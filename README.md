@@ -4,9 +4,13 @@
 
 DynaFetch is a clean, modern .NET 8 package that brings REST API capabilities to Dynamo 3.0. Built for performance and ease of use, it provides a comprehensive HTTP client with robust JSON processing and enterprise-ready authentication support.
 
-## Inspiration & Attribution
+## Development & Attribution
 
-DynaFetch is inspired by and builds upon the pioneering work of **Radu Gidei** and the **DynaWeb** package:
+**DynaFetch** was developed through a collaborative "Vibe Coding" project between [**TheBIMsider**](https://bio.link/thebimsider) and **Claude** [(Anthropic AI)](https://www.anthropic.com/). This partnership combined domain expertise in BIM and construction technology with AI-assisted development to create a modern, efficient REST API package for the Dynamo community.
+
+**Development Approach**: Iterative development with comprehensive testing, focusing on real-world usage patterns and professional-grade reliability.
+
+**Inspiration**: DynaFetch is inspired by and builds upon the pioneering work of **Radu Gidei** and the **DynaWeb** package:
 
 - **DynaWeb Repository**: https://github.com/radumg/DynaWeb
 - **DynaWeb Website**: https://radumg.github.io/DynaWeb/
