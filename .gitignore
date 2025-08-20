@@ -50,3 +50,12 @@ bld/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Additional NuGet and build artifacts
+*.nuget.dgspec.json
+*.nuget.props
+*.nuget.targets
+project.assets.json
+project.nuget.cache
+*.assets.cache
+MSBuildEditorConfig.*
