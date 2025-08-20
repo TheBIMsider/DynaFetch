@@ -1,0 +1,20 @@
+{
+  "license": "BSD-3-Clause",
+  "file_hash": null,
+  "name": "DynaFetch",
+  "version": "1.0.0",
+  "description": "Modern REST API package for Dynamo 3.0 - inspired by DynaWeb by Radu Gidei",
+  "group": "Data",
+  "keywords": ["rest", "api", "http", "json", "web", "fetch"],
+  "dependencies": [],
+  "contents": "Modern REST API functionality for Dynamo 3.0, built on .NET 8. Provides clean HTTP client operations, JSON handling, and request/response management. Inspired by the excellent DynaWeb package by Radu Gidei.",
+  "engine_version": "3.0.0",
+  "engine": "dynamo",
+  "engine_metadata": "",
+  "site_url": "https://github.com/yourusername/DynaFetch",
+  "repository_url": "https://github.com/yourusername/DynaFetch",
+  "contains_binaries": true,
+  "node_libraries": [
+    "DynaFetch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
