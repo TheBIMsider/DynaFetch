@@ -1,4 +1,4 @@
-# DynaFetch {🐕
+# DynaFetch {🐕}
 
 **Modern REST API integration for Dynamo 3.0**
 
