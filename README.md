@@ -1,4 +1,4 @@
-# DynaFetch {🐕}
+# DynaFetch
 
 <img width="512" height="512" alt="DynaFetch_Logo_B" src="https://github.com/user-attachments/assets/3e3f6a46-0e11-429a-9524-a29b5c6d5129" />
 
