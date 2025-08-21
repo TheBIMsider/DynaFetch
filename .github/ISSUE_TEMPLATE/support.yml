@@ -1,0 +1,131 @@
+name: Support Question
+description: Get help with using DynaFetch
+title: '[SUPPORT] '
+labels: ['question', 'support']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need help with DynaFetch? We're here to assist!
+
+        **Before asking**: Please check the documentation and existing issues first:
+        - [API Documentation](https://github.com/TheBIMsider/DynaFetch/blob/main/docs/API-Documentation.md)
+        - [Best Practices](https://github.com/TheBIMsider/DynaFetch/blob/main/docs/Best-Practices.md)
+        - [Troubleshooting Guide](https://github.com/TheBIMsider/DynaFetch/blob/main/docs/Troubleshooting.md)
+
+  - type: input
+    id: dynamo-version
+    attributes:
+      label: Dynamo Version
+      description: Which version of Dynamo are you using?
+      placeholder: 'e.g., Dynamo Sandbox 3.5.2, Dynamo for Revit 3.3'
+    validations:
+      required: true
+
+  - type: input
+    id: dynafetch-version
+    attributes:
+      label: DynaFetch Version
+      description: Which version of DynaFetch are you using?
+      placeholder: 'e.g., v1.0.0'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: question-category
+    attributes:
+      label: Question Category
+      description: What type of help do you need?
+      options:
+        - Installation and setup
+        - Basic HTTP operations (GET, POST, etc.)
+        - Authentication (Bearer tokens, API keys)
+        - JSON processing and data conversion
+        - Error handling and troubleshooting
+        - Performance and optimization
+        - Integration with specific APIs
+        - Migration from DynaWeb
+        - Best practices and workflow design
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like help with?
+      placeholder: "Please describe what you're trying to accomplish and where you're stuck"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-approach
+    attributes:
+      label: What You've Tried
+      description: What have you attempted so far?
+      placeholder: |
+        - Steps you've taken
+        - Nodes you've used
+        - Configuration you've tried
+        - Documentation you've referenced
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: What result are you trying to achieve?
+      placeholder: 'Describe your goal and what success would look like'
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-context
+    attributes:
+      label: API Context (if applicable)
+      description: Information about the API you're working with
+      placeholder: |
+        - API provider/service name
+        - API documentation URL
+        - Authentication method required
+        - Data format (JSON structure)
+    validations:
+      required: false
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: Current Dynamo Workflow
+      description: Describe your current node setup
+      placeholder: |
+        Please describe your current Dynamo graph setup:
+        - Which DynaFetch nodes you're using
+        - How they're connected
+        - Parameter values you've set
+        - Any error messages you're seeing
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: documentation-check
+    attributes:
+      label: Documentation Review
+      description: Have you checked these resources?
+      options:
+        - label: I have reviewed the API Documentation
+        - label: I have checked the sample workflows
+        - label: I have looked at the troubleshooting guide
+        - label: I have searched existing issues for similar questions
+
+  - type: checkboxes
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgent is this question?
+      options:
+        - label: Urgent - Blocking current project deadline
+        - label: High priority - Important for ongoing work
+        - label: Normal priority - General learning/improvement
+        - label: Low priority - Future planning/curiosity

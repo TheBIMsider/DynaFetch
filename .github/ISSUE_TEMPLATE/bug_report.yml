@@ -1,0 +1,116 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in DynaFetch
+title: '[BUG] '
+labels: ['bug', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below to help us resolve the issue quickly.
+
+        **Before submitting**: Please check existing issues to avoid duplicates.
+
+  - type: input
+    id: dynamo-version
+    attributes:
+      label: Dynamo Version
+      description: Which version of Dynamo are you using?
+      placeholder: 'e.g., Dynamo Sandbox 3.5.2, Dynamo for Revit 3.3'
+    validations:
+      required: true
+
+  - type: input
+    id: dynafetch-version
+    attributes:
+      label: DynaFetch Version
+      description: Which version of DynaFetch are you using?
+      placeholder: 'e.g., v1.0.0'
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: 'Describe what happened and what you expected to happen'
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the issue
+      placeholder: |
+        1. Create a new Dynamo graph
+        2. Add DynaFetch nodes...
+        3. Set parameters to...
+        4. Execute and observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: 'Describe the expected result'
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: 'Describe what actually occurred, including error messages'
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-details
+    attributes:
+      label: API Details (if applicable)
+      description: Information about the API you're calling
+      placeholder: |
+        - API URL: 
+        - HTTP Method: 
+        - Authentication Type: 
+        - Expected Response Format:
+    validations:
+      required: false
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages
+      description: Any error messages from Dynamo or DynaFetch
+      placeholder: 'Paste complete error messages here'
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem
+      placeholder: 'Screenshots, related issues, workarounds attempted, etc.'
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify these items before submitting
+      options:
+        - label: I have searched existing issues for duplicates
+          required: true
+        - label: I have provided complete reproduction steps
+          required: true
+        - label: I have included relevant error messages
+          required: true
+        - label: I have tested with the latest DynaFetch version
+          required: false

@@ -1,0 +1,127 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for DynaFetch
+title: '[FEATURE] '
+labels: ['enhancement', 'needs-discussion']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide details below to help us understand your request.
+
+        **Before submitting**: Check existing issues and discussions for similar requests.
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature Summary
+      description: A brief summary of the feature you'd like to see
+      placeholder: 'One-sentence description of the proposed feature'
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: 'Describe the current limitation or challenge this feature would address'
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this feature to work?
+      placeholder: |
+        Describe your ideal implementation:
+        - How would users interact with this feature?
+        - What would the Dynamo nodes look like?
+        - What parameters would be needed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Specific scenarios where this feature would be valuable
+      placeholder: |
+        Example scenarios:
+        1. When working with [specific API type]...
+        2. For [specific industry/workflow]...
+        3. To solve [specific integration challenge]...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of enhancement is this?
+      options:
+        - New HTTP method or operation
+        - Authentication enhancement
+        - JSON processing improvement
+        - Performance optimization
+        - Error handling improvement
+        - Documentation enhancement
+        - New utility function
+        - Integration with external service
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to your workflow?
+      options:
+        - Low - Nice to have
+        - Medium - Would significantly improve workflow
+        - High - Critical for adoption/current project
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Are there workarounds or alternatives you've considered?
+      placeholder: 'Describe any current workarounds or alternative approaches'
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context about this feature request
+      placeholder: 'Links to relevant APIs, similar features in other tools, etc.'
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Implementation
+      description: Would you be interested in contributing to this feature?
+      options:
+        - label: I would be willing to help test this feature
+        - label: I would be interested in contributing code for this feature
+        - label: I can provide domain expertise for this feature
+        - label: I can help with documentation for this feature
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify these items before submitting
+      options:
+        - label: I have searched existing issues and discussions
+          required: true
+        - label: I have provided clear use cases for this feature
+          required: true
+        - label: I understand this is a request, not a guarantee of implementation
+          required: true
