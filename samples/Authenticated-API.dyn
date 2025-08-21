@@ -1,0 +1,453 @@
+{
+  "Uuid": "47345cd8-a4a2-4690-a9df-a7901ed5d36b",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Authenticated-API",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7c08b36f5c354bcfa5893767e5da406e",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "33a3be28f3414757a94f4dbc4357eaca",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.Create",
+      "Replication": "Auto",
+      "Description": "ClientNodes.Create ( ): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "44c01e29ebf847e7a86485b13e79cd6a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "eff4830a3da141f8b33f7fafb1ffb0d8",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "137a9d2a659c457d82b748c598a7c2b0",
+          "Name": "headerName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d57720f824dd47b987088974a9ad13bb",
+          "Name": "headerValue",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "30527f5bcd6e417b8ebd77d70424ca78",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.AddDefaultHeader@DynaFetch.Core.HttpClientWrapper,string,string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.AddDefaultHeader (client: HttpClientWrapper, headerName: string, headerValue: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0b731204cb384d5faeed0b270406f5b5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5cecfd389ba849b8bb1cc764dcafde4f",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "57bfb18fb98240e8863d52ab92e503ed",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ffb74870310549a19de4f41537ce86df",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.GET@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.GET (client: HttpClientWrapper, url: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "ae434d41f38b41d1a1b9e0b6f47c2180",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "88ed5957f6b54f28a68084709a268c3c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"Authorization\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "03eb4ac44d18453693d7073d7f3ca3e9",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3d254d810e3544a59d2c2cba9fe4c060",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"Bearer demo-token\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "5f13bcbbc97241abaaaa8995f1a9beee",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "536989c695744881be70f38ed603274d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"https://httpbin.org/bearer\";"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "3dc31dcd95fe406f8fbec59d875cb33f",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "a634400f52e5410dadc03461a0d6bd03",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b6d0e5cb56ea44a9a551978287fe5c09",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bab951f835fb4d6baca1cfddc71816da",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "10bb91029e8440a1a96a4e41e3c6fcfa",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e9b215a65e384bc0a36ca27a0170fcfb",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ToDictionary@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ToDictionary (response: HttpResponse): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "33a3be28f3414757a94f4dbc4357eaca",
+      "End": "eff4830a3da141f8b33f7fafb1ffb0d8",
+      "Id": "53b9034ab87b44f390dd49b52ebdd4d5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "30527f5bcd6e417b8ebd77d70424ca78",
+      "End": "5cecfd389ba849b8bb1cc764dcafde4f",
+      "Id": "f0b5c673c52c494e9409bc8e98e2157e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ffb74870310549a19de4f41537ce86df",
+      "End": "10bb91029e8440a1a96a4e41e3c6fcfa",
+      "Id": "8e251a4a45614bb1bdae383fa9ae8914",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "88ed5957f6b54f28a68084709a268c3c",
+      "End": "137a9d2a659c457d82b748c598a7c2b0",
+      "Id": "ee26055a11c2490d82191604457c6ede",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3d254d810e3544a59d2c2cba9fe4c060",
+      "End": "d57720f824dd47b987088974a9ad13bb",
+      "Id": "aacf2420522c4dd990e5b9d806ca93bb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "536989c695744881be70f38ed603274d",
+      "End": "57bfb18fb98240e8863d52ab92e503ed",
+      "Id": "e9e1f4f543f044dcb942d24a83d59af9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e9b215a65e384bc0a36ca27a0170fcfb",
+      "End": "a634400f52e5410dadc03461a0d6bd03",
+      "Id": "202f930584ee4a06976ad0b24177cca7",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynaFetch.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "7c08b36f5c354bcfa5893767e5da406e",
+        "44c01e29ebf847e7a86485b13e79cd6a",
+        "0b731204cb384d5faeed0b270406f5b5",
+        "bab951f835fb4d6baca1cfddc71816da"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.2.8856",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "7c08b36f5c354bcfa5893767e5da406e",
+        "Name": "ClientNodes.Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 323.46378614309737,
+        "Y": 754.94310227519
+      },
+      {
+        "Id": "44c01e29ebf847e7a86485b13e79cd6a",
+        "Name": "ClientNodes.AddDefaultHeader",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 620.3108010544447,
+        "Y": 752.2883949364945
+      },
+      {
+        "Id": "0b731204cb384d5faeed0b270406f5b5",
+        "Name": "ExecuteNodes.GET",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 984.1835089800784,
+        "Y": 755.64711580803
+      },
+      {
+        "Id": "ae434d41f38b41d1a1b9e0b6f47c2180",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 319.8221681258542,
+        "Y": 895.9519959134492
+      },
+      {
+        "Id": "03eb4ac44d18453693d7073d7f3ca3e9",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 317.5135298339686,
+        "Y": 1043.4750202065097
+      },
+      {
+        "Id": "5f13bcbbc97241abaaaa8995f1a9beee",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 630.3063882003048,
+        "Y": 959.4538973897653
+      },
+      {
+        "Id": "3dc31dcd95fe406f8fbec59d875cb33f",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1552.593185959754,
+        "Y": 754.0367838296723
+      },
+      {
+        "Id": "bab951f835fb4d6baca1cfddc71816da",
+        "Name": "JsonNodes.ToDictionary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1268.0594772107547,
+        "Y": 756.1961998671161
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "b3b0fdbebed84061bc3c44044a1e7bf7",
+        "Title": "DynaFetch Sample 2: Authenticated API - Uses Bearer token for protected endpoints",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 324.8412420072404,
+        "Top": 658.4516019332494,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -272.05335789686126,
+    "Y": -469.4633110698796,
+    "Zoom": 1.0
+  }
+}
