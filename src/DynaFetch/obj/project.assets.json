@@ -277,11 +277,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CarlStorms\\Downloads\\DynaFetch\\V01\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
+      "projectUniqueName": "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
       "projectName": "DynaFetch",
-      "projectPath": "C:\\Users\\CarlStorms\\Downloads\\DynaFetch\\V01\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
+      "projectPath": "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
       "packagesPath": "C:\\Users\\CarlStorms\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CarlStorms\\Downloads\\DynaFetch\\V01\\DynaFetch\\src\\DynaFetch\\obj\\",
+      "outputPath": "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CarlStorms\\AppData\\Roaming\\NuGet\\NuGet.Config"
