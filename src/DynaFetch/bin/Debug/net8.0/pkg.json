@@ -8,11 +8,19 @@
   "keywords": ["rest", "api", "http", "json", "web", "fetch"],
   "dependencies": [],
   "contents": "Modern REST API functionality for Dynamo 3.0, built on .NET 8. Provides clean HTTP client operations, JSON handling, and request/response management. Inspired by the excellent DynaWeb package by Radu Gidei.",
+  "samples": [
+  "samples/Basic-GET-Request.dyn",
+  "samples/Authenticated-API.dyn", 
+  "samples/POST-Data-Submission.dyn",
+  "samples/Multi-Step-Workflow.dyn",
+  "samples/Error-Handling-Pattern.dyn",
+  "samples/JSON-Processing-Demo.dyn"
+],
   "engine_version": "3.0.0",
   "engine": "dynamo",
   "engine_metadata": "",
-  "site_url": "https://github.com/yourusername/DynaFetch",
-  "repository_url": "https://github.com/yourusername/DynaFetch",
+  "site_url": "https://github.com/TheBIMsider/DynaFetch",
+  "repository_url": "https://github.com/TheBIMsider/DynaFetch", 
   "contains_binaries": true,
   "node_libraries": [
     "DynaFetch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
