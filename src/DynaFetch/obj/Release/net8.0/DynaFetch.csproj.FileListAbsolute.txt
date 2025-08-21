@@ -16,3 +16,22 @@ C:\Users\CarlStorms\Downloads\DynaFetch\V01\DynaFetch\src\DynaFetch\obj\Release\
 C:\Users\CarlStorms\Downloads\DynaFetch\V01\DynaFetch\src\DynaFetch\obj\Release\net8.0\refint\DynaFetch.dll
 C:\Users\CarlStorms\Downloads\DynaFetch\V01\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.pdb
 C:\Users\CarlStorms\Downloads\DynaFetch\V01\DynaFetch\src\DynaFetch\obj\Release\net8.0\ref\DynaFetch.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\pkg.json
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\DynaFetch.deps.json
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\DynaFetch.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\DynaFetch.pdb
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\DynamoServices.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\DynamoUnits.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\ProtoGeometry.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Release\net8.0\Newtonsoft.Json.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.csproj.AssemblyReference.cache
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.AssemblyInfoInputs.cache
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.AssemblyInfo.cs
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.csproj.CoreCompileInputs.cache
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.sourcelink.json
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.csproj.Up2Date
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\refint\DynaFetch.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\DynaFetch.pdb
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Release\net8.0\ref\DynaFetch.dll
