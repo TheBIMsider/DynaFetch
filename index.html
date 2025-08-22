@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=landing/" />
+    <title>DynaFetch - Redirecting...</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f8f9fa;
+        color: #343a40;
+      }
+      .redirect-message {
+        text-align: center;
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e9ecef;
+        border-top: 4px solid #e67e22;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      a {
+        color: #e67e22;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="redirect-message">
+      <div class="spinner"></div>
+      <h2>Redirecting to DynaFetch...</h2>
+      <p>
+        If you're not redirected automatically,
+        <a href="landing/">click here</a>.
+      </p>
+    </div>
+
+    <script>
+      // Backup JavaScript redirect in case meta refresh fails
+      setTimeout(function () {
+        window.location.href = 'landing/';
+      }, 100);
+    </script>
+  </body>
+</html>
