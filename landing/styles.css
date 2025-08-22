@@ -764,7 +764,7 @@ a:hover {
 
 .resources-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--spacing-2xl);
 }
 
@@ -814,6 +814,52 @@ a:hover {
 
 .resource-link:hover::before {
   transform: translateX(2px);
+}
+
+/* ===================================
+   Community Support Section
+   =================================== */
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.community-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-base);
+  text-align: center;
+  border: 2px solid var(--color-gray-200);
+  transition: border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.community-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.community-title {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-xl);
+}
+
+.community-description {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+/* Responsive community grid */
+@media (max-width: 768px) {
+  .community-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
 }
 
 /* ===================================
