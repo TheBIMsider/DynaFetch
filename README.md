@@ -1,6 +1,7 @@
 # DynaFetch {🐕}
 
-<img width="512" height="512" alt="DynaFetch_Logo_B_Med" src="https://github.com/user-attachments/assets/4ee69a83-bb82-4cab-bcc9-c7c9679a661d" />
+<img width="512" height="512" alt="DynaFetch_Logo_B_Tag" src="https://github.com/user-attachments/assets/fd5f7ef8-7f8c-4a40-80a8-5f543a22d046" />
+
 
 **Modern REST API integration for Dynamo 3.0**
 
