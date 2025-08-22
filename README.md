@@ -1,5 +1,8 @@
 # DynaFetch {🐕}
 
+<img width="512" height="512" alt="DynaFetch_Logo_B_Tag" src="https://github.com/user-attachments/assets/fd5f7ef8-7f8c-4a40-80a8-5f543a22d046" />
+
+
 **Modern REST API integration for Dynamo 3.0**
 
 DynaFetch is a clean, modern .NET 8 package that brings REST API capabilities to Dynamo 3.0. Built for performance and ease of use, it provides a comprehensive HTTP client with robust JSON processing and enterprise-ready authentication support.
