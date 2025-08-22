@@ -191,17 +191,21 @@ JsonNodes.ToDictionary(response)
 - Use `ToList` for JSON arrays  
 - Use `Format` for debugging JSON structure
 
-## API Reference
+## Documentation
 
-For complete method documentation with parameters and examples, see [API-Documentation.md](docs/API-Documentation.md).
+### Quick References
+- **[Node Library Reference](docs/Node-Library.md)** - All nodes as they appear in Dynamo with descriptions and usage patterns
+- **[API Documentation](docs/API-Documentation.md)** - Complete method reference with parameters and examples
 
-## Best Practices
+### Guides & Best Practices  
+- **[Best Practices](docs/Best-Practices.md)** - Security, authentication, performance, and workflow organization
+- **[Migration Guide](docs/Migration-Guide.md)** - Step-by-step transition from DynaWeb to DynaFetch
+- **[Troubleshooting](docs/Troubleshooting.md)** - Problem resolution and common issues
 
-For security, authentication patterns, performance optimization, and workflow organization guidance, see [Best-Practices.md](docs/Best-Practices.md).
-
-## Migration from DynaWeb
-
-Migrating from DynaWeb to DynaFetch? See our [Migration-Guide.md](docs/Migration-Guide.md) for step-by-step transition instructions with code examples.
+### Getting Started
+- **[Installation & Quick Start](#quick-start)** - Get up and running in 15 minutes
+- **[Basic Examples](#basic-examples)** - Common workflow patterns
+- **[Sample Graphs](samples/)** - Working Dynamo examples for download
 
 ## Troubleshooting
 
@@ -222,7 +226,7 @@ Migrating from DynaWeb to DynaFetch? See our [Migration-Guide.md](docs/Migration
 - Check authentication header format
 - Ensure token hasn't expired
 
-For more troubleshooting help, see [Troubleshooting.md](docs/Troubleshooting.md).
+For comprehensive troubleshooting help, see the [Troubleshooting Guide](docs/Troubleshooting.md).
 
 ## Contributing
 
