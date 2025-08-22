@@ -1,8 +1,8 @@
 # DynaFetch Node Library Reference
 
-*Complete reference for all DynaFetch nodes as they appear in Dynamo's library interface*
+*Quick reference for primary workflow nodes - the essential nodes for building REST API workflows in Dynamo*
 
-## Library Organization
+> **Complete Reference**: For ALL 220+ nodes including Core infrastructure (100+ individual nodes), System utilities, and HTTP status codes, see the [Advanced Node Library Reference](Advanced-Node-Library.md)
 
 DynaFetch nodes are organized under the main **DynaFetch** category with the following structure:
 

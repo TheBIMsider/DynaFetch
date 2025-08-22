@@ -197,7 +197,8 @@ JsonNodes.ToDictionary(response)
 ## Documentation
 
 ### Quick References
-- **[Node Library Reference](docs/Node-Library.md)** - All nodes as they appear in Dynamo with descriptions and usage patterns
+- **[Node Library Reference](docs/Node-Library.md)** - Primary workflow nodes as they appear in Dynamo
+- **[Advanced Node Library](docs/Advanced-Node-Library.md)** - Complete reference including Core, System, and all HTTP status codes
 - **[API Documentation](docs/API-Documentation.md)** - Complete method reference with parameters and examples
 
 ### Guides & Best Practices  
