@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DynaFetch - Modern REST API integration for Dynamo 3.0. Connect your Dynamo workflows to external data sources with reliable, tested functionality."
+    />
+    <meta
+      name="keywords"
+      content="Dynamo, REST API, JSON, automation, AEC, BIM, data integration"
+    />
+    <title>DynaFetch - Modern REST API for Dynamo</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles.css" as="style" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon (you can add this later) -->
+    <!-- <link rel="icon" type="image/png" href="assets/logo-orange.png"> -->
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav-brand">
+          <img src="assets/logo-orange.png" alt="DynaFetch Logo" class="logo" />
+          <span class="brand-text">DynaFetch</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu">
+          <li><a href="#benefits" class="nav-link">Benefits</a></li>
+          <li><a href="#demo" class="nav-link">How It Works</a></li>
+          <li><a href="#getting-started" class="nav-link">Get Started</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li>
+            <a
+              href="https://github.com/TheBIMsider/DynaFetch"
+              class="nav-link nav-link--external"
+              target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" aria-label="Toggle mobile menu">
+          <span class="hamburger"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Connect Dynamo to <span class="highlight">Any REST API</span>
+            </h1>
+
+            <p class="hero-tagline">Your Data Retriever</p>
+
+            <p class="hero-subtitle">
+              DynaFetch brings modern, reliable REST API integration to Dynamo
+              3.0. Transform your workflows by connecting to external data
+              sources with community-driven, open-source functionality.
+            </p>
+            <div class="hero-actions">
+              <a href="#getting-started" class="btn btn--primary"
+                >Get Started</a
+              >
+              <a
+                href="https://github.com/TheBIMsider/DynaFetch"
+                class="btn btn--secondary"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+
+            <!-- Logo Showcase Section -->
+            <section class="logo-showcase section section--compact">
+              <div class="container">
+                <div class="logo-showcase-content">
+                  <img
+                    src="assets/logo-orange.png"
+                    alt="DynaFetch - Golden Retriever with JSON"
+                    class="logo-large"
+                  />
+                  <p class="logo-description">
+                    Your Data Retriever - fetching APIs with a friendly approach
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+              <div class="indicator">
+                <span class="indicator-value">220+</span>
+                <span class="indicator-label">Available Nodes</span>
+              </div>
+              <div class="indicator">
+                <span class="indicator-value">.NET 8</span>
+                <span class="indicator-label">Modern Framework</span>
+              </div>
+              <div class="indicator">
+                <span class="indicator-value">Open Source</span>
+                <span class="indicator-label">Community Driven</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Benefits Section -->
+      <section id="benefits" class="benefits section section--alternate">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">What DynaFetch Offers</h2>
+            <p class="section-subtitle">
+              A modern, community-driven approach to REST API integration in
+              Dynamo, built with the latest .NET technologies.
+            </p>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">🚀</div>
+              <h3 class="benefit-title">Performance First</h3>
+              <p class="benefit-description">
+                Built on .NET 8 with System.Text.Json for maximum speed. Typical
+                API calls complete in 200-800ms.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">🔒</div>
+              <h3 class="benefit-title">Enterprise Security</h3>
+              <p class="benefit-description">
+                Complete authentication support including Bearer tokens, API
+                keys, and custom headers for enterprise environments.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">🛠️</div>
+              <h3 class="benefit-title">Developer Friendly</h3>
+              <p class="benefit-description">
+                Intuitive node structure with comprehensive error handling.
+                Build complex workflows with simple, chainable operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Demo Section -->
+      <section id="demo" class="demo section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Simple, Powerful Workflow</h2>
+            <p class="section-subtitle">
+              Build REST API integrations with just a few nodes. Here's how easy
+              it is to get started.
+            </p>
+          </div>
+
+          <div class="workflow-demo">
+            <div class="workflow-steps">
+              <div class="workflow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4 class="step-title">Create Client</h4>
+                  <p class="step-description">
+                    Set up your HTTP client with base URL and authentication
+                  </p>
+                </div>
+              </div>
+
+              <div class="workflow-arrow">→</div>
+
+              <div class="workflow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4 class="step-title">Build Request</h4>
+                  <p class="step-description">
+                    Configure your API endpoint, headers, and parameters
+                  </p>
+                </div>
+              </div>
+
+              <div class="workflow-arrow">→</div>
+
+              <div class="workflow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4 class="step-title">Execute & Process</h4>
+                  <p class="step-description">
+                    Send request and convert JSON response to Dynamo data
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder for Screenshots -->
+            <div class="demo-screenshot">
+              <div class="screenshot-placeholder">
+                <p>📸 Dynamo Workflow Screenshot</p>
+                <small>(Screenshot coming soon)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Getting Started Section -->
+      <section
+        id="getting-started"
+        class="getting-started section section--alternate"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Ready to Get Started?</h2>
+            <p class="section-subtitle">
+              Choose your preferred installation method and start enhancing your
+              Dynamo workflows in minutes.
+            </p>
+          </div>
+
+          <div class="install-options">
+            <div class="install-card">
+              <h3 class="install-title">Package Manager</h3>
+              <p class="install-description">
+                Install directly through Dynamo's built-in Package Manager.
+                Search for "DynaFetch" and click install.
+              </p>
+              <div class="install-steps">
+                <ol>
+                  <li>Open Dynamo 3.0+</li>
+                  <li>Go to Packages → Search for Packages</li>
+                  <li>Search "DynaFetch"</li>
+                  <li>Click Install</li>
+                </ol>
+              </div>
+              <a
+                href="https://dynamopackages.com"
+                class="btn btn--outline"
+                target="_blank"
+                >Open Package Manager</a
+              >
+            </div>
+
+            <div class="install-card">
+              <h3 class="install-title">Manual Download</h3>
+              <p class="install-description">
+                Download the latest release directly from GitHub for offline
+                installation or custom deployment.
+              </p>
+              <div class="install-steps">
+                <ol>
+                  <li>Download from GitHub Releases</li>
+                  <li>Extract to Dynamo packages folder</li>
+                  <li>Restart Dynamo</li>
+                  <li>Find DynaFetch in node library</li>
+                </ol>
+              </div>
+              <a
+                href="https://github.com/TheBIMsider/DynaFetch/releases"
+                class="btn btn--outline"
+                target="_blank"
+                >Download v1.0.0</a
+              >
+            </div>
+          </div>
+
+          <!-- Quick Start Preview -->
+          <div class="quick-start">
+            <h3 class="quick-start-title">First API Call in 3 Nodes</h3>
+            <div class="code-preview">
+              <code class="code-block">
+                Create Client → Build GET Request → Execute & Convert to
+                Dictionary
+              </code>
+            </div>
+            <p class="quick-start-note">
+              <a href="../docs/README.md" class="link"
+                >View complete documentation</a
+              >
+              for detailed examples and advanced patterns.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section id="resources" class="resources section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Documentation & Support</h2>
+            <p class="section-subtitle">
+              Comprehensive resources to help you master DynaFetch and build
+              powerful API integrations.
+            </p>
+          </div>
+
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3 class="resource-title">📚 Documentation</h3>
+              <p class="resource-description">
+                Complete guides covering installation, usage, authentication,
+                and advanced patterns.
+              </p>
+              <ul class="resource-links">
+                <li>
+                  <a href="../docs/README.md" class="resource-link"
+                    >Quick Start Guide</a
+                  >
+                </li>
+                <li>
+                  <a href="../docs/Node-Library.md" class="resource-link"
+                    >Node Reference</a
+                  >
+                </li>
+                <li>
+                  <a href="../docs/Best-Practices.md" class="resource-link"
+                    >Best Practices</a
+                  >
+                </li>
+                <li>
+                  <a href="../docs/Troubleshooting.md" class="resource-link"
+                    >Troubleshooting</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="resource-card">
+              <h3 class="resource-title">🎯 Examples</h3>
+              <p class="resource-description">
+                Working Dynamo graphs demonstrating common patterns and
+                real-world scenarios.
+              </p>
+              <ul class="resource-links">
+                <li>
+                  <a href="../samples/" class="resource-link"
+                    >Sample Workflows</a
+                  >
+                </li>
+                <li>
+                  <a href="../docs/Migration-Guide.md" class="resource-link"
+                    >Migration from DynaWeb</a
+                  >
+                </li>
+                <li>
+                  <a href="../docs/API-Documentation.md" class="resource-link"
+                    >Complete API Reference</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="resource-card">
+              <h3 class="resource-title">🤝 Community</h3>
+              <p class="resource-description">
+                Get help, report issues, and contribute to the growing DynaFetch
+                community.
+              </p>
+              <ul class="resource-links">
+                <li>
+                  <a
+                    href="https://github.com/TheBIMsider/DynaFetch/issues"
+                    class="resource-link"
+                    target="_blank"
+                    >Report Issues</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/TheBIMsider/DynaFetch/discussions"
+                    class="resource-link"
+                    target="_blank"
+                    >Community Discussions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/TheBIMsider/DynaFetch/blob/main/CONTRIBUTING.md"
+                    class="resource-link"
+                    target="_blank"
+                    >Contributing Guide</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Attribution Section -->
+      <section class="attribution section section--compact">
+        <div class="container">
+          <div class="attribution-content">
+            <p class="attribution-text">
+              DynaFetch builds upon the pioneering work of
+              <a
+                href="https://github.com/radumg/DynaWeb"
+                class="attribution-link"
+                target="_blank"
+                >DynaWeb by Radu Gidei</a
+              >, bringing modern .NET 8 capabilities to the Dynamo community.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="assets/logo-white.png"
+              alt="DynaFetch Logo"
+              class="footer-logo"
+            />
+            <span class="footer-brand-text">DynaFetch</span>
+          </div>
+
+          <div class="footer-links">
+            <a
+              href="https://github.com/TheBIMsider/DynaFetch"
+              class="footer-link"
+              target="_blank"
+              >GitHub</a
+            >
+            <a href="../docs/README.md" class="footer-link">Documentation</a>
+            <a
+              href="https://github.com/TheBIMsider/DynaFetch/releases"
+              class="footer-link"
+              target="_blank"
+              >Releases</a
+            >
+            <a
+              href="https://github.com/TheBIMsider/DynaFetch/issues"
+              class="footer-link"
+              target="_blank"
+              >Support</a
+            >
+          </div>
+
+          <div class="footer-meta">
+            <p class="footer-copyright">
+              © 2025 DynaFetch. Licensed under BSD-3-Clause.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
