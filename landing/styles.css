@@ -698,6 +698,28 @@ a:hover {
   }
 }
 
+/* Screenshot Caption Styling */
+.screenshot-caption {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+  font-style: italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive caption */
+@media (max-width: 768px) {
+  .screenshot-caption {
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
+  }
+}
+
 /* ===================================
    Getting Started Section
    =================================== */
