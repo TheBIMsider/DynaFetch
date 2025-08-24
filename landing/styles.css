@@ -670,6 +670,34 @@ a:hover {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Nodes Screenshot Styling */
+.nodes-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base);
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.nodes-screenshot:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive screenshot sizing */
+@media (max-width: 768px) {
+  .nodes-screenshot {
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-base);
+  }
+
+  .nodes-screenshot:hover {
+    transform: none; /* Disable hover zoom on mobile */
+  }
+}
+
 /* ===================================
    Getting Started Section
    =================================== */
