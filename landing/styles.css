@@ -703,7 +703,7 @@ a:hover {
   text-align: center;
   font-size: var(--font-size-sm);
   color: var(--color-gray-600);
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-lg);
   margin-bottom: 0;
   font-style: italic;
   max-width: 600px;
