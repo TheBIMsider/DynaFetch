@@ -332,6 +332,12 @@ namespace DynaFetch.Nodes
       if (obj == null)
         throw new ArgumentNullException(nameof(obj), "Object cannot be null");
 
+      // For Dynamo Dictionary objects, recommend using DictionaryToJson instead
+      if (obj.GetType().Name == "Dictionary" && obj.GetType().Namespace == "DesignScript.Builtin")
+      {
+        throw new InvalidOperationException("For Dynamo Dictionary objects, use JsonNodes.DictionaryToJson instead of Serialize. This ensures proper JSON object format.");
+      }
+
       return JsonHelper.SerializeSmart(obj);
     }
 
