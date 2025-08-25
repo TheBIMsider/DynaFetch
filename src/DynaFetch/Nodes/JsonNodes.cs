@@ -332,12 +332,56 @@ namespace DynaFetch.Nodes
       if (obj == null)
         throw new ArgumentNullException(nameof(obj), "Object cannot be null");
 
-      // For Dynamo Dictionary objects, recommend using DictionaryToJson instead
+      // Check if this is a Dynamo Dictionary (DesignScript.Builtin.Dictionary)
       if (obj.GetType().Name == "Dictionary" && obj.GetType().Namespace == "DesignScript.Builtin")
       {
-        throw new InvalidOperationException("For Dynamo Dictionary objects, use JsonNodes.DictionaryToJson instead of Serialize. This ensures proper JSON object format.");
+        // Convert Dynamo Dictionary to standard Dictionary first
+        try
+        {
+          // Use reflection to get the dictionary data
+          var dictType = obj.GetType();
+          var keysProperty = dictType.GetProperty("Keys");
+          var valuesProperty = dictType.GetProperty("Values");
+
+          if (keysProperty != null && valuesProperty != null)
+          {
+            var keys = keysProperty.GetValue(obj) as System.Collections.IEnumerable;
+            var values = valuesProperty.GetValue(obj) as System.Collections.IEnumerable;
+
+            if (keys != null && values != null)
+            {
+              var tempDict = new Dictionary<string, object>();
+              var keyEnumerator = keys.GetEnumerator();
+              var valueEnumerator = values.GetEnumerator();
+
+              while (keyEnumerator.MoveNext() && valueEnumerator.MoveNext())
+              {
+                var key = keyEnumerator.Current?.ToString();
+                var value = valueEnumerator.Current;
+
+                if (!string.IsNullOrEmpty(key))
+                {
+                  tempDict[key] = value;
+                }
+              }
+
+              return JsonHelper.DictionaryToJson(tempDict);
+            }
+          }
+        }
+        catch (Exception ex)
+        {
+          throw new InvalidOperationException($"Failed to serialize Dynamo Dictionary: {ex.Message}", ex);
+        }
       }
 
+      // Check if this is already a standard Dictionary<string, object>
+      if (obj is Dictionary<string, object> standardDict)
+      {
+        return JsonHelper.DictionaryToJson(standardDict);
+      }
+
+      // For all other objects, use the standard serialization
       return JsonHelper.SerializeSmart(obj);
     }
 
