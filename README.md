@@ -4,7 +4,7 @@
 
 **Modern REST API integration for Dynamo 3.0**
 
-> **🌐 [View DynaFetch Landing Page](https://thebimisider.github.io/DynaFetch/landing/)** - Interactive overview with examples and documentation links
+> **🌐 [View DynaFetch Landing Page](https://thebimsider.github.io/DynaFetch/landing/)** - Interactive overview with examples and documentation links
 
 DynaFetch is a clean, modern .NET 8 package that brings REST API capabilities to Dynamo 3.0. Built for performance and ease of use, it provides a comprehensive HTTP client with robust JSON processing and enterprise-ready authentication support.
 
