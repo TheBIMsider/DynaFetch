@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/yourusername/DynaFetch</projectUrl>
     <description>Modern REST API package for Dynamo 3.0 - inspired by DynaWeb</description>
     <tags>dynamo rest api http json bim</tags>
-    <repository type="git" url="https://github.com/yourusername/DynaFetch" commit="db9c0b902c121e35d1ead6da9599d322608919cf" />
+    <repository type="git" url="https://github.com/yourusername/DynaFetch" commit="e9819631712684be8f5832e3a12667b1fc5ef1b4" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="DynamoVisualProgramming.DynamoServices" version="3.0.0" exclude="Build,Analyzers" />
