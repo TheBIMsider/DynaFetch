@@ -2,7 +2,7 @@
   "license": "BSD-3-Clause",
   "file_hash": null,
   "name": "DynaFetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modern REST API package for Dynamo 3.0 - inspired by DynaWeb by Radu Gidei",
   "group": "Data",
   "keywords": ["rest", "api", "http", "json", "web", "fetch"],

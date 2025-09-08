@@ -1,0 +1,930 @@
+{
+  "Uuid": "18bda93a-192c-4145-9c6c-a63f79c63835",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "5 - REST API Advanced-DynaFetch",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "SerializedWidth": 0.0,
+      "SerializedHeight": 0.0,
+      "Id": "0a1afd6ca2ac4bb990312390e94d93fa",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "31f9a29339e84ee38585a18513c71996",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string.",
+      "InputValue": "https://jsonplaceholder.typicode.com/posts"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ee212386cc4448ccbb73e9b8a773d1f6",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "af5d05290d844a85ade507fa60798721",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.Create",
+      "Replication": "Auto",
+      "Description": "ClientNodes.Create ( ): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "ff04765c081047009acfdbd166df8594",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "8299da2803ef4b10b582e1e42b2c3afa",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "59801d9647bb4455bced19bb864a50d0",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "SerializedWidth": 0.0,
+      "SerializedHeight": 0.0,
+      "Id": "82b5b1174042438ab90fc817382718bc",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dcde94bb030c49cfb06b2f67d282bede",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string.",
+      "InputValue": "{\r\n  \"title\": \"DynaFetch Test Post\",\r\n  \"body\": \"This is a test post created with DynaFetch\",\r\n  \"userId\": 1\r\n}"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "73346e5b968445a1900471bba64a4719",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "847dea7237f14f77a6b49323a5f739c4",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "433661a79f474e6bacc5b613aa2ab0b3",
+          "Name": "key",
+          "Description": "The key in the Dictionary to obtain value for\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "30c28ee9ad454717bd0d2abec0d1342d",
+          "Name": "value",
+          "Description": "Value at the specified key or null if it is not set",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.ValueAtKey@string",
+      "Replication": "Auto",
+      "Description": "Obtain the value at a specified key\n\nDictionary.ValueAtKey (key: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "49548d8463474cd7b8aec5cfdf5d1e51",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "df1b814e18274a19974bad3a2d9619f4",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7334bd42cf0448edb884897655d71c3c",
+          "Name": "key",
+          "Description": "The key in the Dictionary to obtain value for\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e8d0bd1d256d48eab841ec6f640002c8",
+          "Name": "value",
+          "Description": "Value at the specified key or null if it is not set",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.ValueAtKey@string",
+      "Replication": "Auto",
+      "Description": "Obtain the value at a specified key\n\nDictionary.ValueAtKey (key: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8f2ea4c7359c429a8d8919223f073112",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b5ee4236f43f43e78773260cdf0d67a8",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "004e618bca9847d09b649d2115fe426c",
+          "Name": "key",
+          "Description": "The key in the Dictionary to obtain value for\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e8c90f4ee7f04c57b4ab2e9e21210e57",
+          "Name": "value",
+          "Description": "Value at the specified key or null if it is not set",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.ValueAtKey@string",
+      "Replication": "Auto",
+      "Description": "Obtain the value at a specified key\n\nDictionary.ValueAtKey (key: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 42.0,
+      "WatchHeight": 52.0,
+      "Id": "cc83783ca9fa4553a31f5eaf4c103135",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "78e02e6e719143009864468b6ec507ee",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f99e79f26bd94408ae1b2b460bc7318c",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 162.0,
+      "WatchHeight": 40.0,
+      "Id": "f2762de16837488c99d146d23915662a",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "d46991b9b502474a8c7a5cec35180df5",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5272b045dab14ce09aca7abf48af78c8",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 335.0,
+      "WatchHeight": 40.0,
+      "Id": "5f5129dd4f854c1d92d84958ad2bacf2",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "f9397dfaaa544d849208eb6feb58a369",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "48a42b4ebeec4c36a2467cebd10b4442",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "748212c20c43474a9821948b203c5978",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "44bdccdb17d04f4db4abf900f2fe7f24",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "52e10ac7b157413e8faadadc0159ec87",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "93bbc90b4923425d88da40e0ec590ade",
+          "Name": "jsonData",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5581e32501134468aa6a6c07fb7c4a8b",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.POST@DynaFetch.Core.HttpClientWrapper,string,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.POST (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "83850ae6fd8b4084bb3b69f689961def",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1667b5ac3091442ab35591827eba452f",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c121d47a078b445ab3d5891a968e121a",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ToDictionary@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ToDictionary (response: HttpResponse): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d5e614b9d4df4240b94766d78e501a5c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "02d7af84440948fe8500e778596417d8",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c62ef39d116f4f7ea1705ef270115322",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.GetContent@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.GetContent (response: HttpResponse): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 420.0,
+      "WatchHeight": 200.0,
+      "Id": "55639ad732064ddd842bffab964eeb67",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "871e0f9a51474acfb0226aaec10eaf9f",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2f4ce13723a84df788e1fb35428adadd",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "bdf5f377d4fb4b13bc7db1f95de220b1",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a56faf393d5b42c797164d35b1e7ea8a",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f4c04457d334f168e9420c83ac26f4c",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "55f245cbb0f04a4a992ac2ab35d71d3b",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"id\";\n\"title\";\n\"body\";"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "31f9a29339e84ee38585a18513c71996",
+      "End": "52e10ac7b157413e8faadadc0159ec87",
+      "Id": "91bab3febf0a4aaebec73d89decb5f1c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "af5d05290d844a85ade507fa60798721",
+      "End": "44bdccdb17d04f4db4abf900f2fe7f24",
+      "Id": "ed52ff9a5f504c2a94d3413fdfeb41dc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59801d9647bb4455bced19bb864a50d0",
+      "End": "847dea7237f14f77a6b49323a5f739c4",
+      "Id": "eef5ff2a2851423489aa1e48ba6e9703",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59801d9647bb4455bced19bb864a50d0",
+      "End": "df1b814e18274a19974bad3a2d9619f4",
+      "Id": "ad0163000a1f4ebbbe747c596cae3150",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "59801d9647bb4455bced19bb864a50d0",
+      "End": "b5ee4236f43f43e78773260cdf0d67a8",
+      "Id": "e3069a8cc3874eb89d12f5cfdf580f46",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dcde94bb030c49cfb06b2f67d282bede",
+      "End": "93bbc90b4923425d88da40e0ec590ade",
+      "Id": "b1c6219157b54c12951e538ccc75a8e8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "30c28ee9ad454717bd0d2abec0d1342d",
+      "End": "78e02e6e719143009864468b6ec507ee",
+      "Id": "644926e152a24ae3b02e8944add1394d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e8d0bd1d256d48eab841ec6f640002c8",
+      "End": "d46991b9b502474a8c7a5cec35180df5",
+      "Id": "2ec323bd997d4a68b501b5e8c7b00a4c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e8c90f4ee7f04c57b4ab2e9e21210e57",
+      "End": "f9397dfaaa544d849208eb6feb58a369",
+      "Id": "ac210b7f5f92462180c6e3fc1a4c45b6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5581e32501134468aa6a6c07fb7c4a8b",
+      "End": "1667b5ac3091442ab35591827eba452f",
+      "Id": "b135f74437fc4804a672039fbbff033b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5581e32501134468aa6a6c07fb7c4a8b",
+      "End": "02d7af84440948fe8500e778596417d8",
+      "Id": "b4ff28a4e3df4345813e535acc0b2bc9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c121d47a078b445ab3d5891a968e121a",
+      "End": "8299da2803ef4b10b582e1e42b2c3afa",
+      "Id": "f543937979be414ab186966700e6372b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c62ef39d116f4f7ea1705ef270115322",
+      "End": "871e0f9a51474acfb0226aaec10eaf9f",
+      "Id": "9a9c6510d04548d7a4decbefa5ecb4c1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a56faf393d5b42c797164d35b1e7ea8a",
+      "End": "433661a79f474e6bacc5b613aa2ab0b3",
+      "Id": "8fcfea6a2b804d32b913d14e46c0ccee",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3f4c04457d334f168e9420c83ac26f4c",
+      "End": "7334bd42cf0448edb884897655d71c3c",
+      "Id": "014b84c9f0d349ce99e0ede223b60997",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "55f245cbb0f04a4a992ac2ab35d71d3b",
+      "End": "004e618bca9847d09b649d2115fe426c",
+      "Id": "4fa020a54bff42ef909d0dc8c50de9bf",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynaFetch.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "ee212386cc4448ccbb73e9b8a773d1f6",
+        "748212c20c43474a9821948b203c5978",
+        "83850ae6fd8b4084bb3b69f689961def",
+        "d5e614b9d4df4240b94766d78e501a5c"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.2.8856",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "0a1afd6ca2ac4bb990312390e94d93fa",
+        "Name": "String - Posts API URL",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -248.9760137693193,
+        "Y": -365.8461094708227
+      },
+      {
+        "Id": "ee212386cc4448ccbb73e9b8a773d1f6",
+        "Name": "ClientNodes.Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -219.50456779773077,
+        "Y": -492.98519526910223
+      },
+      {
+        "Id": "ff04765c081047009acfdbd166df8594",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 751.4599558226676,
+        "Y": -495.8612908468368
+      },
+      {
+        "Id": "82b5b1174042438ab90fc817382718bc",
+        "Name": "String - Post Data JSON",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -253.99188645557655,
+        "Y": -194.01720128515456
+      },
+      {
+        "Id": "73346e5b968445a1900471bba64a4719",
+        "Name": "Dictionary.ValueAtKey",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1621.720947186833,
+        "Y": -498.32927658189897
+      },
+      {
+        "Id": "49548d8463474cd7b8aec5cfdf5d1e51",
+        "Name": "Dictionary.ValueAtKey",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1626.863593301957,
+        "Y": -333.08519726434486
+      },
+      {
+        "Id": "8f2ea4c7359c429a8d8919223f073112",
+        "Name": "Dictionary.ValueAtKey",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1631.9637956173335,
+        "Y": -168.94524747472872
+      },
+      {
+        "Id": "cc83783ca9fa4553a31f5eaf4c103135",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1920.5290287492958,
+        "Y": -497.80396880753733
+      },
+      {
+        "Id": "f2762de16837488c99d146d23915662a",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1920.0710805013446,
+        "Y": -327.5936889966729
+      },
+      {
+        "Id": "5f5129dd4f854c1d92d84958ad2bacf2",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1926.928458374999,
+        "Y": -167.9747111826503
+      },
+      {
+        "Id": "748212c20c43474a9821948b203c5978",
+        "Name": "ExecuteNodes.POST",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 75.7524432482353,
+        "Y": -489.8540237998326
+      },
+      {
+        "Id": "83850ae6fd8b4084bb3b69f689961def",
+        "Name": "JsonNodes.ToDictionary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 380.717769559814,
+        "Y": -486.1514666003611
+      },
+      {
+        "Id": "d5e614b9d4df4240b94766d78e501a5c",
+        "Name": "JsonNodes.GetContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 394.4274623951565,
+        "Y": -331.400768871063
+      },
+      {
+        "Id": "55639ad732064ddd842bffab964eeb67",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 746.9740038064097,
+        "Y": -190.2308116311562
+      },
+      {
+        "Id": "bdf5f377d4fb4b13bc7db1f95de220b1",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1388.1256587411244,
+        "Y": -100.08258362681465
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "9400521cfafc44c1a0797a742b76a36d",
+        "Title": "Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "0a1afd6ca2ac4bb990312390e94d93fa",
+          "ee212386cc4448ccbb73e9b8a773d1f6",
+          "82b5b1174042438ab90fc817382718bc"
+        ],
+        "HasNestedGroups": false,
+        "Left": -263.99188645557655,
+        "Top": -565.9851952691022,
+        "Width": 272.0,
+        "Height": 656.9679939839476,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -492.98519526910223,
+        "InitialHeight": 443.9679939839476,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "09e5a2b3e1bb433193df7ef15fe93dc7",
+        "Title": "Response",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "ff04765c081047009acfdbd166df8594",
+          "55639ad732064ddd842bffab964eeb67"
+        ],
+        "HasNestedGroups": false,
+        "Left": 736.9740038064097,
+        "Top": -568.8612908468368,
+        "Width": 517.0,
+        "Height": 676.6304792156807,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -495.8612908468368,
+        "InitialHeight": 499.79368893381655,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "f04a345e45f84bfdb58601320cc0d2c3",
+        "Title": "Deserialise",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "73346e5b968445a1900471bba64a4719",
+          "49548d8463474cd7b8aec5cfdf5d1e51",
+          "8f2ea4c7359c429a8d8919223f073112",
+          "cc83783ca9fa4553a31f5eaf4c103135",
+          "f2762de16837488c99d146d23915662a",
+          "5f5129dd4f854c1d92d84958ad2bacf2",
+          "bdf5f377d4fb4b13bc7db1f95de220b1"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1378.1256587411244,
+        "Top": -571.329276581899,
+        "Width": 970.8027996338747,
+        "Height": 629.2466929550843,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -498.32927658189897,
+        "InitialHeight": 543.2466929550843,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "d9dea48452da40a382c425998da61f29",
+        "Title": "Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "748212c20c43474a9821948b203c5978",
+          "83850ae6fd8b4084bb3b69f689961def",
+          "d5e614b9d4df4240b94766d78e501a5c"
+        ],
+        "HasNestedGroups": false,
+        "Left": 65.7524432482353,
+        "Top": -562.8540237998326,
+        "Width": 582.6750191469212,
+        "Height": 363.4532549287696,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -489.8540237998326,
+        "InitialHeight": 303.4532549287696,
+        "TextblockHeight": 63.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "5290c5faa24e4d8e96d16436cad557fa",
+        "Title": "DynaFetch Migration Sample\r\nOriginal: \"Dynamo 2.0 - REST API Advanced\" from DynaWeb\r\n\r\nThis graph recreates the original Dynamo 2.0 sample from DynaWeb using DynaFetch nodes. \r\nDynaFetch is a modern REST API package that works with Dynamo 3.0+ and provides the \r\nsame functionality as DynaWeb with improved performance and simplified workflows.\r\n\r\nThis sample demonstrates POST requests with JSON data submission and response processing.\r\n\r\nOriginal DynaWeb sample by Radu Gidei - recreated for DynaFetch compatibility.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -271.63797765801496,
+        "Top": -883.4190927432868,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 195.75686120701567,
+    "Y": 681.2321862956335,
+    "Zoom": 0.6102123960578855
+  }
+}

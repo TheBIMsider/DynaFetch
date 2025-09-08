@@ -1,0 +1,469 @@
+{
+  "Uuid": "eff4b361-8b67-4fe9-908e-fbe53dd244a4",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "07_Fun-GET-Random-Ron_Swanson_Quote",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "SerializedWidth": 0.0,
+      "SerializedHeight": 0.0,
+      "Id": "1637a4ee4f7c4fbd8420c1765d5b19b7",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4f57a7262cb24d6ba97faf191276ec1d",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string.",
+      "InputValue": "https://ron-swanson-quotes.herokuapp.com/v2/quotes"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 573.0,
+      "WatchHeight": 198.0,
+      "Id": "d6c4c23e2120427fb320cd4c090cda7c",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "d306ea3a97d7429fa2c027925e081b89",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "759b24a0034d46dbb6390899b4bcf4eb",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "656953356f814080a4e7e9fab16be848",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2dff5336b044dc880fa2ad5cfb3d65f",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.Create",
+      "Replication": "Auto",
+      "Description": "ClientNodes.Create ( ): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f4d7bd79c0164ef6a620180c21ccccd7",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "475fcaf89d89432da9421da4d41302df",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0cd02e3aee5c4afda12300585dbf40df",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a92f3e6f9ae74b74961be12f38094ee1",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.GET@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.GET (client: HttpClientWrapper, url: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "169c868ba919456283108684db26fd51",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "732a78f4c1cf4b5fa34bfd6220fa99e4",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dbffe06e4ab04c3389932d6abee0beeb",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.GetContent@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.GetContent (response: HttpResponse): string"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4f57a7262cb24d6ba97faf191276ec1d",
+      "End": "0cd02e3aee5c4afda12300585dbf40df",
+      "Id": "751af7051c9a4e8e89fc01598b569062",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e2dff5336b044dc880fa2ad5cfb3d65f",
+      "End": "475fcaf89d89432da9421da4d41302df",
+      "Id": "7778b2910732458995540ec0f6e5e3a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a92f3e6f9ae74b74961be12f38094ee1",
+      "End": "732a78f4c1cf4b5fa34bfd6220fa99e4",
+      "Id": "a0fb5f2b7e29449a8da9235e5f38b96d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dbffe06e4ab04c3389932d6abee0beeb",
+      "End": "d306ea3a97d7429fa2c027925e081b89",
+      "Id": "9342401b677842eb8aefac07cb657b28",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynaFetch.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "656953356f814080a4e7e9fab16be848",
+        "f4d7bd79c0164ef6a620180c21ccccd7",
+        "169c868ba919456283108684db26fd51"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.2.8856",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "1637a4ee4f7c4fbd8420c1765d5b19b7",
+        "Name": "String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 216.05295612531688,
+        "Y": 507.25916949589043
+      },
+      {
+        "Id": "d6c4c23e2120427fb320cd4c090cda7c",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1189.8361498295974,
+        "Y": 370.6984145342893
+      },
+      {
+        "Id": "656953356f814080a4e7e9fab16be848",
+        "Name": "ClientNodes.Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 239.9323728651707,
+        "Y": 363.89359384764737
+      },
+      {
+        "Id": "f4d7bd79c0164ef6a620180c21ccccd7",
+        "Name": "ExecuteNodes.GET",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 540.5842980571031,
+        "Y": 368.07292635732864
+      },
+      {
+        "Id": "169c868ba919456283108684db26fd51",
+        "Name": "JsonNodes.GetContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 868.4489258246394,
+        "Y": 367.26543938731277
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "e0f9d021e2814b24ab5c525734d57fd9",
+        "Title": "1. Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1637a4ee4f7c4fbd8420c1765d5b19b7",
+          "656953356f814080a4e7e9fab16be848",
+          "e1c17db24aa64a5388859758c25c0197"
+        ],
+        "HasNestedGroups": false,
+        "Left": 166.8515706494162,
+        "Top": 290.89359384764737,
+        "Width": 317.0,
+        "Height": 586.0649601410229,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 363.89359384764737,
+        "InitialHeight": 490.0354226273422,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "422300dbc57f4a0c9e697db0f3fdd080",
+        "Title": "2. Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "f4d7bd79c0164ef6a620180c21ccccd7",
+          "a779a4a157244b6790c6769f4805122d"
+        ],
+        "HasNestedGroups": false,
+        "Left": 513.485757848928,
+        "Top": 295.07292635732864,
+        "Width": 320.0,
+        "Height": 461.2744049756712,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 368.07292635732864,
+        "InitialHeight": 330.2299695063943,
+        "TextblockHeight": 63.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "c4077e593913439aa9e08f3d26c23aed",
+        "Title": "3. Response - Random Ron Swanson Quote",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "d6c4c23e2120427fb320cd4c090cda7c",
+          "169c868ba919456283108684db26fd51",
+          "2f2e766c4e044547a4955b27711892f7"
+        ],
+        "HasNestedGroups": false,
+        "Left": 853.8787964154881,
+        "Top": 294.26543938731277,
+        "Width": 995.9573534141093,
+        "Height": 439.00664266767694,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 367.26543938731277,
+        "InitialHeight": 496.929616371931,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "d363658eea9348a0ace440e9ec10f7fc",
+        "Title": "DynaFetch Sample 7 - Fun GET Request\r\nGet a Random Ron Swanson Quote!\r\n\r\nPattern: Create Client & URL → Execute Request → Process Response\r\n\r\nThis sample demonstrates the simplest possible DynaFetch workflow using a fun public API. The Ron Swanson Quotes API (https://ron-swanson-quotes.herokuapp.com/v2/quotes) returns random quotes from the Parks and Recreation character, showing how DynaFetch handles basic GET requests with minimal setup.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 164.60531120638382,
+        "Top": 53.51586463534073,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e1c17db24aa64a5388859758c25c0197",
+        "Title": "Simple API Setup\r\n\r\nDynaFetch's streamlined approach to API requests:\r\n- ClientNodes.Create - No configuration needed for basic requests\r\n- String input with API endpoint URL\r\n- No authentication required for public APIs\r\n\r\nPattern: Create Client → Set URL → Execute Request\r\nPerfect for simple GET requests to public APIs and testing endpoints.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 176.8515706494162,
+        "Top": 691.9585539886702,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a779a4a157244b6790c6769f4805122d",
+        "Title": "GET Request Execution\r\n\r\nExecuteNodes.GET demonstrates DynaFetch's simple execution pattern:\r\n- Two inputs: client and URL\r\n- Automatic HTTP protocol handling\r\n- Returns HttpResponse object for further processing\r\n\r\nSingle-node execution vs multi-step request building\r\nShows DynaFetch's efficiency for straightforward API calls.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 523.485757848928,
+        "Top": 542.3473313329998,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2f2e766c4e044547a4955b27711892f7",
+        "Title": "Raw Response Processing\r\n\r\nJsonNodes.GetContent extracts the actual API response:\r\n- Returns the raw string content from the HTTP response\r\n- Bypasses JSON parsing for simple text responses\r\n- Direct access to API data without additional processing\r\n\r\nWatch node displays the random quote directly\r\nPerfect for APIs that return plain text or simple string responses.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 863.8787964154881,
+        "Top": 519.2720820549897,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2c8f9e5f5b554c08a0bd6a996f88e36c",
+        "Title": "Key Learning Points:\r\n- No authentication needed for public APIs\r\n- Single ExecuteNodes.GET call handles the entire request\r\n- JsonNodes.GetContent extracts raw response content\r\n- Three-node pattern works for most simple API integrations\r\n\r\nThis pattern can be applied to any public API that returns data via GET requests. Try replacing the URL with other fun APIs like Chuck Norris jokes, cat facts, or random advice!",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 491.0251094413534,
+        "Top": 53.270992908865395,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -112.96580643305364,
+    "Y": 39.070480388272046,
+    "Zoom": 0.868537019767252
+  }
+}

@@ -202,26 +202,6 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "Id": "18f1ad6d1d3e4713bcd34a99f233f4f0",
-      "NodeType": "FunctionNode",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "9dc1ac06d93d41898e5b8a5383b56380",
-          "Name": "HttpClientWrapper",
-          "Description": "HttpClientWrapper",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.Create",
-      "Replication": "Auto",
-      "Description": "ClientNodes.Create ( ): HttpClientWrapper"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "Id": "e7f85387f53e4d6c9c10edba9fa3211f",
       "NodeType": "FunctionNode",
       "Inputs": [
@@ -352,67 +332,6 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "Id": "48f36c92395a440288e420808ec42612",
-      "NodeType": "FunctionNode",
-      "Inputs": [
-        {
-          "Id": "e0083a4a382548a39df70a1a6e09fcec",
-          "Name": "response",
-          "Description": "HttpResponse",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "1d3956b961b3404eb200457e754ad12b",
-          "Name": "string",
-          "Description": "string",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.GetContent@DynaFetch.Core.HttpResponse",
-      "Replication": "Auto",
-      "Description": "JsonNodes.GetContent (response: HttpResponse): string"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 420.0,
-      "WatchHeight": 200.0,
-      "Id": "700232e418174e068e022accc4e66f74",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "c44adb08696144e3acabb784e5710c29",
-          "Name": "",
-          "Description": "Node to show output from",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "f2d6bc43626e4e5e83ec6df3150e43d7",
-          "Name": "",
-          "Description": "Node output",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Visualizes a node's output"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "Id": "c467351a030f4ad68188c65e0ad93e41",
       "NodeType": "FunctionNode",
       "Inputs": [
@@ -443,7 +362,7 @@
     },
     {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
+      "WatchWidth": 50.0,
       "WatchHeight": 40.0,
       "Id": "3411ec5139e748ab9cf2c3904589f2ca",
       "NodeType": "ExtensionNode",
@@ -471,6 +390,67 @@
       ],
       "Replication": "Disabled",
       "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 420.0,
+      "WatchHeight": 200.0,
+      "Id": "700232e418174e068e022accc4e66f74",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "a54d287d447045da8491884e2779d278",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a7ec048fe31546a895dd648a2a48d267",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "48f36c92395a440288e420808ec42612",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d8b08c1c0e54461b8428102c8ad1e4fa",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "70a06009d06046e79a8ab0f29332cf22",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.GetContent@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.GetContent (response: HttpResponse): string"
     }
   ],
   "Connectors": [
@@ -478,6 +458,12 @@
       "Start": "b18c0f173e12441d8cc4afae549f7083",
       "End": "1857157cbcb54a0192aae3b423fa9a93",
       "Id": "ac240ca2f4284712b885e7bd943dc5fa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b18c0f173e12441d8cc4afae549f7083",
+      "End": "1d9941b22f0a4da682f321a645c5ad9e",
+      "Id": "cc4f2ef0529c460181ac0b6ffc791cde",
       "IsHidden": "False"
     },
     {
@@ -494,14 +480,14 @@
     },
     {
       "Start": "b981052af7514787bd31765684c2bf62",
-      "End": "e0083a4a382548a39df70a1a6e09fcec",
-      "Id": "6d8632d2bf1046f98c37cc158f5e46e0",
+      "End": "7114c06d4fea44208ab5de401dae1ee3",
+      "Id": "76b5c86c53034690955d548f5d86255d",
       "IsHidden": "False"
     },
     {
       "Start": "b981052af7514787bd31765684c2bf62",
-      "End": "7114c06d4fea44208ab5de401dae1ee3",
-      "Id": "76b5c86c53034690955d548f5d86255d",
+      "End": "d8b08c1c0e54461b8428102c8ad1e4fa",
+      "Id": "6d8632d2bf1046f98c37cc158f5e46e0",
       "IsHidden": "False"
     },
     {
@@ -523,12 +509,6 @@
       "IsHidden": "False"
     },
     {
-      "Start": "9dc1ac06d93d41898e5b8a5383b56380",
-      "End": "1d9941b22f0a4da682f321a645c5ad9e",
-      "Id": "7d0efcc7dba841489b94d7bb74c8d580",
-      "IsHidden": "False"
-    },
-    {
       "Start": "4d85869c367c43d0be3706f000abdea1",
       "End": "a267f5f3b1924616b6bf45aefbd98257",
       "Id": "07d60e95e08042c29836c8eb24f18c9b",
@@ -547,15 +527,15 @@
       "IsHidden": "False"
     },
     {
-      "Start": "1d3956b961b3404eb200457e754ad12b",
-      "End": "c44adb08696144e3acabb784e5710c29",
-      "Id": "45538783cda04cc5a617bad02fcb2e31",
-      "IsHidden": "False"
-    },
-    {
       "Start": "c999ba542cc246d1944d037e137f1297",
       "End": "397b472a7a36440b991896b884d7a534",
       "Id": "0b645d4b7360473d97c04cff2e505b10",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "70a06009d06046e79a8ab0f29332cf22",
+      "End": "a54d287d447045da8491884e2779d278",
+      "Id": "0e10565427464327a75021806d4faa17",
       "IsHidden": "False"
     }
   ],
@@ -568,12 +548,11 @@
         "6adc9f64acdb48f1b770d09d346aadce",
         "20ac313b28e94a47b71252348f2a70a9",
         "2334e68cc0a3492fb7a6423d66a43a31",
-        "18f1ad6d1d3e4713bcd34a99f233f4f0",
         "e7f85387f53e4d6c9c10edba9fa3211f",
         "15cb04101079442e99c90ccea43e2e35",
         "f736944805674bd38ac18de6d04675a5",
-        "48f36c92395a440288e420808ec42612",
-        "c467351a030f4ad68188c65e0ad93e41"
+        "c467351a030f4ad68188c65e0ad93e41",
+        "48f36c92395a440288e420808ec42612"
       ]
     }
   ],
@@ -632,8 +611,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -769.7299807008071,
-        "Y": 470.8435980677509
+        "X": -971.8663240641617,
+        "Y": 165.71639474738095
       },
       {
         "Id": "20ac313b28e94a47b71252348f2a70a9",
@@ -642,8 +621,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -477.83401140738806,
-        "Y": 472.81734182034313
+        "X": -546.5052417809345,
+        "Y": 169.1351239416823
       },
       {
         "Id": "5572bdc053264b4591ec947ef48caeb3",
@@ -652,8 +631,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -966.408833465571,
-        "Y": 640.2887703416964
+        "X": -1168.5451768289256,
+        "Y": 335.1615670213264
       },
       {
         "Id": "2334e68cc0a3492fb7a6423d66a43a31",
@@ -662,8 +641,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -18.45993794990136,
-        "Y": 532.4893374510232
+        "X": 813.629936575981,
+        "Y": 155.50028592403373
       },
       {
         "Id": "35168fc9764841ee984f2f765269b971",
@@ -672,8 +651,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 425.4996855723284,
-        "Y": 483.0855926567194
+        "X": 1172.0950586071417,
+        "Y": 124.68230232344092
       },
       {
         "Id": "8275093fee98411781307ad3a0004268",
@@ -682,8 +661,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 916.4358699140207,
-        "Y": 671.8727616323524
+        "X": -1154.5307713592683,
+        "Y": 484.38495264779647
       },
       {
         "Id": "d9ab02079c344e1d904a397724a4ebc2",
@@ -692,18 +671,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2004.0623702012654,
-        "Y": 510.4123320257529
-      },
-      {
-        "Id": "18f1ad6d1d3e4713bcd34a99f233f4f0",
-        "Name": "ClientNodes.Create",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1113.1147226787843,
-        "Y": 502.42758935840743
+        "X": 276.7441311839425,
+        "Y": 1491.8557022398004
       },
       {
         "Id": "e7f85387f53e4d6c9c10edba9fa3211f",
@@ -712,8 +681,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1405.0106919722034,
-        "Y": 504.40133311099976
+        "X": -522.4369031945175,
+        "Y": 1034.1516275175584
       },
       {
         "Id": "15cb04101079442e99c90ccea43e2e35",
@@ -722,8 +691,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1726.147172088185,
-        "Y": 514.7675713209953
+        "X": -40.490160113351976,
+        "Y": 1486.8673210519937
       },
       {
         "Id": "f736944805674bd38ac18de6d04675a5",
@@ -732,8 +701,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -103.81404788626332,
-        "Y": -226.0940808504014
+        "X": -66.02670001522984,
+        "Y": -230.16024252773593
       },
       {
         "Id": "7d776f7969d046db9fe065803cc0aa97",
@@ -742,28 +711,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 185.72727889840598,
-        "Y": -232.09852362100793
-      },
-      {
-        "Id": "48f36c92395a440288e420808ec42612",
-        "Name": "JsonNodes.GetContent",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": -101.92245804493405,
-        "Y": 902.5104922811281
-      },
-      {
-        "Id": "700232e418174e068e022accc4e66f74",
-        "Name": "Watch",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 209.19725981966485,
-        "Y": 907.1505250304247
+        "X": 223.51462676943947,
+        "Y": -236.16468529834242
       },
       {
         "Id": "c467351a030f4ad68188c65e0ad93e41",
@@ -772,8 +721,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 147.3824082459903,
-        "Y": 198.6315155286744
+        "X": -37.45073744418869,
+        "Y": 416.5633483271554
       },
       {
         "Id": "3411ec5139e748ab9cf2c3904589f2ca",
@@ -782,143 +731,371 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 567.8076117044552,
-        "Y": 197.2537223827552
+        "X": 249.62859514166348,
+        "Y": 416.50030921268296
+      },
+      {
+        "Id": "700232e418174e068e022accc4e66f74",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 256.7275979499336,
+        "Y": 938.2936851922054
+      },
+      {
+        "Id": "48f36c92395a440288e420808ec42612",
+        "Name": "JsonNodes.GetContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -54.39211991466527,
+        "Y": 933.6536524429089
       }
     ],
     "Annotations": [
       {
         "Id": "5818b87236b84bbea51053137b77f14e",
-        "Title": "Multiple users → List",
+        "Title": "3. Response: Multiple users → List",
         "DescriptionText": "",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "8275093fee98411781307ad3a0004268",
           "d9ab02079c344e1d904a397724a4ebc2",
-          "18f1ad6d1d3e4713bcd34a99f233f4f0",
-          "e7f85387f53e4d6c9c10edba9fa3211f",
-          "15cb04101079442e99c90ccea43e2e35"
+          "15cb04101079442e99c90ccea43e2e35",
+          "744b1083e52c43ceb179b204e8ac01d4"
         ],
         "HasNestedGroups": false,
-        "Left": 906.4358699140207,
-        "Top": 429.42758935840743,
-        "Width": 1637.6265002872447,
-        "Height": 673.9847426673455,
+        "Left": -61.958952777469904,
+        "Top": 1413.8673210519937,
+        "Width": 878.7030839614124,
+        "Height": 670.9883811878067,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 502.42758935840743,
-        "InitialHeight": 314.445172273945,
+        "InitialTop": 1486.8673210519937,
+        "InitialHeight": 149.98838118780668,
         "TextblockHeight": 63.0,
-        "Background": "#FFD4B6DB"
+        "Background": "#FFFFAA45"
       },
       {
         "Id": "21c1f8e644b140eeb939aaf1779b7e20",
-        "Title": "Single user object → Dictionary",
+        "Title": "1. Input",
         "DescriptionText": "",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
           "6adc9f64acdb48f1b770d09d346aadce",
-          "20ac313b28e94a47b71252348f2a70a9",
           "5572bdc053264b4591ec947ef48caeb3",
-          "2334e68cc0a3492fb7a6423d66a43a31",
-          "35168fc9764841ee984f2f765269b971"
+          "8275093fee98411781307ad3a0004268",
+          "cbd6714b729d4a068837af3d60ad0ee8"
         ],
         "HasNestedGroups": false,
-        "Left": -976.408833465571,
-        "Top": 397.8435980677509,
-        "Width": 1688.9085190378994,
-        "Height": 383.2419945889685,
+        "Left": -1178.5451768289256,
+        "Top": 92.71639474738095,
+        "Width": 472.0,
+        "Height": 817.6168391505012,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 470.8435980677509,
-        "InitialHeight": 314.44517227394545,
+        "InitialTop": 165.71639474738095,
+        "InitialHeight": 609.6168391505012,
         "TextblockHeight": 63.0,
-        "Background": "#FFE8F7AD"
+        "Background": "#FF48B9FF"
       },
       {
         "Id": "c2a07448938f49059399bef4fb88bdfd",
-        "Title": "Format JSON for readable debugging",
+        "Title": "3. Response: Format JSON for readable debugging",
         "DescriptionText": "",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
           "f736944805674bd38ac18de6d04675a5",
-          "7d776f7969d046db9fe065803cc0aa97"
+          "7d776f7969d046db9fe065803cc0aa97",
+          "aace9a766a194426a6fab6fe31f00399"
         ],
         "HasNestedGroups": false,
-        "Left": -113.81404788626332,
-        "Top": -305.0985236210079,
-        "Width": 806.5413267846693,
-        "Height": 371.0,
+        "Left": -116.697279942249,
+        "Top": -309.1646852983424,
+        "Width": 847.2119067116885,
+        "Height": 502.7791740776149,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": -232.09852362100793,
-        "InitialHeight": 151.00444277060652,
+        "InitialTop": -236.16468529834242,
+        "InitialHeight": 151.0044427706065,
         "TextblockHeight": 63.0,
-        "Background": "#FFE8F7AD"
-      },
-      {
-        "Id": "47eb28dff9df440285403ab75a666eb8",
-        "Title": "Access raw JSON string content",
-        "DescriptionText": "",
-        "IsExpanded": true,
-        "WidthAdjustment": 0.0,
-        "HeightAdjustment": 0.0,
-        "Nodes": [
-          "48f36c92395a440288e420808ec42612",
-          "700232e418174e068e022accc4e66f74"
-        ],
-        "HasNestedGroups": false,
-        "Left": -111.92245804493405,
-        "Top": 829.5104922811281,
-        "Width": 828.1197178645989,
-        "Height": 375.64003274929655,
-        "FontSize": 36.0,
-        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 902.5104922811281,
-        "InitialHeight": 149.64003274929655,
-        "TextblockHeight": 63.0,
-        "Background": "#FFE8F7AD"
+        "Background": "#FFFFAA45"
       },
       {
         "Id": "3bfae69b884b4303b031df427f2815ec",
-        "Title": "Validate JSON before processing",
+        "Title": "3. Response: Validate JSON before processing",
         "DescriptionText": "",
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
           "c467351a030f4ad68188c65e0ad93e41",
-          "3411ec5139e748ab9cf2c3904589f2ca"
+          "3411ec5139e748ab9cf2c3904589f2ca",
+          "cba1a31d1cdd4de5bb2d93a18676391b"
         ],
         "HasNestedGroups": false,
-        "Left": 137.3824082459903,
-        "Top": 124.2537223827552,
-        "Width": 717.4252034584649,
-        "Height": 211.0,
+        "Left": -74.47710865138606,
+        "Top": 300.50030921268296,
+        "Width": 461.10570379304954,
+        "Height": 515.3755987931445,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 197.2537223827552,
-        "InitialHeight": 146.3777931459192,
+        "InitialTop": 416.50030921268296,
+        "InitialHeight": 152.2394663356738,
+        "TextblockHeight": 106.0,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "ab6a10f084394ba78b2fd1bc6af53a7c",
+        "Title": "3. Response: Single user object → Dictionary",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "2334e68cc0a3492fb7a6423d66a43a31",
+          "35168fc9764841ee984f2f765269b971",
+          "a3babb2558304b60b89569d0a5fc1573"
+        ],
+        "HasNestedGroups": false,
+        "Left": 803.629936575981,
+        "Top": 8.682302323440922,
+        "Width": 655.4651220311607,
+        "Height": 617.0396014167967,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 124.68230232344092,
+        "InitialHeight": 175.8179836005928,
+        "TextblockHeight": 106.0,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "4c6cd346a6d74b6d869362e0fe204535",
+        "Title": "2. Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "20ac313b28e94a47b71252348f2a70a9",
+          "e7f85387f53e4d6c9c10edba9fa3211f",
+          "8c0cde3f902a4bba8ae058a74ce73705"
+        ],
+        "HasNestedGroups": false,
+        "Left": -589.8466532027521,
+        "Top": 96.13512394168231,
+        "Width": 322.4097500082346,
+        "Height": 1098.016503575876,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 169.1351239416823,
+        "InitialHeight": 1010.0165035758761,
         "TextblockHeight": 63.0,
-        "Background": "#FFE8F7AD"
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "47eb28dff9df440285403ab75a666eb8",
+        "Title": "3. Response: Access raw JSON string content",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "48f36c92395a440288e420808ec42612",
+          "700232e418174e068e022accc4e66f74",
+          "011c83e580ca4a0cb3f38838c8d8470d"
+        ],
+        "HasNestedGroups": false,
+        "Left": -64.93220894830392,
+        "Top": 860.6536524429089,
+        "Width": 828.6598068982375,
+        "Height": 484.3748586769634,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 933.6536524429089,
+        "InitialHeight": 149.64003274929655,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
       },
       {
         "Id": "b3b0fdbebed84061bc3c44044a1e7bf7",
-        "Title": "DynaFetch Sample 6: JSON Processing - Demonstrates object/array conversion, formatting, validation, and raw content access",
+        "Title": "DynaFetch Sample 6 - Comprehensive JSON Processing\r\n\r\nThis sample demonstrates all available JSON processing methods in DynaFetch.\r\nShows how to handle different JSON response types and choose the right processing method.\r\n\r\nEssential for understanding when to use each JSON processing approach \r\nfor different API response formats and workflow requirements.\r\n\r\nPattern: Multiple Requests → Raw Content → Structured Processing → Validation\r\nAPIs: JSONPlaceholder user (object) and users (array) endpoints",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": -956.2693545088596,
-        "Top": 261.0618263827649,
+        "Left": -1177.267375093133,
+        "Top": -333.13007827585284,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "cbd6714b729d4a068837af3d60ad0ee8",
+        "Title": "Multiple JSON Endpoint Configuration\r\n\r\nClientNodes.Create establishes shared HTTP client for efficiency.\r\n\r\nTwo different JSON response types for comprehensive demonstration:\r\n- /users/1: Single user object (JSON object response)\r\n- /users: All users array (JSON array response)\r\n\r\nThis dual approach shows how to handle both:\r\n- Individual records (objects) - most common API pattern\r\n- Collections (arrays) - for bulk data retrieval\r\n\r\nSame client handles both request types efficiently.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -1102.6358593377568,
+        "Top": 638.3332338978821,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "8c0cde3f902a4bba8ae058a74ce73705",
+        "Title": "Parallel JSON Data Retrieval\r\n\r\nMultiple ExecuteNodes.GET requests demonstrate concurrent processing:\r\n- Single Object Request: Fetches one user record\r\n- Array Request: Fetches collection of all users\r\n- Both execute simultaneously for efficiency\r\n\r\nEach request returns HttpResponse containing JSON data\r\nin different structures, requiring different processing approaches.\r\n\r\nThis pattern shows how to efficiently retrieve multiple\r\nJSON datasets in parallel for comprehensive processing.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -579.8466532027521,
+        "Top": 549.3240717572384,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "011c83e580ca4a0cb3f38838c8d8470d",
+        "Title": "Raw JSON Content Access\r\n\r\nJsonNodes.GetContent extracts raw JSON strings:\r\n- Returns unprocessed JSON text from HttpResponse\r\n- Useful for debugging, logging, or external processing\r\n- Shows actual API response format\r\n- Required for custom JSON processing or validation\r\n\r\nRaw content access enables:\r\n- JSON format inspection and debugging\r\n- Custom parsing for non-standard formats\r\n- Response logging for API monitoring\r\n- Integration with external JSON processing tools",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -54.93220894830392,
+        "Top": 1088.0285111198723,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a3babb2558304b60b89569d0a5fc1573",
+        "Title": "Complete JSON Processing Method Demonstration\n\nJsonNodes.ToDictionary (Object Processing):\n- Converts single user JSON to Dynamo Dictionary\n- Enables property access via Dictionary.ValueAtKey\n- Best for individual records and structured data access\n\nObject Processing Best Practice\r\n\r\nToDictionary converts JSON objects to Dynamo's native Dictionary type:\r\n- Enables seamless integration with Dynamo workflows\r\n- Provides type-safe property access\r\n- Supports nested object structures\r\n- Automatic type conversion (strings, numbers, booleans)\r\n\r\nUse for individual records where you need to access specific properties.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 826.322012382825,
+        "Top": 296.7219037402376,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "744b1083e52c43ceb179b204e8ac01d4",
+        "Title": "Complete JSON Processing Method Demonstration\n\nJsonNodes.ToList (Array Processing):  \n- Converts users array JSON to Dynamo List\n- Each list item is a Dictionary representing one user\n- Best for collections and bulk data processing\n\nJSON Utility Methods\r\n\r\nFormat: Creates human-readable JSON for:\r\n- Debugging complex API responses\r\n- Documentation and examples\r\n- User display of structured data\r\n\r\nIsValid: Validates JSON syntax for:\r\n- Error handling with unpredictable APIs\r\n- Conditional processing based on data quality\r\n- Workflow branching for valid vs invalid responses\r\n\r\nThese utilities enhance workflow robustness and debugging capabilities.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -51.958952777469904,
+        "Top": 1649.1109330998183,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "aace9a766a194426a6fab6fe31f00399",
+        "Title": "Complete JSON Processing Method Demonstration\n\nJsonNodes.Format (Pretty Printing):\n- Formats JSON with proper indentation and line breaks\n- Useful for debugging, documentation, or display\n- Makes complex JSON readable and analyzabl\n\nJSON Utility Methods\nThese utilities enhance workflow robustness and debugging capabilities.\n\nFormat: Creates human-readable JSON for:\n- Debugging complex API responses\n- Documentation and examples\n- User display of structured data\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -106.697279942249,
+        "Top": -78.3855112207275,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "cba1a31d1cdd4de5bb2d93a18676391b",
+        "Title": "Complete JSON Processing Method Demonstration\n\nJsonNodes.IsValid (Validation):\n- Checks if response contains valid JSON syntax\n- Returns true/false for conditional processing\n- Essential for error handling with uncertain data sources\n\nJSON Utility Methods\nThese utilities enhance workflow robustness and debugging capabilities.\n\nIsValid: Validates JSON syntax for:\n- Error handling with unpredictable APIs\n- Conditional processing based on data quality\n- Workflow branching for valid vs invalid responses",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -64.47710865138606,
+        "Top": 558.8759080058275,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "5522a9fafd7244a5b99d6bbc3d0f3e88",
+        "Title": "API Response Pattern Comparison\r\n\r\nSingle Object (/users/1):\r\n{\"id\": 1, \"name\": \"John\", \"email\": \"john@example.com\"}\r\n\r\nArray Response (/users):\r\n[{\"id\": 1, \"name\": \"John\"}, {\"id\": 2, \"name\": \"Jane\"}]\r\n\r\nDifferent structures require different processing methods - \r\nthis sample shows how to handle both patterns effectively.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -821.0155266663817,
+        "Top": -329.4474238617231,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -929,8 +1106,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 431.6958777491021,
-    "Y": 240.88885453614282,
-    "Zoom": 0.41565832579221024
+    "X": 711.1204703563299,
+    "Y": 143.67801940450136,
+    "Zoom": 0.3412421357832743
   }
 }

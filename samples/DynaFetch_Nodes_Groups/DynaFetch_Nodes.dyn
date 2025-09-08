@@ -1,0 +1,2665 @@
+{
+  "Uuid": "cbc5db86-4cd2-437c-bee7-c5de77c97799",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DynaFetch_Nodes",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "81054e62feac4c289c567f17990f9a18",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ca1cdae6a02b427b942886dd9fb7b709",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "08dc12b4a5d0481eb485aed1ee89ea7b",
+          "Name": "headerName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "80e75d72b6f543319c64c339353e7faa",
+          "Name": "headerValue",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "17145fb96d4a451fa7da6e6bb28615e9",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.AddDefaultHeader@DynaFetch.Core.HttpClientWrapper,string,string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.AddDefaultHeader (client: HttpClientWrapper, headerName: string, headerValue: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "00f24bb24fe148a09245b324c97142de",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "e6c0419eb8ca467dbc7a3d0d8c890ed7",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f45fe518ee8d457fa2faeeae1b65be78",
+          "Name": "headers",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b009fce734454c088a68db6dab79135e",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.AddDefaultHeaders@DynaFetch.Core.HttpClientWrapper,var[]..[]",
+      "Replication": "Auto",
+      "Description": "ClientNodes.AddDefaultHeaders (client: HttpClientWrapper, headers: var[]..[]): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "878973da97b94b6b905fbc4ea6ebaabb",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb518957c0f44ab5b25aef69973984ae",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.Create",
+      "Replication": "Auto",
+      "Description": "ClientNodes.Create ( ): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2b3fa9e00de54a468a2d54ec10dd5518",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ecd0af99c51c43acb0696e53e6016ed5",
+          "Name": "baseUrl",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cc0d7cf7f02547819bd3bd11abebc526",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.CreateWithBaseUrl@string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.CreateWithBaseUrl (baseUrl: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a7764ed4feee49909e8f607a7969dc29",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "31824e0c958b4c5aad82ac9229de47a0",
+          "Name": "timeoutSeconds",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4546a4ef5fa548438f3c2f86436ae81f",
+          "Name": "userAgent",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e8b854237e1c42f48eced3afa1a61ccb",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.CreateWithSettings@int,string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.CreateWithSettings (timeoutSeconds: int, userAgent: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "4a7ea018c5564acc9de6b7cae8b211c2",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "a0895776da714e458901f552b7270e3e",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b278abc24f654444bc351d47b45349ca",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.GetDefaultHeaders@DynaFetch.Core.HttpClientWrapper",
+      "Replication": "Auto",
+      "Description": "ClientNodes.GetDefaultHeaders (client: HttpClientWrapper): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5eb2c34d00de4c118d12da46c731117f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "4e5243c8f5bc4a1eae56745777044420",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f2fef6b25c14080a3e77e3fad99541b",
+          "Name": "headerName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "41696714a9bb4beead365a88a62ae933",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.RemoveDefaultHeader@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.RemoveDefaultHeader (client: HttpClientWrapper, headerName: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "52a2fdab29844133af44180690d1d454",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "de5e2cea39014349819affb67a386478",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12b8f1963ec1430b87dabca57b0de448",
+          "Name": "baseUrl",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "644f5b88bc744b738824c2e82e96f796",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.SetBaseUrl@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.SetBaseUrl (client: HttpClientWrapper, baseUrl: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "9a07fed0ed1840e8b88f429e27d4c1de",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3d6a559ba7684ffc8baec78c38554851",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6ddfabd101fe4668a6415be8e28a94d0",
+          "Name": "timeoutSeconds",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5e26ad1610a64a84928dd4a509f74aff",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.SetTimeout@DynaFetch.Core.HttpClientWrapper,int",
+      "Replication": "Auto",
+      "Description": "ClientNodes.SetTimeout (client: HttpClientWrapper, timeoutSeconds: int): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f26b0ecdbebb4ccbaf55c79e3abc9cba",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "db6b4ab3bda74d3c993ed8d676f23267",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ab0faf980164f109c0638b01bab9fd2",
+          "Name": "userAgent",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2d57446c02fe4a55a08f76a9acabac2d",
+          "Name": "HttpClientWrapper",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.SetUserAgent@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ClientNodes.SetUserAgent (client: HttpClientWrapper, userAgent: string): HttpClientWrapper"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0d55321e4336441391a5d0b05179da90",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "62f86c7f4ac445a5b0e6819980cddf8c",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "864f91166f224db99550ab4173976098",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af531c8c80be47db8b928b770f316baf",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.DELETE@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.DELETE (client: HttpClientWrapper, url: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0348c699e3cd41cea63ec23495e5b2a1",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "695b2044a1734e0c97284530f812f7f5",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7df95349a5844c2d879c2c02cf636ca1",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0a36aaddeb5a4454932267750b036e45",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.GET@DynaFetch.Core.HttpClientWrapper,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.GET (client: HttpClientWrapper, url: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c592feb8a2ba4d53993714705158020f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "641419d4bf6247febfa1675846366171",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "93e60d07fa2d44949292b3b8270ef00d",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a31e5229990b457c9749f949da33cc07",
+          "Name": "jsonData",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ab10648ec4e84c01be08142a5c86d6c0",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.PATCH@DynaFetch.Core.HttpClientWrapper,string,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.PATCH (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8df9a528b22f4516acce677833fdcb2c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3893a86b7fbb4285a950196f4afb5535",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "979d45ce57114680803e1b17134fb339",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fd46f6c136b640d0896aa8e478c3f68e",
+          "Name": "jsonData",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0ac2076850ae4ad98a2b4bd8658cd4ca",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.POST@DynaFetch.Core.HttpClientWrapper,string,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.POST (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bc77939e452a48e383d6214dedd288ac",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9ec775988e264b46986062220bb28445",
+          "Name": "client",
+          "Description": "HttpClientWrapper",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c59d4eba5b894444a51386f0bcacb037",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c73ce563864847268c9c99833f8d4cd8",
+          "Name": "jsonData",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e59e981a86be4e53914623f359097430",
+          "Name": "HttpResponse",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.PUT@DynaFetch.Core.HttpClientWrapper,string,string",
+      "Replication": "Auto",
+      "Description": "ExecuteNodes.PUT (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "753d0083d00f444d8a537bc5bc20958b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "83c6218676a64fecb4fec70371cbd1b5",
+          "Name": "dictionary",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d6e3a60bdffe4a2a88c73938d290cb5a",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.DictionaryToJson@var[]..[]",
+      "Replication": "Auto",
+      "Description": "JsonNodes.DictionaryToJson (dictionary: var[]..[]): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "9b21a0e01fad4e32b09a56efa9b6a8d9",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "05d85b0b630e4a88be869a391b071448",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e2b47a9561284923a3bc7e670fed9781",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.Format@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.Format (response: HttpResponse): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "9a3d6cdfb6ef45a0aea88b9b47936068",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5a3978d55b0d46279cbcff5d6cf056d3",
+          "Name": "json",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8f4d362d3a3b46eb9bc1a8002b3faef3",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.FormatJson@string",
+      "Replication": "Auto",
+      "Description": "JsonNodes.FormatJson (json: string): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e86eb72cb34d4e9989047930c52ea87e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b7119821e16d41c1821304d787c1713b",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0d0d4f424a84469bbeb8eb7cba7187b7",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.GetContent@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.GetContent (response: HttpResponse): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b1dc8ff96af54e6c82dccf1f47b7acf7",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b7875f9c59a0445297fc42be85a61d2c",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "124412d9e16f42aba38744f0d4266705",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.IsValid@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.IsValid (response: HttpResponse): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f6687d0b2b4945158da255459f8bcc4b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "980e8f66aae54133afbc9bf1f958fadc",
+          "Name": "json",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b660471ee7c740b7a69377765d4550b3",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.JsonToDictionary@string",
+      "Replication": "Auto",
+      "Description": "JsonNodes.JsonToDictionary (json: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7f42bbcecb414e3b8ea6eb9a565ec2e8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "a819073399a84fba96a4c7ebefe27343",
+          "Name": "json",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0da2629d0a5f4b38a0bf48a83aa82af1",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.JsonToList@string",
+      "Replication": "Auto",
+      "Description": "JsonNodes.JsonToList (json: string): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ff7d5f89f07746438745f17af6e84ac4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d69fb8349a384e9e910b5ec3aa237629",
+          "Name": "json",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6297e762032941ca9605001c642c8f4f",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.JsonToObject@string",
+      "Replication": "Auto",
+      "Description": "JsonNodes.JsonToObject (json: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "56c9e83533474aad96bc6f9502b6e3de",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "667db38a8fc34b25babbfc19d046a91b",
+          "Name": "list",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "418d5bb75a0c4558a0e9d3047e547062",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ListToJson@var[]",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ListToJson (list: var[]): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2bc31377f8b143769b8e8fa90114ab4b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "075180f6ab1344b1bd48a4aca871d289",
+          "Name": "json",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6d5a1b3873514a62b60e912485d2d121",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.MinifyJson@string",
+      "Replication": "Auto",
+      "Description": "JsonNodes.MinifyJson (json: string): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "eff41383e5ad4bb9a2591747dd0b1ccf",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8c22b7b4d1044dceb78c7cad960a11de",
+          "Name": "obj",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "527367c9c8fb4ed182963b1ed20c8e92",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.Serialize@var",
+      "Replication": "Auto",
+      "Description": "JsonNodes.Serialize (obj: var): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "057c66d615c44f95997c44f94112800c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "cb5542f99b6746fb94f9106f5e88f4a9",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "adafc209998b45ce8f77ba1bf47f8c9b",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ToDictionary@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ToDictionary (response: HttpResponse): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bd0e17ebd5874e70950250f4a012347b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "56017de0be60422eadc329e0383712e3",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "111fba1657dd430c9392f3753b0ea6dc",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ToList@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ToList (response: HttpResponse): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d194985abf3749baad7f298bd61183d5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "a037cd7f33344acebf03af8dadfb5f57",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "391b57d78b2c472fa756c81407641a2a",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ToObject@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ToObject (response: HttpResponse): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6edea4d63ff8482eaf3f9c0652600c82",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "bc1b70e78dc54619951df146886845f9",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fed1080fdbed4fe28722752c9cfc9b5c",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.TryToDictionary@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.TryToDictionary (response: HttpResponse): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d92e87f5521440f4a6456a3e146ccc47",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "98d3c2dabcef427383862414b2c0732e",
+          "Name": "response",
+          "Description": "HttpResponse",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1760d7bd6e8a4be4a8a8938c5f6e392c",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.TryToList@DynaFetch.Core.HttpResponse",
+      "Replication": "Auto",
+      "Description": "JsonNodes.TryToList (response: HttpResponse): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "07b7346679c84a7383e4ee5869186cde",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6fd84e66931b455989d490547bff0fe1",
+          "Name": "json",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f05f32852d98455badf08a6b08df441f",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.JsonNodes.ValidateJson@string",
+      "Replication": "Auto",
+      "Description": "JsonNodes.ValidateJson (json: string): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8a2632ca951d4bf4867de14c897224f0",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3901dbef9b6143019886a28df95e7349",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d951f0ea055d47afa2ceee4171c50df0",
+          "Name": "token",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e285f8198c914f7780576990d66c5894",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddBearerToken@DynaFetch.Core.HttpRequest,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddBearerToken (request: HttpRequest, token: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "350272f48e7343638eca8130182f46c8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7d310fe1f46b43ccb4040d3ae289042a",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2699746348424d0da2b9d5062e28f71f",
+          "Name": "headerName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eaa7c2e5b6fb4f9a92c575cd72129388",
+          "Name": "headerValue",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f83d2af77c1a4db591b5bbbd4837acbc",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddHeader@DynaFetch.Core.HttpRequest,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddHeader (request: HttpRequest, headerName: string, headerValue: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "cdce0034bf0e4c7b8fa4dcb538eba79e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "61ad9c303acf462b9233be91f610288e",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "de0b7a12eee742c0a4f5b1d2f495a230",
+          "Name": "headers",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4f71782022f24b48b820e59b54eae668",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddHeaders@DynaFetch.Core.HttpRequest,var[]..[]",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddHeaders (request: HttpRequest, headers: var[]..[]): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "82295200d1cc4d74b5614971e15d2a65",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5613ab6833004916aa71d9dc8d22e762",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6062a073f689485ba1f70189a204d1e6",
+          "Name": "jsonData",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ad0eef45f5194b6792a5215ed25f2700",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddJsonBody@DynaFetch.Core.HttpRequest,var",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddJsonBody (request: HttpRequest, jsonData: var): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ccaf6a4925e24059b5b4072b3017d003",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "98a57bab5cfb445e9b279a46ad66ec84",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e4787f441ffc42458f9d3d2697d538f8",
+          "Name": "jsonContent",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "013dbe7f45bc453cbe5c6c344fab529f",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddJsonContent@DynaFetch.Core.HttpRequest,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddJsonContent (request: HttpRequest, jsonContent: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6bb337cfa41c4098b331cebc2c773475",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "75c07eec976f434fb788ff555c5de6e0",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94aa32547c1447e5b7aab02b85bb96ca",
+          "Name": "parameterName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8cc48ce298fd4aa2a88f969d5d858d64",
+          "Name": "parameterValue",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "258b83c1a89b495a82d43f136d674a9c",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddParameter@DynaFetch.Core.HttpRequest,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddParameter (request: HttpRequest, parameterName: string, parameterValue: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7de73f9409044df59e2c2fbca34657d3",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "21a19c7f30c64bc2b41d795673a24af6",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7fcd55c6170648edbd09c9b389c881a3",
+          "Name": "parameters",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ebd515761622462cb475b110fb553e61",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddParameters@DynaFetch.Core.HttpRequest,var[]..[]",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddParameters (request: HttpRequest, parameters: var[]..[]): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a770cbb723fb4e2a93c9e8e33187d4a4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "20eef79ae79a4171bac529b91286f916",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "95e71e6971544c4891c7e0843ee4a5b3",
+          "Name": "content",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d10d057012004782b354c5a807bc86b2",
+          "Name": "contentType",
+          "Description": "string\nDefault value : \"text/plain\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "141fc547442e45edb186da8b7cab3065",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddTextContent@DynaFetch.Core.HttpRequest,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddTextContent (request: HttpRequest, content: string, contentType: string = \"text/plain\"): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6ef1d2be118541a28e35d842de79e8d2",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8aa30f6b86ec40b690a70faa84a22386",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7df5d281f4774db4a4de7ab4a190c3a0",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AsDelete@DynaFetch.Core.HttpRequest",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AsDelete (request: HttpRequest): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "36116f06870c4a60b05b15ca5c93e29e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "a01d9ab8c0f749a8ad95172456adb07b",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "481550e3fc984395bf134d8916542f7e",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AsGet@DynaFetch.Core.HttpRequest",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AsGet (request: HttpRequest): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "828c14db3e504268afcbd6a7872263d8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5ae39e8568c3427d980b77dcdf85a8a6",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c06d056579df47e7b182653a753bb43b",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AsPatch@DynaFetch.Core.HttpRequest",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AsPatch (request: HttpRequest): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "da607f85ab064dcc81a55199b1b2c595",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "74e7087f90934fd0a040ca05b9d4054d",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f6f44c56ce3f4cab9b99d09bec615cc9",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AsPost@DynaFetch.Core.HttpRequest",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AsPost (request: HttpRequest): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "48a9a8fc696e42bcaedb177eb6fe9928",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "24b6e8a70db34ddab05046cd2cb5338b",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ec86b21c93df40fc87ac0b85148eb830",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AsPut@DynaFetch.Core.HttpRequest",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AsPut (request: HttpRequest): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6031646c75ce40959ca4a501828d903b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "09ad2c87995744839b0687e985e4fe76",
+          "Name": "baseUrl",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b260e7f7bc14410fb3b455a269175e0e",
+          "Name": "endpoint",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b44459fa76fa444ba20915ba51b8d649",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.ByEndpoint@string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.ByEndpoint (baseUrl: string, endpoint: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a8bacfd0333548be870cc7611d174a7b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "bf0566079e554224940b924767202068",
+          "Name": "url",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e7a8e39dedaf4686ba6fd033fbe2c531",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.ByUrl@string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.ByUrl (url: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "42ef41185dc8492d8ed53c63365034ba",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d68419f6095f48a9b2309e390fcda1af",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7c10072cc5a746c08d77f75eb98b60b7",
+          "Name": "method",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ac9b06609c6d4dabaa351b282da729ce",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.SetMethod@DynaFetch.Core.HttpRequest,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.SetMethod (request: HttpRequest, method: string): HttpRequest"
+    }
+  ],
+  "Connectors": [],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynaFetch.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "81054e62feac4c289c567f17990f9a18",
+        "00f24bb24fe148a09245b324c97142de",
+        "878973da97b94b6b905fbc4ea6ebaabb",
+        "2b3fa9e00de54a468a2d54ec10dd5518",
+        "a7764ed4feee49909e8f607a7969dc29",
+        "4a7ea018c5564acc9de6b7cae8b211c2",
+        "5eb2c34d00de4c118d12da46c731117f",
+        "52a2fdab29844133af44180690d1d454",
+        "9a07fed0ed1840e8b88f429e27d4c1de",
+        "f26b0ecdbebb4ccbaf55c79e3abc9cba",
+        "0d55321e4336441391a5d0b05179da90",
+        "0348c699e3cd41cea63ec23495e5b2a1",
+        "c592feb8a2ba4d53993714705158020f",
+        "8df9a528b22f4516acce677833fdcb2c",
+        "bc77939e452a48e383d6214dedd288ac",
+        "753d0083d00f444d8a537bc5bc20958b",
+        "9b21a0e01fad4e32b09a56efa9b6a8d9",
+        "9a3d6cdfb6ef45a0aea88b9b47936068",
+        "e86eb72cb34d4e9989047930c52ea87e",
+        "b1dc8ff96af54e6c82dccf1f47b7acf7",
+        "f6687d0b2b4945158da255459f8bcc4b",
+        "7f42bbcecb414e3b8ea6eb9a565ec2e8",
+        "ff7d5f89f07746438745f17af6e84ac4",
+        "56c9e83533474aad96bc6f9502b6e3de",
+        "2bc31377f8b143769b8e8fa90114ab4b",
+        "eff41383e5ad4bb9a2591747dd0b1ccf",
+        "057c66d615c44f95997c44f94112800c",
+        "bd0e17ebd5874e70950250f4a012347b",
+        "d194985abf3749baad7f298bd61183d5",
+        "6edea4d63ff8482eaf3f9c0652600c82",
+        "d92e87f5521440f4a6456a3e146ccc47",
+        "07b7346679c84a7383e4ee5869186cde",
+        "8a2632ca951d4bf4867de14c897224f0",
+        "350272f48e7343638eca8130182f46c8",
+        "cdce0034bf0e4c7b8fa4dcb538eba79e",
+        "82295200d1cc4d74b5614971e15d2a65",
+        "ccaf6a4925e24059b5b4072b3017d003",
+        "6bb337cfa41c4098b331cebc2c773475",
+        "7de73f9409044df59e2c2fbca34657d3",
+        "a770cbb723fb4e2a93c9e8e33187d4a4",
+        "6ef1d2be118541a28e35d842de79e8d2",
+        "36116f06870c4a60b05b15ca5c93e29e",
+        "828c14db3e504268afcbd6a7872263d8",
+        "da607f85ab064dcc81a55199b1b2c595",
+        "48a9a8fc696e42bcaedb177eb6fe9928",
+        "6031646c75ce40959ca4a501828d903b",
+        "a8bacfd0333548be870cc7611d174a7b",
+        "42ef41185dc8492d8ed53c63365034ba"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.2.8856",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "81054e62feac4c289c567f17990f9a18",
+        "Name": "ClientNodes.AddDefaultHeader",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 64.51480413969603,
+        "Y": 1191.3447662641522
+      },
+      {
+        "Id": "00f24bb24fe148a09245b324c97142de",
+        "Name": "ClientNodes.AddDefaultHeaders",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 64.51480413969603,
+        "Y": 1386.7813508371107
+      },
+      {
+        "Id": "878973da97b94b6b905fbc4ea6ebaabb",
+        "Name": "ClientNodes.Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 64.51480413969603,
+        "Y": 1548.2179354100692
+      },
+      {
+        "Id": "2b3fa9e00de54a468a2d54ec10dd5518",
+        "Name": "ClientNodes.CreateWithBaseUrl",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 64.51480413969603,
+        "Y": 1681.6545199830275
+      },
+      {
+        "Id": "a7764ed4feee49909e8f607a7969dc29",
+        "Name": "ClientNodes.CreateWithSettings",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 64.51480413969603,
+        "Y": 1815.0911045559865
+      },
+      {
+        "Id": "4a7ea018c5564acc9de6b7cae8b211c2",
+        "Name": "ClientNodes.GetDefaultHeaders",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.7725913704287,
+        "Y": 1192.8005943614266
+      },
+      {
+        "Id": "5eb2c34d00de4c118d12da46c731117f",
+        "Name": "ClientNodes.RemoveDefaultHeader",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.7725913704287,
+        "Y": 1327.0346425134333
+      },
+      {
+        "Id": "52a2fdab29844133af44180690d1d454",
+        "Name": "ClientNodes.SetBaseUrl",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.7725913704287,
+        "Y": 1489.2686906654396
+      },
+      {
+        "Id": "9a07fed0ed1840e8b88f429e27d4c1de",
+        "Name": "ClientNodes.SetTimeout",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.7725913704287,
+        "Y": 1651.5027388174462
+      },
+      {
+        "Id": "f26b0ecdbebb4ccbaf55c79e3abc9cba",
+        "Name": "ClientNodes.SetUserAgent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.7725913704287,
+        "Y": 1813.736786969453
+      },
+      {
+        "Id": "0d55321e4336441391a5d0b05179da90",
+        "Name": "ExecuteNodes.DELETE",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 858.799902110924,
+        "Y": 1235.2001666038157
+      },
+      {
+        "Id": "0348c699e3cd41cea63ec23495e5b2a1",
+        "Name": "ExecuteNodes.GET",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 858.799902110924,
+        "Y": 1393.5026398882308
+      },
+      {
+        "Id": "c592feb8a2ba4d53993714705158020f",
+        "Name": "ExecuteNodes.PATCH",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 858.799902110924,
+        "Y": 1551.8051131726459
+      },
+      {
+        "Id": "8df9a528b22f4516acce677833fdcb2c",
+        "Name": "ExecuteNodes.POST",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 858.799902110924,
+        "Y": 1744.1075864570607
+      },
+      {
+        "Id": "bc77939e452a48e383d6214dedd288ac",
+        "Name": "ExecuteNodes.PUT",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 858.799902110924,
+        "Y": 1936.4100597414758
+      },
+      {
+        "Id": "753d0083d00f444d8a537bc5bc20958b",
+        "Name": "JsonNodes.DictionaryToJson",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1183.9930938169052
+      },
+      {
+        "Id": "9b21a0e01fad4e32b09a56efa9b6a8d9",
+        "Name": "JsonNodes.Format",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1309.5655176732782
+      },
+      {
+        "Id": "9a3d6cdfb6ef45a0aea88b9b47936068",
+        "Name": "JsonNodes.FormatJson",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1435.1379415296512
+      },
+      {
+        "Id": "e86eb72cb34d4e9989047930c52ea87e",
+        "Name": "JsonNodes.GetContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1560.710365386024
+      },
+      {
+        "Id": "b1dc8ff96af54e6c82dccf1f47b7acf7",
+        "Name": "JsonNodes.IsValid",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1686.282789242397
+      },
+      {
+        "Id": "f6687d0b2b4945158da255459f8bcc4b",
+        "Name": "JsonNodes.JsonToDictionary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1811.85521309877
+      },
+      {
+        "Id": "7f42bbcecb414e3b8ea6eb9a565ec2e8",
+        "Name": "JsonNodes.JsonToList",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 1937.4276369551435
+      },
+      {
+        "Id": "ff7d5f89f07746438745f17af6e84ac4",
+        "Name": "JsonNodes.JsonToObject",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 2063.000060811516
+      },
+      {
+        "Id": "56c9e83533474aad96bc6f9502b6e3de",
+        "Name": "JsonNodes.ListToJson",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1208.6187713410195,
+        "Y": 2188.5724846678895
+      },
+      {
+        "Id": "2bc31377f8b143769b8e8fa90114ab4b",
+        "Name": "JsonNodes.MinifyJson",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 1191.242274025553
+      },
+      {
+        "Id": "eff41383e5ad4bb9a2591747dd0b1ccf",
+        "Name": "JsonNodes.Serialize",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 1334.2890722608408
+      },
+      {
+        "Id": "057c66d615c44f95997c44f94112800c",
+        "Name": "JsonNodes.ToDictionary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 1477.3358704961288
+      },
+      {
+        "Id": "bd0e17ebd5874e70950250f4a012347b",
+        "Name": "JsonNodes.ToList",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 1620.3826687314167
+      },
+      {
+        "Id": "d194985abf3749baad7f298bd61183d5",
+        "Name": "JsonNodes.ToObject",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 1763.4294669667051
+      },
+      {
+        "Id": "6edea4d63ff8482eaf3f9c0652600c82",
+        "Name": "JsonNodes.TryToDictionary",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 1906.4762652019926
+      },
+      {
+        "Id": "d92e87f5521440f4a6456a3e146ccc47",
+        "Name": "JsonNodes.TryToList",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 2049.523063437281
+      },
+      {
+        "Id": "07b7346679c84a7383e4ee5869186cde",
+        "Name": "JsonNodes.ValidateJson",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1569.0678074140687,
+        "Y": 2192.5698616725685
+      },
+      {
+        "Id": "8a2632ca951d4bf4867de14c897224f0",
+        "Name": "RequestNodes.AddBearerToken",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 1184.9293377266365
+      },
+      {
+        "Id": "350272f48e7343638eca8130182f46c8",
+        "Name": "RequestNodes.AddHeader",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 1349.7161515107853
+      },
+      {
+        "Id": "cdce0034bf0e4c7b8fa4dcb538eba79e",
+        "Name": "RequestNodes.AddHeaders",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 1548.502965294934
+      },
+      {
+        "Id": "82295200d1cc4d74b5614971e15d2a65",
+        "Name": "RequestNodes.AddJsonBody",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 1713.2897790790826
+      },
+      {
+        "Id": "ccaf6a4925e24059b5b4072b3017d003",
+        "Name": "RequestNodes.AddJsonContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 1878.0765928632313
+      },
+      {
+        "Id": "6bb337cfa41c4098b331cebc2c773475",
+        "Name": "RequestNodes.AddParameter",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 2042.86340664738
+      },
+      {
+        "Id": "7de73f9409044df59e2c2fbca34657d3",
+        "Name": "RequestNodes.AddParameters",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 2241.650220431529
+      },
+      {
+        "Id": "a770cbb723fb4e2a93c9e8e33187d4a4",
+        "Name": "RequestNodes.AddTextContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1931.0211316055202,
+        "Y": 2406.4370342156776
+      },
+      {
+        "Id": "6ef1d2be118541a28e35d842de79e8d2",
+        "Name": "RequestNodes.AsDelete",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 1183.8274069891493
+      },
+      {
+        "Id": "36116f06870c4a60b05b15ca5c93e29e",
+        "Name": "RequestNodes.AsGet",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 1358.9040283280258
+      },
+      {
+        "Id": "828c14db3e504268afcbd6a7872263d8",
+        "Name": "RequestNodes.AsPatch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 1533.9806496669023
+      },
+      {
+        "Id": "da607f85ab064dcc81a55199b1b2c595",
+        "Name": "RequestNodes.AsPost",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 1709.057271005779
+      },
+      {
+        "Id": "48a9a8fc696e42bcaedb177eb6fe9928",
+        "Name": "RequestNodes.AsPut",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 1884.1338923446551
+      },
+      {
+        "Id": "6031646c75ce40959ca4a501828d903b",
+        "Name": "RequestNodes.ByEndpoint",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 2059.210513683532
+      },
+      {
+        "Id": "a8bacfd0333548be870cc7611d174a7b",
+        "Name": "RequestNodes.ByUrl",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 2262.287135022408
+      },
+      {
+        "Id": "42ef41185dc8492d8ed53c63365034ba",
+        "Name": "RequestNodes.SetMethod",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2309.6418595465693,
+        "Y": 2437.363756361285
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "dbe9670754c74defa053780b85716c0b",
+        "Title": "Nodes Infrastructure Note:",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "896fda42dbeb4dd8a6b1b682e7c9c656",
+          "ac5d52b69f724e6d971bbabae0661673"
+        ],
+        "HasNestedGroups": false,
+        "Left": -650.5738519254983,
+        "Top": 922.1891145379805,
+        "Width": 634.1852142341736,
+        "Height": 396.09909995861267,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 995.1891145379805,
+        "InitialHeight": 145.09909995861267,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "bb0d5de4acf84a51a35ebd23aa645922",
+        "Title": "⚡",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "81054e62feac4c289c567f17990f9a18",
+          "00f24bb24fe148a09245b324c97142de",
+          "878973da97b94b6b905fbc4ea6ebaabb",
+          "2b3fa9e00de54a468a2d54ec10dd5518",
+          "a7764ed4feee49909e8f607a7969dc29",
+          "4a7ea018c5564acc9de6b7cae8b211c2",
+          "5eb2c34d00de4c118d12da46c731117f",
+          "52a2fdab29844133af44180690d1d454",
+          "9a07fed0ed1840e8b88f429e27d4c1de",
+          "f26b0ecdbebb4ccbaf55c79e3abc9cba"
+        ],
+        "HasNestedGroups": false,
+        "Left": 54.514804139696025,
+        "Top": 1118.3447662641522,
+        "Width": 731.2577872307327,
+        "Height": 856.7463382918343,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1191.3447662641522,
+        "InitialHeight": 768.7463382918343,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "7cc8b949d12f405eb969af653be6290e",
+        "Title": "⚡",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "0d55321e4336441391a5d0b05179da90",
+          "0348c699e3cd41cea63ec23495e5b2a1",
+          "c592feb8a2ba4d53993714705158020f",
+          "8df9a528b22f4516acce677833fdcb2c",
+          "bc77939e452a48e383d6214dedd288ac"
+        ],
+        "HasNestedGroups": false,
+        "Left": 848.799902110924,
+        "Top": 1162.2001666038157,
+        "Width": 283.0,
+        "Height": 968.2098931376602,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1235.2001666038157,
+        "InitialHeight": 846.2098931376602,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "5280b0ecb13c46cab25899551522ec3d",
+        "Title": "⚡",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "753d0083d00f444d8a537bc5bc20958b",
+          "9b21a0e01fad4e32b09a56efa9b6a8d9",
+          "9a3d6cdfb6ef45a0aea88b9b47936068",
+          "e86eb72cb34d4e9989047930c52ea87e",
+          "b1dc8ff96af54e6c82dccf1f47b7acf7",
+          "f6687d0b2b4945158da255459f8bcc4b",
+          "7f42bbcecb414e3b8ea6eb9a565ec2e8",
+          "ff7d5f89f07746438745f17af6e84ac4",
+          "56c9e83533474aad96bc6f9502b6e3de",
+          "2bc31377f8b143769b8e8fa90114ab4b",
+          "eff41383e5ad4bb9a2591747dd0b1ccf",
+          "057c66d615c44f95997c44f94112800c",
+          "bd0e17ebd5874e70950250f4a012347b",
+          "d194985abf3749baad7f298bd61183d5",
+          "6edea4d63ff8482eaf3f9c0652600c82",
+          "d92e87f5521440f4a6456a3e146ccc47",
+          "07b7346679c84a7383e4ee5869186cde",
+          "9f98f54591f64f6fa9690a74a60f6fd7"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1198.6187713410195,
+        "Top": 999.512652931852,
+        "Width": 657.4490360730492,
+        "Height": 1325.0572087407165,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1072.512652931852,
+        "InitialHeight": 1265.0572087407165,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "b8cc339afb7c44eeac889a06117e669e",
+        "Title": "⚡",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8a2632ca951d4bf4867de14c897224f0",
+          "350272f48e7343638eca8130182f46c8",
+          "cdce0034bf0e4c7b8fa4dcb538eba79e",
+          "82295200d1cc4d74b5614971e15d2a65",
+          "ccaf6a4925e24059b5b4072b3017d003",
+          "6bb337cfa41c4098b331cebc2c773475",
+          "7de73f9409044df59e2c2fbca34657d3",
+          "a770cbb723fb4e2a93c9e8e33187d4a4",
+          "6ef1d2be118541a28e35d842de79e8d2",
+          "36116f06870c4a60b05b15ca5c93e29e",
+          "828c14db3e504268afcbd6a7872263d8",
+          "da607f85ab064dcc81a55199b1b2c595",
+          "48a9a8fc696e42bcaedb177eb6fe9928",
+          "6031646c75ce40959ca4a501828d903b",
+          "a8bacfd0333548be870cc7611d174a7b",
+          "42ef41185dc8492d8ed53c63365034ba"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1921.0211316055202,
+        "Top": 1110.8274069891493,
+        "Width": 670.6207279410492,
+        "Height": 1489.6096272265283,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1183.8274069891493,
+        "InitialHeight": 1398.5363493721359,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "98113e14acb1466da7ac3336673520f1",
+        "Title": "Nodes - ClientNodes",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1374616d8d7c4f78afa56715cf4fa18b",
+          "bb0d5de4acf84a51a35ebd23aa645922"
+        ],
+        "HasNestedGroups": true,
+        "Left": 44.514804139696025,
+        "Top": 921.0454754895895,
+        "Width": 751.2577872307327,
+        "Height": 1069.045629066397,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 994.0454754895895,
+        "InitialHeight": 981.0456290663969,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "fe2b43bb6bad4313a54d884fa364645c",
+        "Title": "Nodes - ExecuteNodes",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8951d57ccaf14d59aace81937386226e",
+          "7cc8b949d12f405eb969af653be6290e"
+        ],
+        "HasNestedGroups": true,
+        "Left": 838.799902110924,
+        "Top": 926.2866928637534,
+        "Width": 303.0,
+        "Height": 1219.1233668777224,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1042.2866928637534,
+        "InitialHeight": 1054.1233668777224,
+        "TextblockHeight": 106.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "31490ca98607459093b36408a11c8a16",
+        "Title": "Nodes - JsonNodes",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "9f98f54591f64f6fa9690a74a60f6fd7",
+          "5280b0ecb13c46cab25899551522ec3d"
+        ],
+        "HasNestedGroups": true,
+        "Left": 1188.6187713410195,
+        "Top": 926.512652931852,
+        "Width": 677.4490360730492,
+        "Height": 1413.0572087407165,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 999.512652931852,
+        "InitialHeight": 1310.0572087407165,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "95f2120f80614c9dbecbfd167433c1fa",
+        "Title": "Nodes - RequestNodes",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "7faa5a59365543a5b04a32b29e2b99f2",
+          "b8cc339afb7c44eeac889a06117e669e"
+        ],
+        "HasNestedGroups": true,
+        "Left": 1911.0211316055202,
+        "Top": 927.2663269066109,
+        "Width": 690.6207279410492,
+        "Height": 1688.1707073090668,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1000.2663269066109,
+        "InitialHeight": 1597.0974294546743,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "1374616d8d7c4f78afa56715cf4fa18b",
+        "Title": "DynaFetch > Nodes > ClientNodes \n= 10 Nodes\n•  0 +\n•  10⚡\n•  0 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 62.760360782501266,
+        "Top": 1002.0454754895895,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "8951d57ccaf14d59aace81937386226e",
+        "Title": "DynaFetch > Nodes > ExecuteNodes \n= 5 Nodes\n•  0 +\n•  5⚡\n•  0 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 853.3790147682328,
+        "Top": 1050.2866928637534,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9f98f54591f64f6fa9690a74a60f6fd7",
+        "Title": "DynaFetch > Nodes > JsonNodes \n= 17 Nodes\n•  0 +\n•  17⚡\n•  0 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1208.6504753896415,
+        "Top": 1080.512652931852,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7faa5a59365543a5b04a32b29e2b99f2",
+        "Title": "DynaFetch > Nodes > RequestNodes \n= 16 Nodes\n•  0 +\n•  16⚡\n•  0 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1934.4342041565478,
+        "Top": 1008.2663269066109,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "896fda42dbeb4dd8a6b1b682e7c9c656",
+        "Title": "DynaFetch Nodes Section\r\n\r\nThe Nodes section contains the primary workflow nodes that most users interact with for HTTP operations. These 4 subsections with 48 total nodes provide the simplified, user-friendly interface for building and executing web requests in Dynamo.\r\n\r\nThis is the main working area for DynaFetch users, offering streamlined workflows for common HTTP operations:\r\n\r\nClientNodes - HTTP client creation and configuration management\r\nRequestNodes - Request building with headers, parameters, and body content  \r\nExecuteNodes - HTTP method execution (GET, POST, PUT, DELETE, PATCH)\r\nJsonNodes - JSON response processing and data conversion",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -640.5738519254983,
+        "Top": 1003.2882144965931,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ac5d52b69f724e6d971bbabae0661673",
+        "Title": "These 48 nodes represent the essential DynaFetch functionality that replaces DynaWeb workflows while providing enhanced capabilities. They abstract the complexity of the Core infrastructure into clean, chainable operations that follow Dynamo's visual programming patterns.\r\n\r\nMost DynaFetch workflows use a simple pattern: create client → build request → execute → process response, making HTTP API integration accessible to users regardless of their programming background.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -325.3886376913247,
+        "Top": 1003.1891145379805,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 351.855877797079,
+    "Y": -461.26402191729505,
+    "Zoom": 0.5024492910998689
+  }
+}

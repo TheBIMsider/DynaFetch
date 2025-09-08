@@ -84,7 +84,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "a3815a9e602a4d7692fb519d633eba3a",
+          "Id": "0ea260617ac04be294edd3b6c42fb75d",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -104,7 +104,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "a0040921cfea4291b0d6c247ae795965",
+          "Id": "006dcb7f075e4b26ab33488e58cb9bd9",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -163,7 +163,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "d131bebd98fa40a29d840969f9313ed4",
+          "Id": "b08325d062bf4cfb8d3189d3795d84e2",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -292,7 +292,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "f41d8f69cedf4363a375cb056c9fd862",
+          "Id": "3caca3d4abb24a80a389034716740465",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -312,7 +312,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "7586074526e44607b83716f2675de25f",
+          "Id": "394f6743dd164d9aa26f2c17ebff8083",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -380,7 +380,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "0899028b1aa5405f8bd7f3e2de854b72",
+          "Id": "219006cfeb1343c0b410e3af924aa0c3",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -553,13 +553,13 @@
       "IsHidden": "False"
     },
     {
-      "Start": "a3815a9e602a4d7692fb519d633eba3a",
+      "Start": "0ea260617ac04be294edd3b6c42fb75d",
       "End": "8d6419e425c641c1aa28786450be2307",
       "Id": "148bf95a9155481790af2b1236c1cec6",
       "IsHidden": "False"
     },
     {
-      "Start": "a0040921cfea4291b0d6c247ae795965",
+      "Start": "006dcb7f075e4b26ab33488e58cb9bd9",
       "End": "f530c6a9382a423988540063f61551a7",
       "Id": "c55684eb355341d09990fa75a13ecb5d",
       "IsHidden": "False"
@@ -571,13 +571,13 @@
       "IsHidden": "False"
     },
     {
-      "Start": "d131bebd98fa40a29d840969f9313ed4",
+      "Start": "b08325d062bf4cfb8d3189d3795d84e2",
       "End": "e862dba67e3b44eeb09091d1aa270c74",
       "Id": "945dcc4148c74fc290e62d333de3fb19",
       "IsHidden": "False"
     },
     {
-      "Start": "d131bebd98fa40a29d840969f9313ed4",
+      "Start": "b08325d062bf4cfb8d3189d3795d84e2",
       "End": "0619200e8a3147bca4b2a2b899a8ef54",
       "Id": "e27d7c03777549a78b116df08b9c0149",
       "IsHidden": "False"
@@ -607,13 +607,13 @@
       "IsHidden": "False"
     },
     {
-      "Start": "f41d8f69cedf4363a375cb056c9fd862",
+      "Start": "3caca3d4abb24a80a389034716740465",
       "End": "4b68e3b14bca492ab3b741dfed746dd0",
       "Id": "3e9397febf604c4d96ae824805eeb32d",
       "IsHidden": "False"
     },
     {
-      "Start": "7586074526e44607b83716f2675de25f",
+      "Start": "394f6743dd164d9aa26f2c17ebff8083",
       "End": "d872cebfada94769be8ec031ad737d65",
       "Id": "2c634e74ad314c6588dc8e15a156b43e",
       "IsHidden": "False"
@@ -625,7 +625,7 @@
       "IsHidden": "False"
     },
     {
-      "Start": "0899028b1aa5405f8bd7f3e2de854b72",
+      "Start": "219006cfeb1343c0b410e3af924aa0c3",
       "End": "d4bf708e73b945ae83d796a6195bdded",
       "Id": "0530e5f9a1f5434388847348710946e2",
       "IsHidden": "False"
@@ -721,7 +721,7 @@
         "Excluded": false,
         "ShowGeometry": true,
         "X": 626.0157705916724,
-        "Y": 499.57769065601366
+        "Y": 510.0578012532522
       },
       {
         "Id": "418bbecf909445cb91d6d431b3512ea8",
@@ -730,8 +730,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 933.2197478025989,
-        "Y": 597.229727251543
+        "X": 928.5315259781742,
+        "Y": 595.2552205673135
       },
       {
         "Id": "482b666c4a244690820a7010d247b930",
@@ -740,8 +740,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 628.0871220237503,
-        "Y": 740.4170501221262
+        "X": 635.877171272626,
+        "Y": 657.4165697328569
       },
       {
         "Id": "e6b9d9ef9920488494d3f8a1654f2f0b",
@@ -750,8 +750,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 600.6094474892687,
-        "Y": 889.587193303165
+        "X": 607.4257405820349,
+        "Y": 810.4817375383335
       },
       {
         "Id": "96dad4b6a11146efb2e574dcbebea88a",
@@ -760,8 +760,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1280.534384563196,
-        "Y": 697.2339606292352
+        "X": 1406.4301714441165,
+        "Y": 593.3396069373345
       },
       {
         "Id": "cabf31708f0c47eeb3fbeb22c308cf24",
@@ -770,8 +770,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 584.9073140215636,
-        "Y": 1040.4635527418034
+        "X": 613.8649726220576,
+        "Y": 1064.5374439570776
       },
       {
         "Id": "e04fdc31ad384bbba8c994c8c0e37cd6",
@@ -780,8 +780,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1598.4239586317158,
-        "Y": 791.5651911271369
+        "X": 1854.5966169172455,
+        "Y": 601.3917280119123
       },
       {
         "Id": "cbbcb63293c94a12b0dd4ff51aa35863",
@@ -790,8 +790,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1689.6979299541488,
-        "Y": 1109.5670278170014
+        "X": 1600.2262402757676,
+        "Y": 1347.5466669699745
       },
       {
         "Id": "19b571951a9744a08b37168a1d9ccd74",
@@ -800,8 +800,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1990.9453279915722,
-        "Y": 1028.3894812194872
+        "X": 1959.9591921927681,
+        "Y": 1359.8966149627504
       },
       {
         "Id": "1e9ec0e8ae6e43bd885cf75609c853b7",
@@ -810,8 +810,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1458.1668672575809,
-        "Y": 1135.8629212986075
+        "X": 1328.1533291680314,
+        "Y": 1375.280730082115
       },
       {
         "Id": "0c53aa6f403243309e307df94b7b45da",
@@ -820,8 +820,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1757.08879311798,
-        "Y": 964.8683683384281
+        "X": 1673.320390344703,
+        "Y": 1210.8785131336795
       },
       {
         "Id": "737f00e75ef34f4fb4cfd478fa39fc18",
@@ -830,8 +830,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2303.5238638721335,
-        "Y": 814.1685027600238
+        "X": 2308.1643610426663,
+        "Y": 804.8740155934535
       },
       {
         "Id": "506163903be444b5a2ee10ffcf49684b",
@@ -840,8 +840,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2025.4414721522053,
-        "Y": 764.3259195705866
+        "X": 1926.5480406639908,
+        "Y": 1011.4260097630271
       },
       {
         "Id": "e58789e6ea454bd1989c5251e1aac5b8",
@@ -850,8 +850,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2606.8404365085958,
-        "Y": 814.0895520339851
+        "X": 2617.6360061014307,
+        "Y": 810.9501372897174
       },
       {
         "Id": "391c3cc6871d4a1495db897cf198d3f0",
@@ -860,8 +860,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2938.024807639203,
-        "Y": 661.8457382571205
+        "X": 3388.673008820172,
+        "Y": 521.4424460121206
       },
       {
         "Id": "86dd6488be124649aeace08edb133f5b",
@@ -870,8 +870,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2967.17006852081,
-        "Y": 884.0823516478418
+        "X": 3714.452145105254,
+        "Y": 515.7297418445055
       },
       {
         "Id": "e4444bb2330b4dd596ab13d4dfb34eee",
@@ -880,22 +880,268 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2537.38698812266,
-        "Y": 488.63881075025944
+        "X": 2997.312435397213,
+        "Y": 513.5302677127852
       }
     ],
     "Annotations": [
       {
+        "Id": "a92f48de1d0c488da760625054c02769",
+        "Title": "1. Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "badcc816432847129b453f5a43db657c",
+          "418bbecf909445cb91d6d431b3512ea8",
+          "482b666c4a244690820a7010d247b930",
+          "e6b9d9ef9920488494d3f8a1654f2f0b",
+          "cabf31708f0c47eeb3fbeb22c308cf24",
+          "a439e8ad9f054754b598208d32f0c2a9"
+        ],
+        "HasNestedGroups": false,
+        "Left": 597.4257405820349,
+        "Top": 437.0578012532522,
+        "Width": 652.1057853961393,
+        "Height": 759.4796427038254,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 510.0578012532522,
+        "InitialHeight": 699.4796427038254,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "dfb336319c1d4d51be2a2d075a23b434",
+        "Title": "4. Deserialize",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "391c3cc6871d4a1495db897cf198d3f0",
+          "86dd6488be124649aeace08edb133f5b",
+          "6fd265c7f9064cfc952a58627ff3799f"
+        ],
+        "HasNestedGroups": false,
+        "Left": 3378.673008820172,
+        "Top": 442.7297418445055,
+        "Width": 622.7791362850821,
+        "Height": 508.2091256889149,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 515.7297418445055,
+        "InitialHeight": 150.71270416761513,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "7a857d3a248546c0aa19c6cabb6f2bce",
+        "Title": "2. Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "96dad4b6a11146efb2e574dcbebea88a",
+          "e04fdc31ad384bbba8c994c8c0e37cd6",
+          "cbbcb63293c94a12b0dd4ff51aa35863",
+          "19b571951a9744a08b37168a1d9ccd74",
+          "1e9ec0e8ae6e43bd885cf75609c853b7",
+          "0c53aa6f403243309e307df94b7b45da",
+          "506163903be444b5a2ee10ffcf49684b",
+          "a9e7011de1e44ffaa9f3d952ef33cfe5",
+          "00ddbc8b4bf940d4b95248f1e6f374ce"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1318.1533291680314,
+        "Top": 440.0140827479348,
+        "Width": 905.8058630247367,
+        "Height": 1079.8825322148155,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 513.0140827479348,
+        "InitialHeight": 1007.2666473341803,
+        "TextblockHeight": 63.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "52ad97bc0544464d90c20341d7ed7810",
+        "Title": "3. Response",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "737f00e75ef34f4fb4cfd478fa39fc18",
+          "e58789e6ea454bd1989c5251e1aac5b8",
+          "e4444bb2330b4dd596ab13d4dfb34eee",
+          "a7a4862dc92a46bca360a8d552f484c7"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2298.1643610426663,
+        "Top": 440.5302677127852,
+        "Width": 977.3783979934765,
+        "Height": 558.3437478806683,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 513.5302677127852,
+        "InitialHeight": 442.4198695769323,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
+      },
+      {
         "Id": "6ee2a1bd120a4a828729369adb65927b",
-        "Title": "DynaFetch Sample 4: Multi-Step Workflow - GET data, modify it, PUT update back to API",
+        "Title": "DynaFetch Sample 4 - Multi-Step Authenticated Workflow\r\n\r\nThis sample demonstrates a complete CRUD workflow: authenticate, retrieve data, \r\nmodify it, and update the server. Shows how to chain operations together.\r\n\r\nPerfect for business workflows that require data retrieval, processing, and updating.\r\n\r\nPattern: Auth Setup → GET/Modify/PUT → Process Response → Validate Update\r\nAPI: JSONPlaceholder posts (retrieves post, updates title with \"Updated:\" prefix)",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 624.2325673151661,
-        "Top": 417.71966818390814,
+        "Left": 598.5980543952995,
+        "Top": 126.38301741897158,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a439e8ad9f054754b598208d32f0c2a9",
+        "Title": "Authentication & Client Configuration\r\n\r\nClientNodes.Create establishes the HTTP client foundation.\r\n\r\nClientNodes.AddDefaultHeader configures persistent authentication:\r\n- Simulates token-based authentication for protected operations\r\n- Client-level auth applies to all requests (GET and PUT)\r\n- Required for APIs that protect both read and write operations\r\n\r\nMulti-step workflows benefit from persistent authentication - \r\nset it once, use it for all operations in the workflow.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 923.4336124883341,
+        "Top": 796.6452729401794,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a9e7011de1e44ffaa9f3d952ef33cfe5",
+        "Title": "Complete Multi-Step Operation Sequence\r\n\r\nExecuteNodes.GET retrieves the current record:\r\n- Uses authenticated client for protected data access\r\n- Fetches existing record for modification\r\n\r\nData Processing & Modification:\r\n- String operations add \"Updated: \" prefix to extracted title\r\n- Dictionary reconstruction prepares complete updated record\r\n- JsonNodes.DictionaryToJson converts modified data to API format\r\n\r\nExecuteNodes.PUT submits the updated record:\r\n- Uses same authenticated client as GET operation\r\n- Sends complete modified record to update the resource\r\n- Follows \"Read-Modify-Write\" pattern for data integrity\r\n\r\nThis consolidated execution shows the complete business process \r\nfrom data retrieval through modification to final update.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1367.5258674504626,
+        "Top": 781.9801382785419,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a7a4862dc92a46bca360a8d552f484c7",
+        "Title": "Initial Data Processing & Extraction\r\n\r\nJsonNodes.ToDictionary converts the GET response to structured format.\r\n\r\nDictionary.ValueAtKey extracts specific fields for modification:\r\n- \"title\": Current title that will be updated\r\n- \"id\": Record identifier needed for PUT operation\r\n- Other fields: Available for preservation in update\r\n\r\nThis response processing enables:\r\n- Selective field modification without data loss\r\n- Validation of retrieved data before processing\r\n- Extraction of identifiers needed for subsequent operations",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 2971.542759036143,
+        "Top": 736.213211457203,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6fd265c7f9064cfc952a58627ff3799f",
+        "Title": "Update Confirmation & Validation\r\n\r\nFinal JsonNodes.ToDictionary processes the PUT response:\r\n- Confirms the update operation was successful\r\n- Returns the updated record with applied modifications\r\n- Enables verification that changes were processed correctly\r\n\r\nSuccessful PUT response typically includes:\r\n- Updated record with new \"Updated: \" title prefix\r\n- Preserved original data in other fields\r\n- Confirmation metadata (timestamps, version info)\r\n\r\nThis validation step ensures the multi-step workflow \r\ncompleted successfully and data was updated as expected.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 3395.743469315272,
+        "Top": 664.9388675334204,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ac74e04a50c64111b6c9f927e0031661",
+        "Title": "CRUD Workflow Pattern\r\n\r\nThis demonstrates the standard \"Read-Modify-Write\" pattern:\r\n1. GET: Retrieve current state\r\n2. PROCESS: Modify specific fields  \r\n3. PUT: Update complete record\r\n4. VALIDATE: Confirm successful update\r\n\r\nThis pattern ensures data integrity and follows REST API conventions.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 928.6746001740272,
+        "Top": 125.39985869816485,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7bc0f73de4184b7e9c2d36a3a9bc29aa",
+        "Title": "Data Transformation Pipeline\r\n\r\nShows how to process API data within the workflow:\r\n- Extract specific values from Dictionary responses\r\n- Apply business logic transformations\r\n- Prepare modified data for resubmission\r\n\r\nThis pattern scales to any data processing requirements.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1259.6674639213188,
+        "Top": 125.17769112383587,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "00ddbc8b4bf940d4b95248f1e6f374ce",
+        "Title": "",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 2148.0573842346776,
+        "Top": 521.0140827479348,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -906,8 +1152,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -266.65813191202324,
-    "Y": 15.917897276738586,
-    "Zoom": 0.5071882754762175
+    "X": -226.70428077940494,
+    "Y": 90.47743699763802,
+    "Zoom": 0.428842491041382
   }
 }

@@ -350,8 +350,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 323.46378614309737,
-        "Y": 754.94310227519
+        "X": 265.6643145268445,
+        "Y": 743.043211060079
       },
       {
         "Id": "44c01e29ebf847e7a86485b13e79cd6a",
@@ -360,8 +360,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 620.3108010544447,
-        "Y": 752.2883949364945
+        "X": 607.3976392551804,
+        "Y": 750.1362013032837
       },
       {
         "Id": "0b731204cb384d5faeed0b270406f5b5",
@@ -370,8 +370,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 984.1835089800784,
-        "Y": 755.64711580803
+        "X": 971.270347180814,
+        "Y": 753.4949221748192
       },
       {
         "Id": "ae434d41f38b41d1a1b9e0b6f47c2180",
@@ -380,8 +380,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 319.8221681258542,
-        "Y": 895.9519959134492
+        "X": 262.02269650960136,
+        "Y": 884.0521046983382
       },
       {
         "Id": "03eb4ac44d18453693d7073d7f3ca3e9",
@@ -390,8 +390,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 317.5135298339686,
-        "Y": 1043.4750202065097
+        "X": 232.96579512360893,
+        "Y": 1023.0156848012846
       },
       {
         "Id": "5f13bcbbc97241abaaaa8995f1a9beee",
@@ -400,8 +400,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 630.3063882003048,
-        "Y": 959.4538973897653
+        "X": 617.3932264010405,
+        "Y": 957.3017037565545
       },
       {
         "Id": "3dc31dcd95fe406f8fbec59d875cb33f",
@@ -410,8 +410,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1552.593185959754,
-        "Y": 754.0367838296723
+        "X": 1711.88323963938,
+        "Y": 745.3022998891187
       },
       {
         "Id": "bab951f835fb4d6baca1cfddc71816da",
@@ -420,22 +420,156 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1268.0594772107547,
-        "Y": 756.1961998671161
+        "X": 1390.5319264735353,
+        "Y": 747.4617159265624
       }
     ],
     "Annotations": [
       {
+        "Id": "68905dd3b93440c488236c0e55e82a4d",
+        "Title": "3. Response",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "3dc31dcd95fe406f8fbec59d875cb33f",
+          "bab951f835fb4d6baca1cfddc71816da",
+          "fe9d07de134841daac313be448d7baa4"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1371.9791327966786,
+        "Top": 672.3022998891187,
+        "Width": 626.9041068427014,
+        "Height": 606.6858223817156,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 745.3022998891187,
+        "InitialHeight": 328.0000000000001,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "f83c4b2ac221459ebb9d84b81ddd50dc",
+        "Title": "1. Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "7c08b36f5c354bcfa5893767e5da406e",
+          "ae434d41f38b41d1a1b9e0b6f47c2180",
+          "03eb4ac44d18453693d7073d7f3ca3e9",
+          "6fa8c967778348e88747c9f9bf24e046"
+        ],
+        "HasNestedGroups": false,
+        "Left": 186.62662883843734,
+        "Top": 670.043211060079,
+        "Width": 308.0,
+        "Height": 683.1404497744828,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 743.043211060079,
+        "InitialHeight": 450.53191793131975,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "71a8e5fd360e41b2a886f1e9824bca1d",
+        "Title": "2. Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "44c01e29ebf847e7a86485b13e79cd6a",
+          "0b731204cb384d5faeed0b270406f5b5",
+          "5f13bcbbc97241abaaaa8995f1a9beee",
+          "34927b4ee9f144a8b33cd96b652238e0"
+        ],
+        "HasNestedGroups": false,
+        "Left": 597.3976392551804,
+        "Top": 677.1362013032837,
+        "Width": 684.3256489157807,
+        "Height": 577.6756969714814,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 750.1362013032837,
+        "InitialHeight": 369.16550245327073,
+        "TextblockHeight": 63.0,
+        "Background": "#FF71C6A8"
+      },
+      {
         "Id": "b3b0fdbebed84061bc3c44044a1e7bf7",
-        "Title": "DynaFetch Sample 2: Authenticated API - Uses Bearer token for protected endpoints",
+        "Title": "DynaFetch Sample 2 - Authenticated API Requests\r\n\r\nThis sample demonstrates how to authenticate with APIs using Bearer tokens. \r\nShows the client-level authentication pattern that persists across multiple requests.\r\n\r\nPerfect for APIs that require authorization headers like OAuth, JWT tokens, or API keys.\r\n\r\nPattern: Create Client → Add Auth Header → Execute Request → Process Response\r\nAPI: httpbin.org/bearer (validates Bearer token authentication)",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 324.8412420072404,
-        "Top": 658.4516019332494,
+        "Left": 189.63931430315023,
+        "Top": 412.800783274617,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6fa8c967778348e88747c9f9bf24e046",
+        "Title": "HTTP Client Creation\r\n\r\nThe ClientNodes.Create node establishes the foundation HTTP client.\r\nThis client will hold authentication credentials and can be reused \r\nfor multiple authenticated requests efficiently.\r\n\r\nClient-level authentication is more secure and efficient than \r\nadding auth headers to individual requests.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 196.62662883843734,
+        "Top": 1168.1836608345618,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "34927b4ee9f144a8b33cd96b652238e0",
+        "Title": "Authentication Setup & Request Execution\r\n\r\nClientNodes.AddDefaultHeader configures persistent authentication:\r\n- Header: \"Authorization\" \r\n- Value: \"Bearer demo-token\" (use real tokens in production)\r\n- Scope: Client-level (applies to all requests from this client)\r\n\r\nExecuteNodes.GET executes the authenticated request:\r\n- Uses the configured client with built-in authentication\r\n- Automatically includes the Authorization header\r\n- Returns HttpResponse with authentication results\r\n\r\nClient-level auth means you set it once and all subsequent \r\nrequests automatically include the credentials.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 971.7232881709612,
+        "Top": 939.8118982747651,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "fe9d07de134841daac313be448d7baa4",
+        "Title": "Direct JSON Processing & Authentication Validation\r\n\r\nJsonNodes.ToDictionary converts the authentication response directly \r\nfrom the HttpResponse to structured Dictionary data:\r\n\r\nFor successful authentication (httpbin.org/bearer response):\r\n- \"authenticated\": true/false status\r\n- \"token\": echoed token value for verification  \r\n- \"user\": user information (if applicable)\r\n\r\nThis direct conversion pattern is efficient for JSON APIs:\r\n- Skips intermediate content extraction step\r\n- Automatically handles JSON parsing\r\n- Provides immediate access to structured auth data\r\n- Enables conditional logic based on authentication status\r\n\r\nDictionary format makes auth results ready for immediate use \r\nin subsequent Dynamo operations and decision making.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1381.9791327966786,
+        "Top": 891.9881222708343,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -446,8 +580,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -275.5276777495335,
-    "Y": -435.13188359211426,
-    "Zoom": 0.9622508934006603
+    "X": -123.35619502481893,
+    "Y": -271.2216220767807,
+    "Zoom": 0.8086730095409937
   }
 }

@@ -1,0 +1,3128 @@
+{
+  "Uuid": "184db620-375e-4f95-a6b9-4381dd4b08b8",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "System",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "65062b03b184420da37eb1eda3d9e83e",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8702a8fa4138490786e4d3299eb877e1",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Exception",
+      "Replication": "Auto",
+      "Description": "Exception.Exception ( ): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "baf9826ddba145a7b0de17f6bbe089b4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c2dfe0df7f3e4b278027725b3d3eefee",
+          "Name": "message",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0eebc9c6f7a144699d7d6a80038782ca",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Exception@string",
+      "Replication": "Auto",
+      "Description": "Exception.Exception (message: string): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "17b78b62b2b1419a9c1a2b952c1558da",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "72adb821cb214e00b28b77e0752b3790",
+          "Name": "message",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6dcb9c22a7c14f86ab2c2730265e713c",
+          "Name": "innerException",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bdde1e34d69744339e5786f27dcf1692",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Exception@string,System.Exception",
+      "Replication": "Auto",
+      "Description": "Exception.Exception (message: string, innerException: Exception): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "af6d89811ba44aa3bbdb1acc14f1e619",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7f470be943f04c7f96c19e85a009fe70",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9b5c47474439426ca4ed0f22ffe3e722",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.GetBaseException",
+      "Replication": "Auto",
+      "Description": "Exception.GetBaseException ( ): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0ece288b2e9e40f0a323ddb8c43bf957",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1eb2b5dfb9bb48ac9b593adee10dfa7c",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "785549408fd341cc883017d6f89ad73c",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.GetType",
+      "Replication": "Auto",
+      "Description": "Exception.GetType ( ): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "39199c16ee5b49f28296c88f6e508914",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1aa771aa17f0476aad0e684fe3b195df",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a4a11332e18f4bb380f172a2843c28f4",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Data",
+      "Replication": "Auto",
+      "Description": "Exception.Data: var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "40ec0562f2ad42918b18e6a9116c44ec",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "cafd83f15eb84ec8a9bb5e7c52177d4a",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53f5217b534540ce88603174992975ea",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.HelpLink",
+      "Replication": "Auto",
+      "Description": "Exception.HelpLink: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0b86ca944f75414abfe9ae7af322c47a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "04bfd71cb208414086506b3edae899cd",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f0305a821be043e48a1352f022de7446",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.HResult",
+      "Replication": "Auto",
+      "Description": "Exception.HResult: int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1f82f67f2e4a483b9dd84a9483a0984f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "66c6fc9d8b474ec885a86aad49344187",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af7f565f9fb64eca9d492e254b87446d",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.InnerException",
+      "Replication": "Auto",
+      "Description": "Exception.InnerException: Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "810f59ed406e45458aa4aa958e269bbf",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "acb5fd89f82547caa511590c2324ab4f",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "051aafd327b8499c8cdb32d2c1cd0dd9",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Message",
+      "Replication": "Auto",
+      "Description": "Exception.Message: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "26a6454c73f7470eb0255ec2bc1533a5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "569fa8e6972748a8adbf95302437ccbe",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "964e08a7457a4c9aa3e9f942245bf843",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Source",
+      "Replication": "Auto",
+      "Description": "Exception.Source: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "32ff17ee58f3429cb270672832fb538f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "0da8266bbe374900914a5d675a5e9336",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3df0b2ca2cfb495d8b64364805b1d13d",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.StackTrace",
+      "Replication": "Auto",
+      "Description": "Exception.StackTrace: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "25b3073807c34426bec583af1369b7a8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "0eb1a20e304240f3bf5f580958161a29",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f3a10be4b1e547dfa318a7c9eee40196",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.TargetSite",
+      "Replication": "Auto",
+      "Description": "Exception.TargetSite: var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c5aceea3c59047c3984b4f222ec407ad",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb0e8fd866de41c0afa6f898aec99ca5",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Accepted",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Accepted: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "59c708f196fd4f5485899da5cc3fbc4e",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c9a42966bde6418f808654a51fabb4ca",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.AlreadyReported",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.AlreadyReported: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5c24e7b7847c47e4a1e984dad964ea65",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d427c162c23f4b27927a79604f0e16ed",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Ambiguous",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Ambiguous: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b2b972e08d9c44dea3711ba5eb8248e6",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f3483acf3a3c4425a7c6e84f94adebce",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.BadGateway",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.BadGateway: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ca337ce9fb1340c3a9951732f9b820fc",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "36eb182d1c484647a0387058172e971d",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.BadRequest",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.BadRequest: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "64a34bd7bac943c38fc9d7718e12259c",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a6a00ac2dfc74419991b4ffa12e88350",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Conflict",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Conflict: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8cb68b78de684dd49f88b49ab06b15d3",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c221977edca7406fabf3f30aa83674ab",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Continue",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Continue: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1dbf6410da314e9782dcc367c7c5c611",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b579b53b323f455f9e5d0ff6423e8caf",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Created",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Created: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "fe9986f787da44a292e1f572d87799a2",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a912c4c7009346768fcd4e1864d2ff1f",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.EarlyHints",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.EarlyHints: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "eaf6f60c0e4a469d8db67f106bbb3e6c",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "532a16c846cf4072be49568e462ccadb",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.ExpectationFailed",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.ExpectationFailed: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ed9d68a8f8b44f52bb2837806f9225b8",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6dada28c3fdc45c9877ac3258bedb288",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.FailedDependency",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.FailedDependency: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e6f6f41eeed447ab8e4829e081f05706",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3745c6587c474a9baef908eb94fbb9b5",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Forbidden",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Forbidden: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "9e2485ff84b5464b9660815e059da725",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7f6f58066c4443b7b5088a203b9ccb55",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Found",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Found: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bcaa5d56830f4e3a8f90ea3455f3b2f9",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "771c48aab28d4ae6ab4b5e7cc814e19f",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.GatewayTimeout",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.GatewayTimeout: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7d8b6a4f45a14c148a7c01f8ff83f788",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c48a60aa242e476787c60318a5521527",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Gone",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Gone: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "86fb9670ef724d9d9a2730223099aaea",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4e3d884e3cbf45ee88b89e0888f7d8ec",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.HttpVersionNotSupported",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.HttpVersionNotSupported: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3abfdf71e6b3455293765407965d49e7",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f7be290607554f58ac7551ea42e2ab24",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.IMUsed",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.IMUsed: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "709341d532af41ff82147b8df3aea6a5",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7c890e115b9c4e009eb5d35348bcb5fa",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.InsufficientStorage",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.InsufficientStorage: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "991fb5797b7b480c99e0139e5e9f281a",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ba18137201fc49a399d1faf7c9bd3c6c",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.InternalServerError",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.InternalServerError: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f369a9215afe433f994d66649e800fde",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d59eef9003bf4352a5882eb1dbb8ea29",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.LengthRequired",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.LengthRequired: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7abe78930fdf4d90b6eb61ade362bfde",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "367de2decab64916afd97cffa9daaed6",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Locked",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Locked: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "57d6a009d7d144bb8db63ed87ceb7145",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fd2afbf727794d98b731ebc10c015f6e",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.LoopDetected",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.LoopDetected: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "7aec1fdef69d491c8f1703b693cb9456",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1a0f9f2f765e4c6494a88f5f61094b49",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.MethodNotAllowed",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.MethodNotAllowed: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "4cf263407b5543dc90579961688c38e5",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4283e27dbccd493796ca9e2ac3031283",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.MisdirectedRequest",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.MisdirectedRequest: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d9a2d237e1394aa5a8b06b938c11ee70",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c78f074ca65d48df98000035c98b4a9e",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Moved",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Moved: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "05b297f0a8e744feb75b9e2199bb32d7",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d14ace524fe84a2da697b6c7b9b2f303",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.MovedPermanently",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.MovedPermanently: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "63ed96e4b01646828895926dd7f515f2",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7ee0c83c42d34fb2a0f43e4418be9f9d",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.MultipleChoices",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.MultipleChoices: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1bb535f949804c54ab52477afa88e71f",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2ce96971d0a84c7aace2ef633e36cb53",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.MultiStatus",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.MultiStatus: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f6968976098c415d85e085aff0e7ab55",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "723c175827ce4785aa58e7a5175fb078",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NetworkAuthenticationRequired",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NetworkAuthenticationRequired: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "793561a170fc44caa9be6daae589542f",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bbb80f7f2c344126a8a23b1dff281c31",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NoContent",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NoContent: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "07a7b4e8c28e4936a8f5160a6ebc4858",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "812387ec0d274fddba5a9b7023431b31",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NonAuthoritativeInformation",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NonAuthoritativeInformation: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e1e8351c4ee442ad844d427b32480240",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2967bca741b46ceb37c732fae744f18",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NotAcceptable",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NotAcceptable: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "962870ee638c4bca87a447f470549ce2",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b67c4c87c3d74b53a79d9d05c971300b",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NotExtended",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NotExtended: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d73b6601da304bbe9ee82a62919e62cd",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "98ff2be5aeda4bbf984ef733e5329c40",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NotFound",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NotFound: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1e7fb05df2cb47c29264cd1ba322c2e4",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed26cc8e45fd4405862b03b94ec521fa",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NotImplemented",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NotImplemented: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5484aca8a2d448b1a8f3dbe3367f2908",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "05e39951dd3a4f3eabaf717df0751c23",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.NotModified",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.NotModified: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "55c7e98b206240fdbb8b95c3e88316de",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4bb41d2460f540b7972fcccdaef69b65",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.OK",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.OK: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ed59af56c68347909adb99e463b39830",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a00e10514931493398cba51ce81b40b9",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.PartialContent",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.PartialContent: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b91866c0043743ec9d6b143a263172c1",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f7c3f14669434827b12cb7ffc98ee14a",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.PaymentRequired",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.PaymentRequired: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8edff2c54f5448e9903e80447216e155",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "371822b6e2b546a59df8d3b252871a71",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.PermanentRedirect",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.PermanentRedirect: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2cb89207abfe4f308d68f53829c95f62",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a4524e5ef7c545e194168e7d91d4b43e",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.PreconditionFailed",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.PreconditionFailed: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "72314d48ed924e27ac65af77aca5057b",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "086db52d0d1b4f27b76a64e747359bb8",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.PreconditionRequired",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.PreconditionRequired: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "68d944751e2a4aeca5d5f42d7e12d910",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a02539627a4647199c6f808774eae5c4",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Processing",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Processing: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d8cd1170565544adb5d0af8ea3e22fcb",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9ee4c8de22a24723bf754f520e636971",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.ProxyAuthenticationRequired",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.ProxyAuthenticationRequired: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "9ada8f85ab0f4035ba1e493be188225f",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "51606c3ef43949809fb1590a2e7af786",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Redirect",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Redirect: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "815853d4e72a409fad8e203e7cae2da3",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "96110154931341bfa23f3ff02f418656",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RedirectKeepVerb",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RedirectKeepVerb: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c6ee40f39d194522902558cedfdb83b9",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b94f82da50ce45d189d9561033f8bb86",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RedirectMethod",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RedirectMethod: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "edfbc53b36f54e839375e65885f0fc35",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "94157bb83697406b9d024ebaae8825d3",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RequestedRangeNotSatisfiable",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RequestedRangeNotSatisfiable: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5c698640fc99420a950aea501eb2660f",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b35c130eb29d4ca388b0c42fcbeed0e5",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RequestEntityTooLarge",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RequestEntityTooLarge: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "903e9254b9e94598981801b82d925305",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "09d3056935c24ef299fb1048372d3f3d",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RequestHeaderFieldsTooLarge",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RequestHeaderFieldsTooLarge: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c238ae83f3304dc7803e698449ea30f3",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "15ffaa346d95400b9e622c64ce08619f",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RequestTimeout",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RequestTimeout: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "dd94b9b0dba3405c841a2217b42784fb",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4f1aca3d8f144eab80b1a1c47fec7450",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.RequestUriTooLong",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.RequestUriTooLong: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bd58e4782fb04576bbe5a5d5cf6432d9",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "eb92a7f662ef4b89bba7128c5dbd4ed2",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.ResetContent",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.ResetContent: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "948698d769854192a5716096655ea6b3",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f1878ed4b0ca43e0b75caa858ad51161",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.SeeOther",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.SeeOther: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bccc68ff5efd4411882a662208e0fa07",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "498a10d560ca445ebb2c4a34818f8e38",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.ServiceUnavailable",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.ServiceUnavailable: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f68dd5c0666c4ca498246c4e3137d0a2",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "435221787b934d5b9bf52addfa3a5e4c",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.SwitchingProtocols",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.SwitchingProtocols: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2c8c1a4cf0d64236af5344280ca49b18",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ebea21a42be841d9a5382477ee32c816",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.TemporaryRedirect",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.TemporaryRedirect: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "4ab1da61acdc40e280fbf6b0143f9205",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f9e44ad045a443eeaaa55b026eef5488",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.TooManyRequests",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.TooManyRequests: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "884ee503bd8e4afd811e8d3c4b8a565e",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e6d5ef2d2c8841a889f4062803b36575",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Unauthorized",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Unauthorized: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "feff79cc9e164c6886077d0dd1b0f9bb",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d12b70faa2dc409c86ea96eceb8378a2",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.UnavailableForLegalReasons",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.UnavailableForLegalReasons: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "59e6f745d0054dcd9781ba8c58858aab",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "41e2493d46da439bab56fdb78540449e",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.UnprocessableContent",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.UnprocessableContent: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e5aa5a59176f4fc5904ed7875151e895",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "23d373b107e14f3586965411afa4fd6c",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.UnprocessableEntity",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.UnprocessableEntity: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "80a3fc49862f4f07a58471c17ca97c87",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "10dfa886e9ec43a68150e0dd776b34b0",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.UnsupportedMediaType",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.UnsupportedMediaType: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c0d836cc895e4793ba7133263a3685e4",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b114acdc262148278de23adf94f1d72e",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.Unused",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.Unused: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "be9de5434e604c978f86849cec7d748b",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "268bba0751334e8cb2c9f8e016227706",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.UpgradeRequired",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.UpgradeRequired: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "64a52207bb4e484b98e3c1a61e967e6f",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "262fd449cb20415582695416867a16c3",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.UseProxy",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.UseProxy: HttpStatusCode"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "64afa4aab00445cc9a1bc1666d6bb701",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f7ed5a8af6be4c5e9326814ca5310c93",
+          "Name": "HttpStatusCode",
+          "Description": "HttpStatusCode",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Net.HttpStatusCode.VariantAlsoNegotiates",
+      "Replication": "Auto",
+      "Description": "HttpStatusCode.VariantAlsoNegotiates: HttpStatusCode"
+    }
+  ],
+  "Connectors": [],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynaFetch.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "65062b03b184420da37eb1eda3d9e83e",
+        "baf9826ddba145a7b0de17f6bbe089b4",
+        "17b78b62b2b1419a9c1a2b952c1558da",
+        "af6d89811ba44aa3bbdb1acc14f1e619",
+        "0ece288b2e9e40f0a323ddb8c43bf957",
+        "39199c16ee5b49f28296c88f6e508914",
+        "40ec0562f2ad42918b18e6a9116c44ec",
+        "0b86ca944f75414abfe9ae7af322c47a",
+        "1f82f67f2e4a483b9dd84a9483a0984f",
+        "810f59ed406e45458aa4aa958e269bbf",
+        "26a6454c73f7470eb0255ec2bc1533a5",
+        "32ff17ee58f3429cb270672832fb538f",
+        "25b3073807c34426bec583af1369b7a8",
+        "c5aceea3c59047c3984b4f222ec407ad",
+        "59c708f196fd4f5485899da5cc3fbc4e",
+        "5c24e7b7847c47e4a1e984dad964ea65",
+        "b2b972e08d9c44dea3711ba5eb8248e6",
+        "ca337ce9fb1340c3a9951732f9b820fc",
+        "64a34bd7bac943c38fc9d7718e12259c",
+        "8cb68b78de684dd49f88b49ab06b15d3",
+        "1dbf6410da314e9782dcc367c7c5c611",
+        "fe9986f787da44a292e1f572d87799a2",
+        "eaf6f60c0e4a469d8db67f106bbb3e6c",
+        "ed9d68a8f8b44f52bb2837806f9225b8",
+        "e6f6f41eeed447ab8e4829e081f05706",
+        "9e2485ff84b5464b9660815e059da725",
+        "bcaa5d56830f4e3a8f90ea3455f3b2f9",
+        "7d8b6a4f45a14c148a7c01f8ff83f788",
+        "86fb9670ef724d9d9a2730223099aaea",
+        "3abfdf71e6b3455293765407965d49e7",
+        "709341d532af41ff82147b8df3aea6a5",
+        "991fb5797b7b480c99e0139e5e9f281a",
+        "f369a9215afe433f994d66649e800fde",
+        "7abe78930fdf4d90b6eb61ade362bfde",
+        "57d6a009d7d144bb8db63ed87ceb7145",
+        "7aec1fdef69d491c8f1703b693cb9456",
+        "4cf263407b5543dc90579961688c38e5",
+        "d9a2d237e1394aa5a8b06b938c11ee70",
+        "05b297f0a8e744feb75b9e2199bb32d7",
+        "63ed96e4b01646828895926dd7f515f2",
+        "1bb535f949804c54ab52477afa88e71f",
+        "f6968976098c415d85e085aff0e7ab55",
+        "793561a170fc44caa9be6daae589542f",
+        "07a7b4e8c28e4936a8f5160a6ebc4858",
+        "e1e8351c4ee442ad844d427b32480240",
+        "962870ee638c4bca87a447f470549ce2",
+        "d73b6601da304bbe9ee82a62919e62cd",
+        "1e7fb05df2cb47c29264cd1ba322c2e4",
+        "5484aca8a2d448b1a8f3dbe3367f2908",
+        "55c7e98b206240fdbb8b95c3e88316de",
+        "ed59af56c68347909adb99e463b39830",
+        "b91866c0043743ec9d6b143a263172c1",
+        "8edff2c54f5448e9903e80447216e155",
+        "2cb89207abfe4f308d68f53829c95f62",
+        "72314d48ed924e27ac65af77aca5057b",
+        "68d944751e2a4aeca5d5f42d7e12d910",
+        "d8cd1170565544adb5d0af8ea3e22fcb",
+        "9ada8f85ab0f4035ba1e493be188225f",
+        "815853d4e72a409fad8e203e7cae2da3",
+        "c6ee40f39d194522902558cedfdb83b9",
+        "edfbc53b36f54e839375e65885f0fc35",
+        "5c698640fc99420a950aea501eb2660f",
+        "903e9254b9e94598981801b82d925305",
+        "c238ae83f3304dc7803e698449ea30f3",
+        "dd94b9b0dba3405c841a2217b42784fb",
+        "bd58e4782fb04576bbe5a5d5cf6432d9",
+        "948698d769854192a5716096655ea6b3",
+        "bccc68ff5efd4411882a662208e0fa07",
+        "f68dd5c0666c4ca498246c4e3137d0a2",
+        "2c8c1a4cf0d64236af5344280ca49b18",
+        "4ab1da61acdc40e280fbf6b0143f9205",
+        "884ee503bd8e4afd811e8d3c4b8a565e",
+        "feff79cc9e164c6886077d0dd1b0f9bb",
+        "59e6f745d0054dcd9781ba8c58858aab",
+        "e5aa5a59176f4fc5904ed7875151e895",
+        "80a3fc49862f4f07a58471c17ca97c87",
+        "c0d836cc895e4793ba7133263a3685e4",
+        "be9de5434e604c978f86849cec7d748b",
+        "64a52207bb4e484b98e3c1a61e967e6f",
+        "64afa4aab00445cc9a1bc1666d6bb701"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.2.8856",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -25.794347763061523,
+      "EyeY": 33.5272102355957,
+      "EyeZ": 92.50602722167969,
+      "LookX": 20.794347763061523,
+      "LookY": -22.527210235595703,
+      "LookZ": -100.50602722167969,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "65062b03b184420da37eb1eda3d9e83e",
+        "Name": "Exception.Exception",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1687.0315432031416,
+        "Y": 3198.71579709535
+      },
+      {
+        "Id": "baf9826ddba145a7b0de17f6bbe089b4",
+        "Name": "Exception.Exception",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1687.0315432031416,
+        "Y": 3331.5924702779284
+      },
+      {
+        "Id": "17b78b62b2b1419a9c1a2b952c1558da",
+        "Name": "Exception.Exception",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1687.0315432031416,
+        "Y": 3464.4691434605065
+      },
+      {
+        "Id": "af6d89811ba44aa3bbdb1acc14f1e619",
+        "Name": "Exception.GetBaseException",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1690.5721852601869,
+        "Y": 3727.517137410678
+      },
+      {
+        "Id": "0ece288b2e9e40f0a323ddb8c43bf957",
+        "Name": "Exception.GetType",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1690.5721852601869,
+        "Y": 3870.9672017643297
+      },
+      {
+        "Id": "39199c16ee5b49f28296c88f6e508914",
+        "Name": "Exception.Data",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1330.7894256136228,
+        "Y": 3204.503607858725
+      },
+      {
+        "Id": "40ec0562f2ad42918b18e6a9116c44ec",
+        "Name": "Exception.HelpLink",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1330.7894256136228,
+        "Y": 3342.4107992565546
+      },
+      {
+        "Id": "0b86ca944f75414abfe9ae7af322c47a",
+        "Name": "Exception.HResult",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1330.7894256136228,
+        "Y": 3473.7509815402022
+      },
+      {
+        "Id": "1f82f67f2e4a483b9dd84a9483a0984f",
+        "Name": "Exception.InnerException",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1330.7894256136228,
+        "Y": 3601.8076592667585
+      },
+      {
+        "Id": "810f59ed406e45458aa4aa958e269bbf",
+        "Name": "Exception.Message",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1005.6399972470517,
+        "Y": 3211.0706169729083
+      },
+      {
+        "Id": "26a6454c73f7470eb0255ec2bc1533a5",
+        "Name": "Exception.Source",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1005.6399972470517,
+        "Y": 3340.2217962184945
+      },
+      {
+        "Id": "32ff17ee58f3429cb270672832fb538f",
+        "Name": "Exception.StackTrace",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1005.6399972470517,
+        "Y": 3469.372975464081
+      },
+      {
+        "Id": "25b3073807c34426bec583af1369b7a8",
+        "Name": "Exception.TargetSite",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1005.6399972470517,
+        "Y": 3598.524154709667
+      },
+      {
+        "Id": "c5aceea3c59047c3984b4f222ec407ad",
+        "Name": "HttpStatusCode.Accepted",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3218.99914055446
+      },
+      {
+        "Id": "59c708f196fd4f5485899da5cc3fbc4e",
+        "Name": "HttpStatusCode.AlreadyReported",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3343.6704002358833
+      },
+      {
+        "Id": "5c24e7b7847c47e4a1e984dad964ea65",
+        "Name": "HttpStatusCode.Ambiguous",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3468.3416599173074
+      },
+      {
+        "Id": "b2b972e08d9c44dea3711ba5eb8248e6",
+        "Name": "HttpStatusCode.BadGateway",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3593.0129195987324
+      },
+      {
+        "Id": "ca337ce9fb1340c3a9951732f9b820fc",
+        "Name": "HttpStatusCode.BadRequest",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3717.6841792801556
+      },
+      {
+        "Id": "64a34bd7bac943c38fc9d7718e12259c",
+        "Name": "HttpStatusCode.Conflict",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3842.3554389615806
+      },
+      {
+        "Id": "8cb68b78de684dd49f88b49ab06b15d3",
+        "Name": "HttpStatusCode.Continue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 3967.026698643004
+      },
+      {
+        "Id": "1dbf6410da314e9782dcc367c7c5c611",
+        "Name": "HttpStatusCode.Created",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 4091.697958324429
+      },
+      {
+        "Id": "fe9986f787da44a292e1f572d87799a2",
+        "Name": "HttpStatusCode.EarlyHints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 4216.3692180058515
+      },
+      {
+        "Id": "eaf6f60c0e4a469d8db67f106bbb3e6c",
+        "Name": "HttpStatusCode.ExpectationFailed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 79.38276913639402,
+        "Y": 4341.0404776872765
+      },
+      {
+        "Id": "ed9d68a8f8b44f52bb2837806f9225b8",
+        "Name": "HttpStatusCode.FailedDependency",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3222.2838957407635
+      },
+      {
+        "Id": "e6f6f41eeed447ab8e4829e081f05706",
+        "Name": "HttpStatusCode.Forbidden",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3346.780521170918
+      },
+      {
+        "Id": "9e2485ff84b5464b9660815e059da725",
+        "Name": "HttpStatusCode.Found",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3471.2771466010695
+      },
+      {
+        "Id": "bcaa5d56830f4e3a8f90ea3455f3b2f9",
+        "Name": "HttpStatusCode.GatewayTimeout",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3595.773772031224
+      },
+      {
+        "Id": "7d8b6a4f45a14c148a7c01f8ff83f788",
+        "Name": "HttpStatusCode.Gone",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3720.2703974613764
+      },
+      {
+        "Id": "86fb9670ef724d9d9a2730223099aaea",
+        "Name": "HttpStatusCode.HttpVersionNotSupported",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3844.767022891531
+      },
+      {
+        "Id": "3abfdf71e6b3455293765407965d49e7",
+        "Name": "HttpStatusCode.IMUsed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 3969.2636483216834
+      },
+      {
+        "Id": "709341d532af41ff82147b8df3aea6a5",
+        "Name": "HttpStatusCode.InsufficientStorage",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 4093.7602737518378
+      },
+      {
+        "Id": "991fb5797b7b480c99e0139e5e9f281a",
+        "Name": "HttpStatusCode.InternalServerError",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 4218.25689918199
+      },
+      {
+        "Id": "f369a9215afe433f994d66649e800fde",
+        "Name": "HttpStatusCode.LengthRequired",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 493.3441519526773,
+        "Y": 4342.753524612144
+      },
+      {
+        "Id": "7abe78930fdf4d90b6eb61ade362bfde",
+        "Name": "HttpStatusCode.Locked",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3217.5022579247957
+      },
+      {
+        "Id": "57d6a009d7d144bb8db63ed87ceb7145",
+        "Name": "HttpStatusCode.LoopDetected",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3344.3330428804725
+      },
+      {
+        "Id": "7aec1fdef69d491c8f1703b693cb9456",
+        "Name": "HttpStatusCode.MethodNotAllowed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3471.16382783615
+      },
+      {
+        "Id": "4cf263407b5543dc90579961688c38e5",
+        "Name": "HttpStatusCode.MisdirectedRequest",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3597.994612791829
+      },
+      {
+        "Id": "d9a2d237e1394aa5a8b06b938c11ee70",
+        "Name": "HttpStatusCode.Moved",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3724.8253977475056
+      },
+      {
+        "Id": "05b297f0a8e744feb75b9e2199bb32d7",
+        "Name": "HttpStatusCode.MovedPermanently",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3851.656182703184
+      },
+      {
+        "Id": "63ed96e4b01646828895926dd7f515f2",
+        "Name": "HttpStatusCode.MultipleChoices",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 3978.486967658861
+      },
+      {
+        "Id": "1bb535f949804c54ab52477afa88e71f",
+        "Name": "HttpStatusCode.MultiStatus",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 4105.317752614539
+      },
+      {
+        "Id": "f6968976098c415d85e085aff0e7ab55",
+        "Name": "HttpStatusCode.NetworkAuthenticationRequired",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 4232.148537570216
+      },
+      {
+        "Id": "793561a170fc44caa9be6daae589542f",
+        "Name": "HttpStatusCode.NoContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 956.031522042817,
+        "Y": 4358.9793225258945
+      },
+      {
+        "Id": "07a7b4e8c28e4936a8f5160a6ebc4858",
+        "Name": "HttpStatusCode.NonAuthoritativeInformation",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3227.724813325111
+      },
+      {
+        "Id": "e1e8351c4ee442ad844d427b32480240",
+        "Name": "HttpStatusCode.NotAcceptable",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3353.480641303811
+      },
+      {
+        "Id": "962870ee638c4bca87a447f470549ce2",
+        "Name": "HttpStatusCode.NotExtended",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3479.236469282511
+      },
+      {
+        "Id": "d73b6601da304bbe9ee82a62919e62cd",
+        "Name": "HttpStatusCode.NotFound",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3604.99229726121
+      },
+      {
+        "Id": "1e7fb05df2cb47c29264cd1ba322c2e4",
+        "Name": "HttpStatusCode.NotImplemented",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3730.748125239909
+      },
+      {
+        "Id": "5484aca8a2d448b1a8f3dbe3367f2908",
+        "Name": "HttpStatusCode.NotModified",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3856.503953218608
+      },
+      {
+        "Id": "55c7e98b206240fdbb8b95c3e88316de",
+        "Name": "HttpStatusCode.OK",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 3982.259781197307
+      },
+      {
+        "Id": "ed59af56c68347909adb99e463b39830",
+        "Name": "HttpStatusCode.PartialContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 4108.0156091760055
+      },
+      {
+        "Id": "b91866c0043743ec9d6b143a263172c1",
+        "Name": "HttpStatusCode.PaymentRequired",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 4233.7714371547045
+      },
+      {
+        "Id": "8edff2c54f5448e9903e80447216e155",
+        "Name": "HttpStatusCode.PermanentRedirect",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1448.6513877173102,
+        "Y": 4359.5272651334035
+      },
+      {
+        "Id": "2cb89207abfe4f308d68f53829c95f62",
+        "Name": "HttpStatusCode.PreconditionFailed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3227.9057543224367
+      },
+      {
+        "Id": "72314d48ed924e27ac65af77aca5057b",
+        "Name": "HttpStatusCode.PreconditionRequired",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3354.389111339063
+      },
+      {
+        "Id": "68d944751e2a4aeca5d5f42d7e12d910",
+        "Name": "HttpStatusCode.Processing",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3480.8724683556907
+      },
+      {
+        "Id": "d8cd1170565544adb5d0af8ea3e22fcb",
+        "Name": "HttpStatusCode.ProxyAuthenticationRequired",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3607.355825372317
+      },
+      {
+        "Id": "9ada8f85ab0f4035ba1e493be188225f",
+        "Name": "HttpStatusCode.Redirect",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3733.8391823889438
+      },
+      {
+        "Id": "815853d4e72a409fad8e203e7cae2da3",
+        "Name": "HttpStatusCode.RedirectKeepVerb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3860.3225394055703
+      },
+      {
+        "Id": "c6ee40f39d194522902558cedfdb83b9",
+        "Name": "HttpStatusCode.RedirectMethod",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 3986.805896422197
+      },
+      {
+        "Id": "edfbc53b36f54e839375e65885f0fc35",
+        "Name": "HttpStatusCode.RequestedRangeNotSatisfiable",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 4113.289253438823
+      },
+      {
+        "Id": "5c698640fc99420a950aea501eb2660f",
+        "Name": "HttpStatusCode.RequestEntityTooLarge",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 4239.7726104554495
+      },
+      {
+        "Id": "903e9254b9e94598981801b82d925305",
+        "Name": "HttpStatusCode.RequestHeaderFieldsTooLarge",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1984.953569046791,
+        "Y": 4366.255967472076
+      },
+      {
+        "Id": "c238ae83f3304dc7803e698449ea30f3",
+        "Name": "HttpStatusCode.RequestTimeout",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3227.990820421926
+      },
+      {
+        "Id": "dd94b9b0dba3405c841a2217b42784fb",
+        "Name": "HttpStatusCode.RequestUriTooLong",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3354.255577944026
+      },
+      {
+        "Id": "bd58e4782fb04576bbe5a5d5cf6432d9",
+        "Name": "HttpStatusCode.ResetContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3480.520335466125
+      },
+      {
+        "Id": "948698d769854192a5716096655ea6b3",
+        "Name": "HttpStatusCode.SeeOther",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3606.7850929882247
+      },
+      {
+        "Id": "bccc68ff5efd4411882a662208e0fa07",
+        "Name": "HttpStatusCode.ServiceUnavailable",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3733.0498505103246
+      },
+      {
+        "Id": "f68dd5c0666c4ca498246c4e3137d0a2",
+        "Name": "HttpStatusCode.SwitchingProtocols",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3859.3146080324245
+      },
+      {
+        "Id": "2c8c1a4cf0d64236af5344280ca49b18",
+        "Name": "HttpStatusCode.TemporaryRedirect",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 3985.5793655545244
+      },
+      {
+        "Id": "4ab1da61acdc40e280fbf6b0143f9205",
+        "Name": "HttpStatusCode.TooManyRequests",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 4111.844123076624
+      },
+      {
+        "Id": "884ee503bd8e4afd811e8d3c4b8a565e",
+        "Name": "HttpStatusCode.Unauthorized",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 4238.108880598724
+      },
+      {
+        "Id": "feff79cc9e164c6886077d0dd1b0f9bb",
+        "Name": "HttpStatusCode.UnavailableForLegalReasons",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2479.2306470626763,
+        "Y": 4364.373638120824
+      },
+      {
+        "Id": "59e6f745d0054dcd9781ba8c58858aab",
+        "Name": "HttpStatusCode.UnprocessableContent",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2942.3912207570734,
+        "Y": 3213.1435159069692
+      },
+      {
+        "Id": "e5aa5a59176f4fc5904ed7875151e895",
+        "Name": "HttpStatusCode.UnprocessableEntity",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2942.3912207570734,
+        "Y": 3407.300297419813
+      },
+      {
+        "Id": "80a3fc49862f4f07a58471c17ca97c87",
+        "Name": "HttpStatusCode.UnsupportedMediaType",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2942.3912207570734,
+        "Y": 3601.4570789326576
+      },
+      {
+        "Id": "c0d836cc895e4793ba7133263a3685e4",
+        "Name": "HttpStatusCode.Unused",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2942.3912207570734,
+        "Y": 3795.613860445503
+      },
+      {
+        "Id": "be9de5434e604c978f86849cec7d748b",
+        "Name": "HttpStatusCode.UpgradeRequired",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2942.3912207570734,
+        "Y": 3989.770641958347
+      },
+      {
+        "Id": "64a52207bb4e484b98e3c1a61e967e6f",
+        "Name": "HttpStatusCode.UseProxy",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2942.3912207570734,
+        "Y": 4183.927423471192
+      },
+      {
+        "Id": "64afa4aab00445cc9a1bc1666d6bb701",
+        "Name": "HttpStatusCode.VariantAlsoNegotiates",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2975.9102686370657,
+        "Y": 4378.084204984036
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "60d326816b2f40db9384f1cfbbf501fa",
+        "Title": "+",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "65062b03b184420da37eb1eda3d9e83e",
+          "baf9826ddba145a7b0de17f6bbe089b4",
+          "17b78b62b2b1419a9c1a2b952c1558da"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1697.0315432031416,
+        "Top": 3125.71579709535,
+        "Width": 293.0,
+        "Height": 498.75334636515663,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3198.71579709535,
+        "InitialHeight": 410.75334636515663,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "87434c6a16024d2bbcdd08b001e1f5fd",
+        "Title": "⚡",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "af6d89811ba44aa3bbdb1acc14f1e619",
+          "0ece288b2e9e40f0a323ddb8c43bf957"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1700.5721852601869,
+        "Top": 3654.517137410678,
+        "Width": 306.0,
+        "Height": 348.45006435365167,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3727.517137410678,
+        "InitialHeight": 288.45006435365167,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "f0b8f9d998c24eb5a1ed082cccc0b9f8",
+        "Title": "?",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "39199c16ee5b49f28296c88f6e508914",
+          "40ec0562f2ad42918b18e6a9116c44ec",
+          "0b86ca944f75414abfe9ae7af322c47a",
+          "1f82f67f2e4a483b9dd84a9483a0984f",
+          "810f59ed406e45458aa4aa958e269bbf",
+          "26a6454c73f7470eb0255ec2bc1533a5",
+          "32ff17ee58f3429cb270672832fb538f",
+          "25b3073807c34426bec583af1369b7a8"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1340.7894256136228,
+        "Top": 3131.503607858725,
+        "Width": 576.1494283665711,
+        "Height": 602.3040514080335,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3204.503607858725,
+        "InitialHeight": 542.3040514080335,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "204cdb2ce11d407ab091efc1ce0b4434",
+        "Title": "Exception Note:",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "d1118429badc449c9763fdc7d86ccad9",
+          "99edb6185b164d6c98dc665dadf58493"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2384.669763796571,
+        "Top": 2931.2530792305447,
+        "Width": 632.185214234174,
+        "Height": 338.0990999586129,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3004.2530792305447,
+        "InitialHeight": 145.0990999586129,
+        "TextblockHeight": 63.0,
+        "Background": "#FF848484"
+      },
+      {
+        "Id": "9309d14265aa47e899e459a52caabe6b",
+        "Title": "Net Note:",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "3f9fccfc73864313bc1ff4a9b54ae25b",
+          "5ce17b1cdc9e46308e0d1862655292fb"
+        ],
+        "HasNestedGroups": false,
+        "Left": -642.8786471054082,
+        "Top": 2944.5109666830645,
+        "Width": 634.1852142341736,
+        "Height": 338.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3017.5109666830645,
+        "InitialHeight": 145.0990999586138,
+        "TextblockHeight": 63.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "5f32154a29dd441daa9224a2bf211890",
+        "Title": "?",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "c5aceea3c59047c3984b4f222ec407ad",
+          "59c708f196fd4f5485899da5cc3fbc4e",
+          "5c24e7b7847c47e4a1e984dad964ea65",
+          "b2b972e08d9c44dea3711ba5eb8248e6",
+          "ca337ce9fb1340c3a9951732f9b820fc",
+          "64a34bd7bac943c38fc9d7718e12259c",
+          "8cb68b78de684dd49f88b49ab06b15d3",
+          "1dbf6410da314e9782dcc367c7c5c611",
+          "fe9986f787da44a292e1f572d87799a2",
+          "eaf6f60c0e4a469d8db67f106bbb3e6c",
+          "ed9d68a8f8b44f52bb2837806f9225b8",
+          "e6f6f41eeed447ab8e4829e081f05706",
+          "9e2485ff84b5464b9660815e059da725",
+          "bcaa5d56830f4e3a8f90ea3455f3b2f9",
+          "7d8b6a4f45a14c148a7c01f8ff83f788",
+          "86fb9670ef724d9d9a2730223099aaea",
+          "3abfdf71e6b3455293765407965d49e7",
+          "709341d532af41ff82147b8df3aea6a5",
+          "991fb5797b7b480c99e0139e5e9f281a",
+          "f369a9215afe433f994d66649e800fde",
+          "7abe78930fdf4d90b6eb61ade362bfde",
+          "57d6a009d7d144bb8db63ed87ceb7145",
+          "7aec1fdef69d491c8f1703b693cb9456",
+          "4cf263407b5543dc90579961688c38e5",
+          "d9a2d237e1394aa5a8b06b938c11ee70",
+          "05b297f0a8e744feb75b9e2199bb32d7",
+          "63ed96e4b01646828895926dd7f515f2",
+          "1bb535f949804c54ab52477afa88e71f",
+          "f6968976098c415d85e085aff0e7ab55",
+          "793561a170fc44caa9be6daae589542f",
+          "07a7b4e8c28e4936a8f5160a6ebc4858",
+          "e1e8351c4ee442ad844d427b32480240",
+          "962870ee638c4bca87a447f470549ce2",
+          "d73b6601da304bbe9ee82a62919e62cd",
+          "1e7fb05df2cb47c29264cd1ba322c2e4",
+          "5484aca8a2d448b1a8f3dbe3367f2908",
+          "55c7e98b206240fdbb8b95c3e88316de",
+          "ed59af56c68347909adb99e463b39830",
+          "b91866c0043743ec9d6b143a263172c1",
+          "8edff2c54f5448e9903e80447216e155",
+          "2cb89207abfe4f308d68f53829c95f62",
+          "72314d48ed924e27ac65af77aca5057b",
+          "68d944751e2a4aeca5d5f42d7e12d910",
+          "d8cd1170565544adb5d0af8ea3e22fcb",
+          "9ada8f85ab0f4035ba1e493be188225f",
+          "815853d4e72a409fad8e203e7cae2da3",
+          "c6ee40f39d194522902558cedfdb83b9",
+          "edfbc53b36f54e839375e65885f0fc35",
+          "5c698640fc99420a950aea501eb2660f",
+          "903e9254b9e94598981801b82d925305",
+          "c238ae83f3304dc7803e698449ea30f3",
+          "dd94b9b0dba3405c841a2217b42784fb",
+          "bd58e4782fb04576bbe5a5d5cf6432d9",
+          "948698d769854192a5716096655ea6b3",
+          "bccc68ff5efd4411882a662208e0fa07",
+          "f68dd5c0666c4ca498246c4e3137d0a2",
+          "2c8c1a4cf0d64236af5344280ca49b18",
+          "4ab1da61acdc40e280fbf6b0143f9205",
+          "884ee503bd8e4afd811e8d3c4b8a565e",
+          "feff79cc9e164c6886077d0dd1b0f9bb",
+          "59e6f745d0054dcd9781ba8c58858aab",
+          "e5aa5a59176f4fc5904ed7875151e895",
+          "80a3fc49862f4f07a58471c17ca97c87",
+          "c0d836cc895e4793ba7133263a3685e4",
+          "be9de5434e604c978f86849cec7d748b",
+          "64a52207bb4e484b98e3c1a61e967e6f",
+          "64afa4aab00445cc9a1bc1666d6bb701"
+        ],
+        "HasNestedGroups": false,
+        "Left": 69.38276913639402,
+        "Top": 3140.1435159069692,
+        "Width": 3281.5274995006716,
+        "Height": 1369.9406890770665,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3213.1435159069692,
+        "InitialHeight": 1309.9406890770665,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "dacaad381c694b6293ed690de364a34b",
+        "Title": "System Section",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "76e390b2d43a421991465ae33cc8645e",
+          "7f9975007a0444329780031532634730"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2379.1889610576513,
+        "Top": 2672.6666144332803,
+        "Width": 5745.300542307545,
+        "Height": 195.02096622962563,
+        "FontSize": 96.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2817.6666144332803,
+        "InitialHeight": 146.02096622962563,
+        "TextblockHeight": 135.0,
+        "Background": "#FFFFFFFF"
+      },
+      {
+        "Id": "9306fc6281654f90ac9fd45bda2d06f9",
+        "Title": "Exception",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "81c60a347f4c434698813df11881f055",
+          "87434c6a16024d2bbcdd08b001e1f5fd",
+          "60d326816b2f40db9384f1cfbbf501fa",
+          "f0b8f9d998c24eb5a1ed082cccc0b9f8"
+        ],
+        "HasNestedGroups": true,
+        "Left": -1710.5721852601869,
+        "Top": 2936.813631221639,
+        "Width": 955.9321880131351,
+        "Height": 1081.1535705426909,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3009.813631221639,
+        "InitialHeight": 1021.1535705426909,
+        "TextblockHeight": 63.0,
+        "Background": "#FF848484"
+      },
+      {
+        "Id": "b95e32e479ba475a9ff62533311345bd",
+        "Title": "Net > HttpStatusCode",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "d20beb9553e7425b88b5d284e8ef728e",
+          "5f32154a29dd441daa9224a2bf211890"
+        ],
+        "HasNestedGroups": true,
+        "Left": 59.38276913639402,
+        "Top": 2945.1710423441923,
+        "Width": 3301.5274995006716,
+        "Height": 1579.9131626398434,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3018.1710423441923,
+        "InitialHeight": 1519.9131626398434,
+        "TextblockHeight": 63.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "81c60a347f4c434698813df11881f055",
+        "Title": "System > Exception  \n= 13 Nodes\n•  3 +\n•  2⚡\n•  8 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -1690.6434746118048,
+        "Top": 3017.813631221639,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d1118429badc449c9763fdc7d86ccad9",
+        "Title": "DynaFetch System Exception Section\r\n\r\nThe System Exception section contains specialized error handling nodes for debugging and troubleshooting HTTP operations. These 13 nodes provide detailed information about specific types of failures that can occur during web requests.\r\n\r\nThese nodes are primarily useful for advanced users and developers who need to diagnose connection issues, authentication failures, or API response problems. Most users won't need to interact with these nodes directly, as DynaFetch's main workflow nodes handle common errors automatically.\r\n\r\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -2374.669763796571,
+        "Top": 3012.3521791891576,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "99edb6185b164d6c98dc665dadf58493",
+        "Title": "Exception nodes help identify specific failure types including:\r\n- Network connectivity issues\r\n- Authentication and authorization failures  \r\n- HTTP protocol errors and status code problems\r\n- JSON parsing and data conversion errors\r\n- Timeout and performance-related failures\r\n- Invalid request format or parameter errors\r\n\r\nThese 13 exception nodes expose the underlying error handling system that ensures DynaFetch operations fail gracefully in Dynamo, providing meaningful error messages instead of crashing the graph. They're valuable for troubleshooting complex workflows or building robust error handling into production systems.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -2059.4845495623968,
+        "Top": 3012.2530792305447,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3f9fccfc73864313bc1ff4a9b54ae25b",
+        "Title": "DynaFetch System Net Section\r\n\r\nThe System Net section contains low-level networking and HTTP protocol nodes that provide direct access to .NET's networking infrastructure. This 1 subsection with 67 nodes exposes the underlying System.Net.Http components that power DynaFetch's HTTP operations.\r\n\r\nThese nodes are intended for advanced users and developers who need direct control over HTTP protocol details, network configuration, or specialized networking scenarios. Most users should work with the simplified Nodes section rather than these low-level components.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -632.8786471054082,
+        "Top": 3025.6100666416783,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "5ce17b1cdc9e46308e0d1862655292fb",
+        "Title": "System Net nodes provide access to:\r\n- Raw HTTP message construction and manipulation\r\n- Network protocol configuration and fine-tuning\r\n- Advanced connection management and pooling\r\n- SSL/TLS security configuration\r\n- HTTP header and status code management\r\n- Stream handling for large data transfers\r\n- Network performance monitoring and diagnostics\r\n\r\nThese 67 nodes represent the complete .NET HTTP networking stack made available within Dynamo's visual environment. They offer maximum flexibility for specialized use cases but require understanding of HTTP protocol details and networking concepts to use effectively.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -317.69343287123456,
+        "Top": 3025.5109666830645,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d20beb9553e7425b88b5d284e8ef728e",
+        "Title": "System > Net > HttpStatusCode  \n= 67 Nodes\n•  0 +\n•  0⚡\n•  67 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 77.63214871080481,
+        "Top": 3026.1710423441923,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "76e390b2d43a421991465ae33cc8645e",
+        "Title": "System Section",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -2369.1889610576513,
+        "Top": 2825.6666144332803,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7f9975007a0444329780031532634730",
+        "Title": "System Section",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 3252.1115812498933,
+        "Top": 2826.687580662906,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 700.8666961983832,
+    "Y": -594.0907166944562,
+    "Zoom": 0.2825094699171206
+  }
+}

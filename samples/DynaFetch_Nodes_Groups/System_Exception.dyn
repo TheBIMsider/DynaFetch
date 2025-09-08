@@ -1,0 +1,794 @@
+{
+  "Uuid": "53f26329-a583-495a-af04-88c6fc9b80b5",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "System_Exception",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "65062b03b184420da37eb1eda3d9e83e",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8702a8fa4138490786e4d3299eb877e1",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Exception",
+      "Replication": "Auto",
+      "Description": "Exception.Exception ( ): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "baf9826ddba145a7b0de17f6bbe089b4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c2dfe0df7f3e4b278027725b3d3eefee",
+          "Name": "message",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0eebc9c6f7a144699d7d6a80038782ca",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Exception@string",
+      "Replication": "Auto",
+      "Description": "Exception.Exception (message: string): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "17b78b62b2b1419a9c1a2b952c1558da",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "72adb821cb214e00b28b77e0752b3790",
+          "Name": "message",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6dcb9c22a7c14f86ab2c2730265e713c",
+          "Name": "innerException",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bdde1e34d69744339e5786f27dcf1692",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Exception@string,System.Exception",
+      "Replication": "Auto",
+      "Description": "Exception.Exception (message: string, innerException: Exception): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "af6d89811ba44aa3bbdb1acc14f1e619",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7f470be943f04c7f96c19e85a009fe70",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9b5c47474439426ca4ed0f22ffe3e722",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.GetBaseException",
+      "Replication": "Auto",
+      "Description": "Exception.GetBaseException ( ): Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0ece288b2e9e40f0a323ddb8c43bf957",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1eb2b5dfb9bb48ac9b593adee10dfa7c",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "785549408fd341cc883017d6f89ad73c",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.GetType",
+      "Replication": "Auto",
+      "Description": "Exception.GetType ( ): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "39199c16ee5b49f28296c88f6e508914",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1aa771aa17f0476aad0e684fe3b195df",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a4a11332e18f4bb380f172a2843c28f4",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Data",
+      "Replication": "Auto",
+      "Description": "Exception.Data: var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "40ec0562f2ad42918b18e6a9116c44ec",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "cafd83f15eb84ec8a9bb5e7c52177d4a",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53f5217b534540ce88603174992975ea",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.HelpLink",
+      "Replication": "Auto",
+      "Description": "Exception.HelpLink: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0b86ca944f75414abfe9ae7af322c47a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "04bfd71cb208414086506b3edae899cd",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f0305a821be043e48a1352f022de7446",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.HResult",
+      "Replication": "Auto",
+      "Description": "Exception.HResult: int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1f82f67f2e4a483b9dd84a9483a0984f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "66c6fc9d8b474ec885a86aad49344187",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af7f565f9fb64eca9d492e254b87446d",
+          "Name": "Exception",
+          "Description": "Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.InnerException",
+      "Replication": "Auto",
+      "Description": "Exception.InnerException: Exception"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "810f59ed406e45458aa4aa958e269bbf",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "acb5fd89f82547caa511590c2324ab4f",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "051aafd327b8499c8cdb32d2c1cd0dd9",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Message",
+      "Replication": "Auto",
+      "Description": "Exception.Message: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "26a6454c73f7470eb0255ec2bc1533a5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "569fa8e6972748a8adbf95302437ccbe",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "964e08a7457a4c9aa3e9f942245bf843",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.Source",
+      "Replication": "Auto",
+      "Description": "Exception.Source: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "32ff17ee58f3429cb270672832fb538f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "0da8266bbe374900914a5d675a5e9336",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3df0b2ca2cfb495d8b64364805b1d13d",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.StackTrace",
+      "Replication": "Auto",
+      "Description": "Exception.StackTrace: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "25b3073807c34426bec583af1369b7a8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "0eb1a20e304240f3bf5f580958161a29",
+          "Name": "exception",
+          "Description": "System.Exception",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f3a10be4b1e547dfa318a7c9eee40196",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "System.Exception.TargetSite",
+      "Replication": "Auto",
+      "Description": "Exception.TargetSite: var"
+    }
+  ],
+  "Connectors": [],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynaFetch.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "65062b03b184420da37eb1eda3d9e83e",
+        "baf9826ddba145a7b0de17f6bbe089b4",
+        "17b78b62b2b1419a9c1a2b952c1558da",
+        "af6d89811ba44aa3bbdb1acc14f1e619",
+        "0ece288b2e9e40f0a323ddb8c43bf957",
+        "39199c16ee5b49f28296c88f6e508914",
+        "40ec0562f2ad42918b18e6a9116c44ec",
+        "0b86ca944f75414abfe9ae7af322c47a",
+        "1f82f67f2e4a483b9dd84a9483a0984f",
+        "810f59ed406e45458aa4aa958e269bbf",
+        "26a6454c73f7470eb0255ec2bc1533a5",
+        "32ff17ee58f3429cb270672832fb538f",
+        "25b3073807c34426bec583af1369b7a8"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.5",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "9.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.5.2.8856",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "65062b03b184420da37eb1eda3d9e83e",
+        "Name": "Exception.Exception",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1653.5771367896932,
+        "Y": 2953.3834833967294
+      },
+      {
+        "Id": "baf9826ddba145a7b0de17f6bbe089b4",
+        "Name": "Exception.Exception",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1653.5771367896932,
+        "Y": 3086.260156579308
+      },
+      {
+        "Id": "17b78b62b2b1419a9c1a2b952c1558da",
+        "Name": "Exception.Exception",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1653.5771367896932,
+        "Y": 3219.136829761886
+      },
+      {
+        "Id": "af6d89811ba44aa3bbdb1acc14f1e619",
+        "Name": "Exception.GetBaseException",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1657.1177788467385,
+        "Y": 3482.1848237120576
+      },
+      {
+        "Id": "0ece288b2e9e40f0a323ddb8c43bf957",
+        "Name": "Exception.GetType",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1657.1177788467385,
+        "Y": 3625.634888065709
+      },
+      {
+        "Id": "39199c16ee5b49f28296c88f6e508914",
+        "Name": "Exception.Data",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1297.3350192001744,
+        "Y": 2959.1712941601045
+      },
+      {
+        "Id": "40ec0562f2ad42918b18e6a9116c44ec",
+        "Name": "Exception.HelpLink",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1297.3350192001744,
+        "Y": 3097.078485557934
+      },
+      {
+        "Id": "0b86ca944f75414abfe9ae7af322c47a",
+        "Name": "Exception.HResult",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1297.3350192001744,
+        "Y": 3228.4186678415817
+      },
+      {
+        "Id": "1f82f67f2e4a483b9dd84a9483a0984f",
+        "Name": "Exception.InnerException",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -1297.3350192001744,
+        "Y": 3356.475345568138
+      },
+      {
+        "Id": "810f59ed406e45458aa4aa958e269bbf",
+        "Name": "Exception.Message",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -972.1855908336033,
+        "Y": 2965.738303274288
+      },
+      {
+        "Id": "26a6454c73f7470eb0255ec2bc1533a5",
+        "Name": "Exception.Source",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -972.1855908336033,
+        "Y": 3094.889482519874
+      },
+      {
+        "Id": "32ff17ee58f3429cb270672832fb538f",
+        "Name": "Exception.StackTrace",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -972.1855908336033,
+        "Y": 3224.0406617654603
+      },
+      {
+        "Id": "25b3073807c34426bec583af1369b7a8",
+        "Name": "Exception.TargetSite",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -972.1855908336033,
+        "Y": 3353.1918410110466
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "60d326816b2f40db9384f1cfbbf501fa",
+        "Title": "+",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "65062b03b184420da37eb1eda3d9e83e",
+          "baf9826ddba145a7b0de17f6bbe089b4",
+          "17b78b62b2b1419a9c1a2b952c1558da"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1663.5771367896932,
+        "Top": 2880.3834833967294,
+        "Width": 293.0,
+        "Height": 498.75334636515663,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2953.3834833967294,
+        "InitialHeight": 410.75334636515663,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "87434c6a16024d2bbcdd08b001e1f5fd",
+        "Title": "⚡",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "af6d89811ba44aa3bbdb1acc14f1e619",
+          "0ece288b2e9e40f0a323ddb8c43bf957"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1667.1177788467385,
+        "Top": 3409.1848237120576,
+        "Width": 306.0,
+        "Height": 348.45006435365167,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3482.1848237120576,
+        "InitialHeight": 288.45006435365167,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "f0b8f9d998c24eb5a1ed082cccc0b9f8",
+        "Title": "?",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "39199c16ee5b49f28296c88f6e508914",
+          "40ec0562f2ad42918b18e6a9116c44ec",
+          "0b86ca944f75414abfe9ae7af322c47a",
+          "1f82f67f2e4a483b9dd84a9483a0984f",
+          "810f59ed406e45458aa4aa958e269bbf",
+          "26a6454c73f7470eb0255ec2bc1533a5",
+          "32ff17ee58f3429cb270672832fb538f",
+          "25b3073807c34426bec583af1369b7a8"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1307.3350192001744,
+        "Top": 2886.1712941601045,
+        "Width": 576.1494283665711,
+        "Height": 602.3040514080335,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2959.1712941601045,
+        "InitialHeight": 542.3040514080335,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "204cdb2ce11d407ab091efc1ce0b4434",
+        "Title": "Exception Note:",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "d1118429badc449c9763fdc7d86ccad9",
+          "99edb6185b164d6c98dc665dadf58493"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2351.2153573831224,
+        "Top": 2685.920765531924,
+        "Width": 632.185214234174,
+        "Height": 338.0990999586129,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2758.920765531924,
+        "InitialHeight": 145.0990999586129,
+        "TextblockHeight": 63.0,
+        "Background": "#FF848484"
+      },
+      {
+        "Id": "9306fc6281654f90ac9fd45bda2d06f9",
+        "Title": "Exception",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "81c60a347f4c434698813df11881f055",
+          "87434c6a16024d2bbcdd08b001e1f5fd",
+          "60d326816b2f40db9384f1cfbbf501fa",
+          "f0b8f9d998c24eb5a1ed082cccc0b9f8"
+        ],
+        "HasNestedGroups": true,
+        "Left": -1677.1177788467385,
+        "Top": 2691.4813175230183,
+        "Width": 955.9321880131351,
+        "Height": 1081.1535705426909,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2764.4813175230183,
+        "InitialHeight": 1021.1535705426909,
+        "TextblockHeight": 63.0,
+        "Background": "#FF848484"
+      },
+      {
+        "Id": "81c60a347f4c434698813df11881f055",
+        "Title": "System > Exception  \n= 13 Nodes\n•  3 +\n•  2⚡\n•  8 ?",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -1657.1890681983564,
+        "Top": 2772.4813175230183,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d1118429badc449c9763fdc7d86ccad9",
+        "Title": "DynaFetch System Exception Section\r\n\r\nThe System Exception section contains specialized error handling nodes for debugging and troubleshooting HTTP operations. These 13 nodes provide detailed information about specific types of failures that can occur during web requests.\r\n\r\nThese nodes are primarily useful for advanced users and developers who need to diagnose connection issues, authentication failures, or API response problems. Most users won't need to interact with these nodes directly, as DynaFetch's main workflow nodes handle common errors automatically.\r\n\r\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -2341.2153573831224,
+        "Top": 2767.019865490537,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "99edb6185b164d6c98dc665dadf58493",
+        "Title": "Exception nodes help identify specific failure types including:\r\n- Network connectivity issues\r\n- Authentication and authorization failures  \r\n- HTTP protocol errors and status code problems\r\n- JSON parsing and data conversion errors\r\n- Timeout and performance-related failures\r\n- Invalid request format or parameter errors\r\n\r\nThese 13 exception nodes expose the underlying error handling system that ensures DynaFetch operations fail gracefully in Dynamo, providing meaningful error messages instead of crashing the graph. They're valuable for troubleshooting complex workflows or building robust error handling into production systems.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -2026.0301431489484,
+        "Top": 2766.920765531924,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 1831.4456060470416,
+    "Y": -1852.48236286961,
+    "Zoom": 0.7064496073754377
+  }
+}

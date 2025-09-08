@@ -386,8 +386,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 778.5533578968614,
-        "Y": 919.4633110698796
+        "X": 583.4354721024015,
+        "Y": 907.6601561017205
       },
       {
         "Id": "4913d5b5d5ef4536a2c1451d9ac1c91c",
@@ -396,8 +396,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1087.5533578968611,
-        "Y": 931.4633110698796
+        "X": 954.3290460724841,
+        "Y": 822.3714854453872
       },
       {
         "Id": "954f73c74647427786b6e3e040066f42",
@@ -406,8 +406,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 629.5533578968613,
-        "Y": 596.4633110698796
+        "X": 607.175623747143,
+        "Y": 617.5409501101626
       },
       {
         "Id": "51bd2273ce3b4c5ea5434477fc1462c0",
@@ -416,8 +416,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 991.5533578968611,
-        "Y": 596.4633110698796
+        "X": 1273.420992940668,
+        "Y": 557.7559113094784
       },
       {
         "Id": "bee89d9844db4625ae583a0128c36ce5",
@@ -426,8 +426,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1317.5533578968611,
-        "Y": 592.4633110698796
+        "X": 1682.6042419438938,
+        "Y": 561.3114186351556
       },
       {
         "Id": "0a75e66af6a04b868a6e212c60c54021",
@@ -436,8 +436,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 310.0,
-        "Y": 972.0
+        "X": 230.81137996381187,
+        "Y": 906.1671199508256
       },
       {
         "Id": "ce9cc32b132a4988b6d9b81a75461b3f",
@@ -446,8 +446,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 309.0,
-        "Y": 1128.0
+        "X": -8.075839169929168,
+        "Y": 1082.3881862200428
       },
       {
         "Id": "a817ba594dc64f34809fa687f2ec654c",
@@ -456,8 +456,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 331.0,
-        "Y": 762.0
+        "X": 392.9119466789364,
+        "Y": 762.0817296985284
       },
       {
         "Id": "0091ffaea8f244eb9d1b8bf6fdea9656",
@@ -466,22 +466,220 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1490.0533578968611,
-        "Y": 832.4633110698796
+        "X": 1980.7559003832534,
+        "Y": 555.3015095227315
       }
     ],
     "Annotations": [
       {
+        "Id": "9d5e83decd854d12ac4f78b393c74677",
+        "Title": "1. Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "a199c10e2cf74f988a04e7be68d30eb9",
+          "954f73c74647427786b6e3e040066f42",
+          "0a75e66af6a04b868a6e212c60c54021",
+          "ce9cc32b132a4988b6d9b81a75461b3f",
+          "a817ba594dc64f34809fa687f2ec654c",
+          "25b6202afae14850b35fbb4fe90ee8a3",
+          "3bcda6379dde45d7a4e00e03d718e1ee"
+        ],
+        "HasNestedGroups": false,
+        "Left": -65.71080581676574,
+        "Top": 494.36345305414216,
+        "Width": 917.1462779191672,
+        "Height": 720.0247331659007,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 567.3634530541422,
+        "InitialHeight": 626.8472361098803,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "1c2f2004375f40e7bb8839028abc4060",
+        "Title": "2. Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "4913d5b5d5ef4536a2c1451d9ac1c91c",
+          "51bd2273ce3b4c5ea5434477fc1462c0",
+          "9a873eb2324e43ac957640c9cf0dcbde",
+          "335b89ed6b3a49cea52172623cf03534"
+        ],
+        "HasNestedGroups": false,
+        "Left": 944.3290460724841,
+        "Top": 484.7559113094784,
+        "Width": 647.3948674758299,
+        "Height": 824.9073005497092,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 557.7559113094784,
+        "InitialHeight": 425.57482118359985,
+        "TextblockHeight": 63.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "775844e9ffe34a499ba9d5c10d3d7ecb",
+        "Title": "3. Response",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "bee89d9844db4625ae583a0128c36ce5",
+          "0091ffaea8f244eb9d1b8bf6fdea9656",
+          "f7b673de28c143a7b74c640d1d5b3edc",
+          "0d3f1d714d48421d8963a2a343d235be"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1645.4886347601464,
+        "Top": 482.3015095227315,
+        "Width": 636.6977638780077,
+        "Height": 733.5180904975991,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 555.3015095227315,
+        "InitialHeight": 328.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
+      },
+      {
         "Id": "8918ff614c814e719bf0c9201167a526",
-        "Title": "DynaFetch Sample 3: POST Data Submission - Creates and submits JSON data to API",
+        "Title": "DynaFetch Sample 3 - POST Data Submission\r\n\r\nThis sample demonstrates how to submit data to APIs using POST requests.\r\nShows the complete workflow from data preparation to response processing.\r\n\r\nPerfect for creating records, submitting forms, or sending structured data to APIs.\r\n\r\nPattern: Prepare Data → Convert to JSON → POST Request → Process Response\r\nAPI: JSONPlaceholder posts (creates new post records)",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 330.8412420072404,
-        "Top": 609.4516019332494,
+        "Left": -8.295373206921283,
+        "Top": 233.3015085600788,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "25b6202afae14850b35fbb4fe90ee8a3",
+        "Title": "Data Preparation & Client Setup\r\n\r\nDictionary.ByKeysValues creates structured data for submission:\r\n- Keys: Field names that the API expects [\"title\", \"body\", \"userId\"]\r\n- Values: Actual data to submit [\"Test Post\", \"Content\", 1]\r\n- Result: Dynamo Dictionary ready for JSON conversion\r\n\r\nClientNodes.Create establishes the HTTP client for the POST request.\r\n\r\nData structure matches the target API's expected format.\r\nThis approach works for any API that accepts JSON data.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": -55.71080581676574,
+        "Top": 576.3293506631373,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9a873eb2324e43ac957640c9cf0dcbde",
+        "Title": "JSON Conversion & POST Execution\r\n\r\nJsonNodes.DictionaryToJson converts Dynamo data to JSON format:\r\n- Takes Dictionary input and creates valid JSON string\r\n- Handles proper escaping and formatting automatically\r\n- Ensures data is in the format APIs expect\r\n- Required step for most modern API data submission\r\n\r\nExecuteNodes.POST submits the JSON data:\r\n- Client: HTTP client for the request\r\n- URL: Target endpoint for data creation\r\n- Body: JSON string containing the data to submit\r\n- Content-Type: Automatically set to \"application/json\"\r\n\r\nPOST is the standard HTTP method for creating new resources.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 968.1618046680387,
+        "Top": 980.6632118591876,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f7b673de28c143a7b74c640d1d5b3edc",
+        "Title": "Creation Response Processing\r\n\r\nJsonNodes.ToDictionary processes the API's creation response:\r\n\r\nFor successful data submission (JSONPlaceholder response):\r\n- \"id\": Newly created record ID (e.g., 101)\r\n- \"title\": Echoed title data for confirmation\r\n- \"body\": Echoed body content for verification\r\n- \"userId\": Echoed user ID for validation\r\n\r\nResponse validation enables:\r\n- Confirmation that data was created successfully\r\n- Access to new record ID for further operations\r\n- Verification that submitted data was processed correctly\r\n- Error detection if submission failed\r\n\r\nThe returned ID can be used for subsequent operations like \r\nupdates, deletions, or retrieving the full record.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1976.186398638154,
+        "Top": 871.8196000203308,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0d3f1d714d48421d8963a2a343d235be",
+        "Title": "Notes About: JsonNodes.DictionaryToJson\n\nData Format Conversion\r\n\r\nDictionaryToJson handles the critical conversion from Dynamo's \r\nnative Dictionary format to JSON string format that APIs require:\r\n\r\n- Automatic type conversion (strings, numbers, booleans)\r\n- Proper JSON formatting and escaping\r\n- Nested object support for complex data structures\r\n- UTF-8 encoding for international characters\r\n\r\nThis conversion is essential - APIs typically reject raw \r\nDictionary objects and require properly formatted JSON.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1655.4886347601464,
+        "Top": 702.6919685349294,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "335b89ed6b3a49cea52172623cf03534",
+        "Title": "Notes About: ExecuteNodes.POST\n\nPOST Request Execution\r\n\r\nPOST differs from GET in several important ways:\r\n- Includes request body with data to submit\r\n- Intended for creating/modifying server resources\r\n- May have side effects (creates records, sends emails, etc.)\r\n- Content-Type header automatically set to \"application/json\"\r\n\r\nDynaFetch handles the HTTP protocol details automatically,\r\nincluding proper headers and encoding.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1290.723913548314,
+        "Top": 760.0684497386842,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3bcda6379dde45d7a4e00e03d718e1ee",
+        "Title": "Testing Endpoint - JSONPlaceholder\r\n\r\nJSONPlaceholder /posts endpoint simulates record creation:\r\n- Accepts standard post data (title, body, userId)\r\n- Returns created record with new ID\r\n- Perfect for testing POST workflows safely\r\n- Real APIs follow similar patterns\r\n\r\nUse this pattern with your production API endpoints.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 277.44649617872585,
+        "Top": 575.3634530541422,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -492,8 +690,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -297.0024361027031,
-    "Y": -532.2572475229605,
-    "Zoom": 1.0582603110119841
+    "X": 64.82079118797441,
+    "Y": -40.010170537861086,
+    "Zoom": 0.6250275988198929
   }
 }

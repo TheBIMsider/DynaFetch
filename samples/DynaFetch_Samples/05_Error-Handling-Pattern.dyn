@@ -31,7 +31,7 @@
     },
     {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
+      "WatchWidth": 20.0,
       "WatchHeight": 40.0,
       "Id": "94a7eb5efdaf4b129336357fbcabd693",
       "NodeType": "ExtensionNode",
@@ -211,7 +211,7 @@
     },
     {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
+      "WatchWidth": 50.0,
       "WatchHeight": 40.0,
       "Id": "73fa5d313b0348cd9805200bf5caf2fe",
       "NodeType": "ExtensionNode",
@@ -242,7 +242,7 @@
     },
     {
       "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "WatchWidth": 200.0,
+      "WatchWidth": 58.0,
       "WatchHeight": 40.0,
       "Id": "d39fd5604f3d4df38809004f99b0c98f",
       "NodeType": "ExtensionNode",
@@ -428,8 +428,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 639.9538653867635,
-        "Y": 506.9222415405222
+        "X": 601.8014320825009,
+        "Y": 460.3500186887844
       },
       {
         "Id": "94a7eb5efdaf4b129336357fbcabd693",
@@ -438,8 +438,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1692.3529498396977,
-        "Y": 678.0057253668833
+        "X": 1624.4594635871767,
+        "Y": 925.4574099005973
       },
       {
         "Id": "1a2958f209bc403da5af481ae38e3b14",
@@ -448,8 +448,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 931.8498346801825,
-        "Y": 508.89598529311445
+        "X": 955.1970251569314,
+        "Y": 460.5718977917158
       },
       {
         "Id": "b7e10872156e489ba00e8248a7629675",
@@ -458,8 +458,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 522.6457174753434,
-        "Y": 662.4507992621781
+        "X": 476.73956852315087,
+        "Y": 602.0375238294475
       },
       {
         "Id": "09eb27b6777349beae676a3537f7eb3b",
@@ -468,8 +468,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1349.2543496621697,
-        "Y": 345.32394890978344
+        "X": 1328.0884026480396,
+        "Y": 465.03953178843335
       },
       {
         "Id": "dde0220fed65409dbe059b9a9d77b84f",
@@ -478,8 +478,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1341.464300413294,
-        "Y": 512.81000776061
+        "X": 1325.0283737332804,
+        "Y": 597.2934528673694
       },
       {
         "Id": "d09e3a386d9d49a7894bcfd6be36e6a3",
@@ -488,8 +488,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1346.3330811938408,
-        "Y": 678.3485542992174
+        "X": 1297.8758692783,
+        "Y": 922.6992244508841
       },
       {
         "Id": "73fa5d313b0348cd9805200bf5caf2fe",
@@ -498,8 +498,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1667.5229870861347,
-        "Y": 519.3594695205544
+        "X": 1616.3464359068357,
+        "Y": 595.7215402635248
       },
       {
         "Id": "d39fd5604f3d4df38809004f99b0c98f",
@@ -508,8 +508,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1648.0490475481354,
-        "Y": 339.8198480115446
+        "X": 1602.3831039292652,
+        "Y": 459.90839757638895
       },
       {
         "Id": "5b0afc0b5708472190031001aef83bd8",
@@ -518,22 +518,101 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1340.367162477248,
-        "Y": 897.4392965299289
+        "X": 1312.8972124530644,
+        "Y": 738.4724044435549
       }
     ],
     "Annotations": [
       {
+        "Id": "59351a6240c4493ca18e0dbeabe01a72",
+        "Title": "1. Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "6f6d7d0dd09343ceb13c78a4edbfc7ee",
+          "b7e10872156e489ba00e8248a7629675",
+          "90b2ff0f46c64403b8a1fa4486bcacdf"
+        ],
+        "HasNestedGroups": false,
+        "Left": 466.73956852315087,
+        "Top": 387.3500186887844,
+        "Width": 368.93875660183585,
+        "Height": 657.9826611770242,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 460.3500186887844,
+        "InitialHeight": 301.42024637963283,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "d909515e459b45df9d46360f0f78d2a9",
+        "Title": "2. Build & Execute",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1a2958f209bc403da5af481ae38e3b14",
+          "a9f66587b7a44d04a5f8a1b19cadff0a",
+          "b26aa5bca4b34f90a96f958e70b6116e"
+        ],
+        "HasNestedGroups": false,
+        "Left": 884.966379663882,
+        "Top": 387.5718977917158,
+        "Width": 325.23064549304945,
+        "Height": 731.4336659127921,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 460.5718977917158,
+        "InitialHeight": 190.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "569cfacd52d04bd9aab71182a6c64e69",
+        "Title": "3. Response",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "94a7eb5efdaf4b129336357fbcabd693",
+          "09eb27b6777349beae676a3537f7eb3b",
+          "dde0220fed65409dbe059b9a9d77b84f",
+          "d09e3a386d9d49a7894bcfd6be36e6a3",
+          "73fa5d313b0348cd9805200bf5caf2fe",
+          "d39fd5604f3d4df38809004f99b0c98f",
+          "5b0afc0b5708472190031001aef83bd8",
+          "7218534120ba4d3a892b9eaee70d0318",
+          "3e49a722cc2945d38a84c29ffc6bd533",
+          "2145ffb048874957a50bab932b9a2b03"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1286.8302258938675,
+        "Top": 386.90839757638895,
+        "Width": 808.6848776106913,
+        "Height": 1084.384630365974,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 459.90839757638895,
+        "InitialHeight": 1041.384630365974,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFAA45"
+      },
+      {
         "Id": "09d97b5ea1944704be39f8af4b846cf8",
-        "Title": "DynaFetch Sample 5: Error Handling - Demonstrates graceful error handling with 404 response",
+        "Title": "DynaFetch Sample 5 - Error Handling Pattern\r\n\r\nThis sample demonstrates how to handle API errors gracefully instead of letting \r\nworkflows fail. Shows proper error detection and user-friendly error processing.\r\n\r\nEssential for production workflows that need to handle network issues, \r\nmissing resources, or API failures without breaking.\r\n\r\nPattern: Request → Check Status → Validate Response → Handle Errors Gracefully\r\nAPI: httpbin.org/status/404 (deliberately returns 404 error for testing)",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 553.1483679191758,
-        "Top": 425.5097174327838,
+        "Left": 464.829243105406,
+        "Top": 86.83830844495031,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -545,15 +624,135 @@
       },
       {
         "Id": "2145ffb048874957a50bab932b9a2b03",
-        "Title": "The sample shows:\n\n1) JsonNodes.IsValid correctly returns false (no valid JSON)\n2) JsonNodes.ToDictionary handles the error gracefully (doesn't crash)\n3) JsonNodes.GetContent returns empty (no content in 404 response)\n4) Response preview (Watch node) shows clear error info: \"404 NOT FOUND | text/html | 0 bytes\"",
+        "Title": "The sample shows in the Orange group\n (3. Response)\n\n1) JsonNodes.IsValid correctly returns false (no valid JSON)\n2) JsonNodes.ToDictionary handles the error gracefully (doesn't crash)\n3) Response preview (Watch node) shows clear error info: \"404 NOT FOUND | text/html | 0 bytes\"\n4) JsonNodes.GetContent returns empty (no content in 404 response)\n",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 926.6441779106658,
-        "Top": 720.2200690119238,
+        "Left": 1785.5151035045587,
+        "Top": 468.41342049465584,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "90b2ff0f46c64403b8a1fa4486bcacdf",
+        "Title": "Error Scenario Setup\r\n\r\nClientNodes.Create establishes the HTTP client for error testing.\r\n\r\nTarget URL: httpbin.org/status/404\r\n- Deliberately returns HTTP 404 \"Not Found\" status\r\n- Simulates common API error scenario (missing resource)\r\n- Safe testing endpoint for error handling development\r\n\r\nReal workflows should include error handling for:\r\n- Network connectivity issues\r\n- Authentication failures (401/403)\r\n- Resource not found (404)\r\n- Server errors (500/502/503)\r\n- Timeout scenarios",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 531.6783251249867,
+        "Top": 759.3326798658086,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a9f66587b7a44d04a5f8a1b19cadff0a",
+        "Title": "Controlled Error Request\r\n\r\nExecuteNodes.GET executes request that will fail:\r\n- Target endpoint specifically returns 404 status\r\n- DynaFetch handles the error gracefully (no exceptions thrown)\r\n- Returns HttpResponse object with error information\r\n- Workflow continues instead of crashing\r\n\r\nKey advantage: DynaFetch treats HTTP errors as valid responses\r\nrather than exceptions, enabling proper error handling workflows.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 894.966379663882,
+        "Top": 890.005563704508,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7218534120ba4d3a892b9eaee70d0318",
+        "Title": "Error Detection & Status Analysis\r\n\r\nHttpResponse provides comprehensive error information:\r\n\r\nStatus Code Analysis:\r\n- HttpResponse.StatusCode: \"NotFound\" (enumeration value)\r\n- HttpResponse.StatusCodeNumber: 404 (numeric value)\r\n- HttpResponse.IsSuccess: false (boolean indicator)\r\n- HttpResponse.IsError: true (boolean indicator)\r\n\r\nAdditional Error Context:\r\n- HttpResponse.StatusDescription: Human-readable error description\r\n- HttpResponse.Headers: Server response headers\r\n- HttpResponse.RequestUrl: Confirms which request failed\r\n\r\nThis rich error information enables intelligent error handling\r\nand user-friendly error messages instead of cryptic failures.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1296.8302258938675,
+        "Top": 1080.2929709245204,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3e49a722cc2945d38a84c29ffc6bd533",
+        "Title": "Graceful Error Handling\r\n\r\nConditional Logic Based on Response Status:\r\n- Use IsSuccess/IsError properties for branching logic\r\n- Process successful responses normally\r\n- Handle errors with appropriate fallback behavior\r\n\r\nError Handling Strategies:\r\n- Display user-friendly error messages\r\n- Retry logic for temporary failures\r\n- Fallback to cached or default data\r\n- Log errors for debugging while continuing workflow\r\n\r\nExample Error Processing:\r\n- If IsError = true: Show \"Resource not found, using default data\"\r\n- If IsSuccess = true: Process response normally\r\n- Status-specific handling: Different actions for 404 vs 500 errors\r\n\r\nThis pattern prevents workflow crashes and provides \r\nbetter user experience when API issues occur.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1619.5279129299304,
+        "Top": 1084.293027942363,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b26aa5bca4b34f90a96f958e70b6116e",
+        "Title": "Note about: ExecuteNodes.GET\nError-Safe Request Execution\r\n\r\nDynaFetch design philosophy:\r\n- HTTP errors return HttpResponse objects (not exceptions)\r\n- Workflows continue executing instead of crashing\r\n- Comprehensive error information available for handling\r\n- Enables building resilient, production-ready workflows\r\n\r\nThis approach is superior to exception-based error handling\r\nfor workflow environments like Dynamo.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 901.014318710427,
+        "Top": 637.1554536551023,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "c5eb6b03faff469a992796425732c0e1",
+        "Title": "Production Error Handling\r\n\r\nReal-world error handling patterns:\r\n- Retry transient errors (network timeouts)\r\n- Cache successful responses for offline scenarios\r\n- Provide meaningful error messages to users\r\n- Log errors for monitoring and debugging\r\n- Graceful degradation when services are unavailable\r\n\r\nBuild resilient workflows that handle errors professionally.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 799.7366092424697,
+        "Top": 87.95016112533565,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -564,8 +763,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -520.465857297117,
-    "Y": -257.97838219504604,
-    "Zoom": 1.0269511455469498
+    "X": -1.611110738801699,
+    "Y": -21.694921014057336,
+    "Zoom": 0.5953008751526806
   }
 }
