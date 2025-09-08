@@ -131,44 +131,44 @@ DynaFetch includes 22 comprehensive sample graphs organized into three categorie
 
 1. **Start with DynaFetch_Samples** - Learn core concepts and basic patterns
 2. **Explore DynaFetched_DynaWeb_Samples** - See practical migration examples from DynaWeb
-3. **Reference DynaFetch_Nodes-Groups** - Detailed documentation of all available nodes
+3. **Reference DynaFetch_Nodes_Groups** - Detailed visual documentation of all available nodes
 
 ### DynaFetch_Samples (7 Original Samples)
 
 Core functionality demonstrations perfect for learning DynaFetch basics:
 
-- **1-Basic-GET-Request** - Simplest HTTP request pattern using DynaFetch for beginners
-- **2-Authenticated-API-Requests** - Bearer token authentication with client-level auth setup
-- **3-POST-Data-Submission** - Complete structured data submission workflow
-- **4-Multi-Step-Authenticated-Workflow** - Complex CRUD operations with authentication
-- **5-Error-Handling-Pattern** - Graceful API error handling instead of workflow crashes
-- **6-Comprehensive-JSON-Processing** - Multiple JSON processing methods for different response types
-- **7-Fun-GET-Request** - Simple public API demonstration using Ron Swanson Quotes API
+- **01_Basic-GET-Request.dyn** - Simplest HTTP request pattern using DynaFetch for beginners
+- **02_Authenticated-API.dyn** - Bearer token authentication with client-level auth setup
+- **03_POST-Data-Submission.dyn** - Complete structured data submission workflow
+- **04_Multi-Step-Workflow.dyn** - Complex CRUD operations with authentication
+- **05_Error-Handling-Pattern.dyn** - Graceful API error handling instead of workflow crashes
+- **06_JSON-Processing-Demo.dyn** - Multiple JSON processing methods for different response types
+- **07_Fun-GET-Random-Ron_Swanson_Quote.dyn** - Simple public API demonstration using Ron Swanson Quotes API
 
 ### DynaFetched_DynaWeb_Samples (7 Migration Examples)
 
 Practical migration examples showing DynaWeb to DynaFetch transitions:
 
-- **1-First-Request-DynaFetch** - DynaWeb to DynaFetch migration of basic HTTP request pattern
-- **2-Simple-Request-DynaFetch** - Recreates DynaWeb's multi-endpoint JSON processing workflow
-- **3-Simple-Request-Benchmarking-DynaFetch** - Comprehensive response analysis with detailed metadata extraction
-- **4-REST-API-Example-DynaFetch** - Complex JSON deserialization with multiple data structure handling
-- **5-REST-API-Advanced-DynaFetch** - Multi-step authenticated API workflow with POST data submission
-- **6-Complex-POST-Request-DynaFetch** - Advanced POST operations with JSON body creation and response processing
-- **7-Upload-File-to-APS-DynaFetch** - Modern Autodesk Platform Services integration (updated from legacy Forge)
+- **1 - First-Request-DynaFetch.dyn** - DynaWeb to DynaFetch migration of basic HTTP request pattern
+- **2 - Simple-Request-DynaFetch.dyn** - Recreates DynaWeb's multi-endpoint JSON processing workflow
+- **3 - Simple-Request-Benchmarking-DynaFetch.dyn** - Comprehensive response analysis with detailed metadata extraction
+- **4 - REST-API-Example-DynaFetch.dyn** - Complex JSON deserialization with multiple data structure handling
+- **5 - REST-API-Advanced-DynaFetch.dyn** - Multi-step authenticated API workflow with POST data submission
+- **6 - Complex-POST-Request-DynaFetch.dyn** - Advanced POST operations with JSON body creation and response processing
+- **7 - Upload-File-to-APS-DynaFetch.dyn** - Modern Autodesk Platform Services integration (updated from legacy Forge)
 
 ### DynaFetch_Nodes-Groups (8 Node Reference Samples)
 
 Complete node documentation organized by functional groups:
 
-- **Core-Infrastructure-Note** - Overview of DynaFetch core components and architecture
-- **Core-Node-Groups** - Complete DynaFetch node collection organized by functional groups
-- **Nodes-ClientNodes** - HTTP client creation and configuration nodes
-- **Nodes-ExecuteNodes** - Request execution nodes for GET, POST, PUT, DELETE operations
-- **Nodes-JsonNodes** - JSON processing, validation, and conversion utilities
-- **Nodes-RequestNodes** - Request building and parameter configuration nodes
-- **Utilities-JsonHelper** - Advanced JSON manipulation and serialization tools
-- **System-Sections** - Exception handling and .NET HttpStatusCode integration nodes
+- **DynaFetch.dyn** - Overview of DynaFetch nodes
+- **DynaFetch_Core.dyn** - HTTP client creation and configuration nodes
+- **DynaFetch_Nodes.dyn** - Request execution nodes for GET, POST, PUT, DELETE operations
+- **DynaFetch_Package_Nodes.dyn** - Complete DynaFetch node collection including DynaFetch and System nodes
+- **DynaFetch_Utilities.dyn** - Advanced JSON manipulation and serialization tools
+- **System.dyn** - Overview of System Nodes
+- **System_Exception.dyn** - Exception handling
+- **System_Net.dyn** .NET HttpStatusCode integration nodes
 
 ### Sample Usage
 
