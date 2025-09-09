@@ -43,7 +43,7 @@
 6. **6 - Complex-POST-Request-DynaFetch.dyn**
    - Advanced POST operations with JSON body creation and response processing
 
-7. **7 - Upload-File-to-APS-DynaFetch.dyn**
+7. **7 - GET-ACC-Projects-and-Users-DynaFetch**
    - Modern Autodesk Platform Services integration (updated from legacy Forge)
 
 ## DynaFetch_Nodes_Groups (8 Node Reference Samples)

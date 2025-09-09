@@ -155,7 +155,7 @@ Practical migration examples showing DynaWeb to DynaFetch transitions:
 - **4 - REST-API-Example-DynaFetch.dyn** - Complex JSON deserialization with multiple data structure handling
 - **5 - REST-API-Advanced-DynaFetch.dyn** - Multi-step authenticated API workflow with POST data submission
 - **6 - Complex-POST-Request-DynaFetch.dyn** - Advanced POST operations with JSON body creation and response processing
-- **7 - Upload-File-to-APS-DynaFetch.dyn** - Modern Autodesk Platform Services integration (updated from legacy Forge)
+- **7 - GET-ACC-Projects-and-Users-DynaFetch.dyn** - Modern Autodesk Platform Services integration (updated from legacy Forge)
 
 ### DynaFetch_Nodes-Groups (8 Node Reference Samples)
 
