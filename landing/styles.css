@@ -670,6 +670,107 @@ a:hover {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Samples Section Styles */
+.samples-section {
+  background: linear-gradient(
+    135deg,
+    var(--color-gray-50) 0%,
+    var(--color-gray-100) 100%
+  );
+  padding: var(--spacing-3xl) 0;
+  margin: var(--spacing-2xl) 0;
+}
+
+.samples-intro {
+  font-size: var(--font-size-lg);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-gray-600);
+}
+
+.samples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.sample-category {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sample-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sample-category h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+}
+
+.sample-count {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.sample-category p {
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.samples-cta {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.samples-cta p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-gray-600);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: var(--spacing-md) var(--spacing-xl);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button.secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .samples-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .sample-category {
+    padding: var(--spacing-lg);
+  }
+}
+
 /* Nodes Screenshot Styling */
 .nodes-screenshot {
   width: 100%;
