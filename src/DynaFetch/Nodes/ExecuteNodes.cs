@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using DynaFetch.Core;
 
 namespace DynaFetch.Nodes
@@ -26,9 +27,8 @@ namespace DynaFetch.Nodes
 
       try
       {
-        // Execute GET request and wrap response
-        var httpResponseTask = client.GetAsync(url);
-        var httpResponseMessage = httpResponseTask.GetAwaiter().GetResult();
+        // Execute GET request and wrap response (using Task.Run to avoid deadlocks in Revit)
+        var httpResponseMessage = Task.Run(async () => await client.GetAsync(url)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)
@@ -58,10 +58,9 @@ namespace DynaFetch.Nodes
 
       try
       {
-        // Create JSON content and execute POST
+        // Create JSON content and execute POST (using Task.Run to avoid deadlocks in Revit)
         var content = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        var httpResponseTask = client.PostAsync(url, content);
-        var httpResponseMessage = httpResponseTask.GetAwaiter().GetResult();
+        var httpResponseMessage = Task.Run(async () => await client.PostAsync(url, content)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)
@@ -91,10 +90,9 @@ namespace DynaFetch.Nodes
 
       try
       {
-        // Create JSON content and execute PUT
+        // Create JSON content and execute PUT (using Task.Run to avoid deadlocks in Revit)
         var content = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        var httpResponseTask = client.PutAsync(url, content);
-        var httpResponseMessage = httpResponseTask.GetAwaiter().GetResult();
+        var httpResponseMessage = Task.Run(async () => await client.PutAsync(url, content)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)
@@ -120,9 +118,8 @@ namespace DynaFetch.Nodes
 
       try
       {
-        // Execute DELETE request and wrap response
-        var httpResponseTask = client.DeleteAsync(url);
-        var httpResponseMessage = httpResponseTask.GetAwaiter().GetResult();
+        // Execute DELETE request and wrap response (using Task.Run to avoid deadlocks in Revit)
+        var httpResponseMessage = Task.Run(async () => await client.DeleteAsync(url)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)
@@ -152,10 +149,9 @@ namespace DynaFetch.Nodes
 
       try
       {
-        // Create JSON content and execute PATCH
+        // Create JSON content and execute PATCH (using Task.Run to avoid deadlocks in Revit)
         var content = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        var httpResponseTask = client.PatchAsync(url, content);
-        var httpResponseMessage = httpResponseTask.GetAwaiter().GetResult();
+        var httpResponseMessage = Task.Run(async () => await client.PatchAsync(url, content)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)
