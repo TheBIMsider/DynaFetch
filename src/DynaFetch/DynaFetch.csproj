@@ -10,21 +10,21 @@
     
     <!-- Package Information -->
     <PackageId>DynaFetch</PackageId>
-    <Version>1.0.0</Version>
-    <Authors>Your Name</Authors>
-    <Company>Your Company</Company>
+    <Version>1.0.2</Version>
+    <Authors>Carl Storms AKA The BIMsider</Authors>
+    <Company>TBS</Company>
     <Description>Modern REST API package for Dynamo 3.0 - inspired by DynaWeb</Description>
     <PackageTags>dynamo;rest;api;http;json;bim</PackageTags>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/yourusername/DynaFetch</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/yourusername/DynaFetch/landing</PackageProjectUrl>
     <RepositoryUrl>https://github.com/yourusername/DynaFetch</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     
     <!-- Assembly Information -->
     <AssemblyTitle>DynaFetch</AssemblyTitle>
     <AssemblyDescription>Modern REST API package for Dynamo 3.0</AssemblyDescription>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
