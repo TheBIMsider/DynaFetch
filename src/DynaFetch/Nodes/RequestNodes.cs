@@ -364,5 +364,108 @@ namespace DynaFetch.Nodes
 
       return request.AsPatch();
     }
+
+    /// <summary>
+    /// Creates multipart form-data content for file uploads.
+    /// Returns a MultipartFormDataContent object that can be passed to POST/PUT methods.
+    /// </summary>
+    /// <param name="filePath">Full path to the file to upload</param>
+    /// <param name="fieldName">Form field name (optional, defaults to empty string for unnamed fields)</param>
+    /// <param name="fileName">Custom filename (optional, uses actual filename if not provided)</param>
+    /// <returns>MultipartFormDataContent ready for upload</returns>
+    public static object CreateFileUpload(string filePath, string fieldName = "", string fileName = "")
+    {
+      // Validate file exists
+      if (!System.IO.File.Exists(filePath))
+      {
+        throw new System.IO.FileNotFoundException($"File not found: {filePath}");
+      }
+
+      // Read file content as byte array
+      byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+      // Create ByteArrayContent from file bytes
+      var fileContent = new ByteArrayContent(fileBytes);
+
+      // Detect content type based on file extension
+      string contentType = GetContentType(filePath);
+      fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(contentType);
+
+      // Create multipart form data container
+      var formData = new MultipartFormDataContent();
+
+      // Use actual filename if custom one not provided
+      string uploadFileName = string.IsNullOrEmpty(fileName)
+          ? System.IO.Path.GetFileName(filePath)
+          : fileName;
+
+      // Add file content with field name (empty string for unnamed fields like BIMtrack)
+      formData.Add(fileContent, fieldName, uploadFileName);
+
+      return formData;
+    }
+
+    /// <summary>
+    /// Adds additional form fields to existing multipart form data.
+    /// Use this to add text fields alongside file uploads.
+    /// </summary>
+    /// <param name="formData">Existing MultipartFormDataContent from CreateFileUpload</param>
+    /// <param name="fieldName">Form field name</param>
+    /// <param name="value">Field value</param>
+    /// <returns>Updated MultipartFormDataContent</returns>
+    public static object AddFormField(object formData, string fieldName, string value)
+    {
+      if (formData is not MultipartFormDataContent content)
+      {
+        throw new ArgumentException("formData must be MultipartFormDataContent from CreateFileUpload");
+      }
+
+      content.Add(new StringContent(value), fieldName);
+      return content;
+    }
+
+    /// <summary>
+    /// Detects MIME content type based on file extension.
+    /// </summary>
+    private static string GetContentType(string filePath)
+    {
+      string extension = System.IO.Path.GetExtension(filePath).ToLowerInvariant();
+
+      return extension switch
+      {
+        // Images
+        ".jpg" or ".jpeg" => "image/jpeg",
+        ".png" => "image/png",
+        ".gif" => "image/gif",
+        ".bmp" => "image/bmp",
+        ".webp" => "image/webp",
+        ".svg" => "image/svg+xml",
+        ".ico" => "image/x-icon",
+
+        // Documents
+        ".pdf" => "application/pdf",
+        ".doc" => "application/msword",
+        ".docx" => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ".xls" => "application/vnd.ms-excel",
+        ".xlsx" => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        ".ppt" => "application/vnd.ms-powerpoint",
+        ".pptx" => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+
+        // Text
+        ".txt" => "text/plain",
+        ".csv" => "text/csv",
+        ".html" or ".htm" => "text/html",
+        ".xml" => "application/xml",
+        ".json" => "application/json",
+
+        // Archives
+        ".zip" => "application/zip",
+        ".rar" => "application/x-rar-compressed",
+        ".7z" => "application/x-7z-compressed",
+
+        // Default
+        _ => "application/octet-stream"
+      };
+    }
   }
 }

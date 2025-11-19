@@ -38,14 +38,14 @@ namespace DynaFetch.Nodes
     }
 
     /// <summary>
-    /// Execute a POST request with URL and JSON data
-    /// Perfect for sending JSON data to APIs
+    /// Execute a POST request with URL and content (JSON string or file upload)
+    /// Supports both JSON data and multipart form-data for file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
     /// <param name="url">URL to post to (e.g., "https://api.example.com/create")</param>
-    /// <param name="jsonData">JSON data to send as string</param>
+    /// <param name="content">JSON string or MultipartFormDataContent from RequestNodes.CreateFileUpload</param>
     /// <returns>HTTP response containing the result</returns>
-    public static HttpResponse POST(HttpClientWrapper client, string url, string jsonData)
+    public static HttpResponse POST(HttpClientWrapper client, string url, object? content = null)
     {
       if (client == null)
         throw new ArgumentNullException(nameof(client), "HTTP client cannot be null");
@@ -53,14 +53,38 @@ namespace DynaFetch.Nodes
       if (string.IsNullOrWhiteSpace(url))
         throw new ArgumentException("URL cannot be empty", nameof(url));
 
-      if (string.IsNullOrWhiteSpace(jsonData))
-        throw new ArgumentException("JSON data cannot be empty", nameof(jsonData));
-
       try
       {
-        // Create JSON content and execute POST (using Task.Run to avoid deadlocks in Revit)
-        var content = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        var httpResponseMessage = Task.Run(async () => await client.PostAsync(url, content)).Result;
+        System.Net.Http.HttpContent? httpContent = null;
+
+        // Handle different content types
+        if (content == null)
+        {
+          // No content - simple POST
+          httpContent = null;
+        }
+        else if (content is MultipartFormDataContent multipartContent)
+        {
+          // File upload - multipart form data
+          httpContent = multipartContent;
+        }
+        else if (content is string jsonData)
+        {
+          // Validate JSON string is not empty
+          if (string.IsNullOrWhiteSpace(jsonData))
+            throw new ArgumentException("JSON data cannot be empty", nameof(content));
+
+          // JSON string content
+          httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+        }
+        else
+        {
+          throw new ArgumentException($"Unsupported content type: {content.GetType().Name}. Use string for JSON or MultipartFormDataContent for file uploads.", nameof(content));
+        }
+
+        // Execute POST (using Task.Run to avoid deadlocks in Revit)
+        // Note: httpContent can be null for simple POST requests without body
+        var httpResponseMessage = Task.Run(async () => await client.PostAsync(url, httpContent!)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)

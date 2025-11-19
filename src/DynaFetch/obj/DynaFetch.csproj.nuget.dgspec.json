@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
         "projectName": "DynaFetch",
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

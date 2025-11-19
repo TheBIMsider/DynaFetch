@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "DynaFetch/1.0.2": {
+      "DynaFetch/1.0.3": {
         "dependencies": {
           "DynamoVisualProgramming.DynamoServices": "3.0.0.7186",
           "DynamoVisualProgramming.ZeroTouchLibrary": "3.0.0.7186",
@@ -57,7 +57,7 @@
     }
   },
   "libraries": {
-    "DynaFetch/1.0.2": {
+    "DynaFetch/1.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
