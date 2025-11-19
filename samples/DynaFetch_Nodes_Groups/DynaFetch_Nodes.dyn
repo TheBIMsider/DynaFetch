@@ -522,8 +522,8 @@
         },
         {
           "Id": "fd46f6c136b640d0896aa8e478c3f68e",
-          "Name": "jsonData",
-          "Description": "string",
+          "Name": "content",
+          "Description": "var",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -541,9 +541,9 @@
           "KeepListStructure": false
         }
       ],
-      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.POST@DynaFetch.Core.HttpClientWrapper,string,string",
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.POST@DynaFetch.Core.HttpClientWrapper,string,var",
       "Replication": "Auto",
-      "Description": "ExecuteNodes.POST (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+      "Description": "ExecuteNodes.POST (client: HttpClientWrapper, url: string, content: var): HttpResponse"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -1699,6 +1699,168 @@
       "FunctionSignature": "DynaFetch.Nodes.RequestNodes.SetMethod@DynaFetch.Core.HttpRequest,string",
       "Replication": "Auto",
       "Description": "RequestNodes.SetMethod (request: HttpRequest, method: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "308b7ce26f7e48b09b97df8514507c91",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "fdb9c21e174141bd89ca110838c5dd9d",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cafd5c0a40a340f1b49cc019430298bd",
+          "Name": "fieldName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eeedb55845d34e1fbb8e3f1ed1d358cb",
+          "Name": "filePath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f0a158445ad4ac28c086c65d0ddf050",
+          "Name": "contentType",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "349ba8edc6b443aba8f279f247ad810f",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddFile@DynaFetch.Core.HttpRequest,string,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddFile (request: HttpRequest, fieldName: string, filePath: string, contentType: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ceef8b3fe9054fc4968324fc9550626c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "75b4dbbab7e84a068894b178b0a7f539",
+          "Name": "filePath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c4247adb2ee54c948f1fe35948cb6bc8",
+          "Name": "fieldName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90b8cd9e56ee42759bb4b419793df7cc",
+          "Name": "fileName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1bc7c7e1afdb43ac855709db1abc58e0",
+          "Name": "contentType",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b2e245d3810846f6b0e6c6383729aa0a",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.CreateFileUpload@string,string,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.CreateFileUpload (filePath: string, fieldName: string, fileName: string, contentType: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ee99cb23e682470a9276def43a5d6bd4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "cef501d9d5f34597a13a2fa420e187aa",
+          "Name": "formData",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fbfe8fc63fbc4e2e90bf6a3777bdd387",
+          "Name": "fieldName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8fc4691be75944aead65b6bc6b0b95e0",
+          "Name": "value",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2712f45c488147b3aa29b5cdfed58bcc",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddFormField@var,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddFormField (formData: var, fieldName: string, value: string): var"
     }
   ],
   "Connectors": [],
@@ -1755,7 +1917,10 @@
         "48a9a8fc696e42bcaedb177eb6fe9928",
         "6031646c75ce40959ca4a501828d903b",
         "a8bacfd0333548be870cc7611d174a7b",
-        "42ef41185dc8492d8ed53c63365034ba"
+        "42ef41185dc8492d8ed53c63365034ba",
+        "308b7ce26f7e48b09b97df8514507c91",
+        "ceef8b3fe9054fc4968324fc9550626c",
+        "ee99cb23e682470a9276def43a5d6bd4"
       ]
     }
   ],
@@ -1789,7 +1954,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "3.5.2.8856",
+      "Version": "3.6.1.9895",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -2134,7 +2299,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
+        "X": 1926.6481723132015,
         "Y": 1184.9293377266365
       },
       {
@@ -2144,8 +2309,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1349.7161515107853
+        "X": 1926.6481723132015,
+        "Y": 1806.3936784876157
       },
       {
         "Id": "cdce0034bf0e4c7b8fa4dcb538eba79e",
@@ -2154,8 +2319,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1548.502965294934
+        "X": 1926.6481723132015,
+        "Y": 2013.5484587412755
       },
       {
         "Id": "82295200d1cc4d74b5614971e15d2a65",
@@ -2164,8 +2329,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1713.2897790790826
+        "X": 1926.6481723132015,
+        "Y": 2186.7032389949354
       },
       {
         "Id": "ccaf6a4925e24059b5b4072b3017d003",
@@ -2174,8 +2339,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1878.0765928632313
+        "X": 1926.6481723132015,
+        "Y": 2359.858019248595
       },
       {
         "Id": "6bb337cfa41c4098b331cebc2c773475",
@@ -2184,8 +2349,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 2042.86340664738
+        "X": 1926.6481723132015,
+        "Y": 2533.012799502255
       },
       {
         "Id": "7de73f9409044df59e2c2fbca34657d3",
@@ -2194,8 +2359,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 2241.650220431529
+        "X": 1926.6481723132015,
+        "Y": 2740.1675797559146
       },
       {
         "Id": "a770cbb723fb4e2a93c9e8e33187d4a4",
@@ -2204,8 +2369,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 2406.4370342156776
+        "X": 2280.857874991054,
+        "Y": 1185.0589608001417
       },
       {
         "Id": "6ef1d2be118541a28e35d842de79e8d2",
@@ -2214,8 +2379,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1183.8274069891493
+        "X": 2280.857874991054,
+        "Y": 1399.4125789456177
       },
       {
         "Id": "36116f06870c4a60b05b15ca5c93e29e",
@@ -2224,8 +2389,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1358.9040283280258
+        "X": 2280.857874991054,
+        "Y": 1551.7661970910938
       },
       {
         "Id": "828c14db3e504268afcbd6a7872263d8",
@@ -2234,8 +2399,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1533.9806496669023
+        "X": 2280.857874991054,
+        "Y": 1704.1198152365698
       },
       {
         "Id": "da607f85ab064dcc81a55199b1b2c595",
@@ -2244,8 +2409,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1709.057271005779
+        "X": 2280.857874991054,
+        "Y": 1856.4734333820459
       },
       {
         "Id": "48a9a8fc696e42bcaedb177eb6fe9928",
@@ -2254,8 +2419,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1884.1338923446551
+        "X": 2280.857874991054,
+        "Y": 2008.827051527522
       },
       {
         "Id": "6031646c75ce40959ca4a501828d903b",
@@ -2264,8 +2429,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 2059.210513683532
+        "X": 2280.857874991054,
+        "Y": 2161.180669672998
       },
       {
         "Id": "a8bacfd0333548be870cc7611d174a7b",
@@ -2274,8 +2439,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 2262.287135022408
+        "X": 2280.857874991054,
+        "Y": 2341.5342878184742
       },
       {
         "Id": "42ef41185dc8492d8ed53c63365034ba",
@@ -2284,8 +2449,38 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 2437.363756361285
+        "X": 2280.857874991054,
+        "Y": 2742.2415241094263
+      },
+      {
+        "Id": "308b7ce26f7e48b09b97df8514507c91",
+        "Name": "RequestNodes.AddFile",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1926.6481723132015,
+        "Y": 1358.0841179802962
+      },
+      {
+        "Id": "ceef8b3fe9054fc4968324fc9550626c",
+        "Name": "RequestNodes.CreateFileUpload",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2280.857874991054,
+        "Y": 2493.8879059639503
+      },
+      {
+        "Id": "ee99cb23e682470a9276def43a5d6bd4",
+        "Name": "RequestNodes.AddFormField",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1926.6481723132015,
+        "Y": 1599.238898233956
       }
     ],
     "Annotations": [
@@ -2393,17 +2588,16 @@
           "d194985abf3749baad7f298bd61183d5",
           "6edea4d63ff8482eaf3f9c0652600c82",
           "d92e87f5521440f4a6456a3e146ccc47",
-          "07b7346679c84a7383e4ee5869186cde",
-          "9f98f54591f64f6fa9690a74a60f6fd7"
+          "07b7346679c84a7383e4ee5869186cde"
         ],
         "HasNestedGroups": false,
         "Left": 1198.6187713410195,
-        "Top": 999.512652931852,
+        "Top": 1110.9930938169052,
         "Width": 657.4490360730492,
-        "Height": 1325.0572087407165,
+        "Height": 1213.5767678556633,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 1072.512652931852,
+        "InitialTop": 1183.9930938169052,
         "InitialHeight": 1265.0572087407165,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
@@ -2431,17 +2625,20 @@
           "48a9a8fc696e42bcaedb177eb6fe9928",
           "6031646c75ce40959ca4a501828d903b",
           "a8bacfd0333548be870cc7611d174a7b",
-          "42ef41185dc8492d8ed53c63365034ba"
+          "42ef41185dc8492d8ed53c63365034ba",
+          "308b7ce26f7e48b09b97df8514507c91",
+          "ee99cb23e682470a9276def43a5d6bd4",
+          "ceef8b3fe9054fc4968324fc9550626c"
         ],
         "HasNestedGroups": false,
-        "Left": 1921.0211316055202,
-        "Top": 1110.8274069891493,
-        "Width": 670.6207279410492,
-        "Height": 1489.6096272265283,
+        "Left": 1916.6481723132015,
+        "Top": 1111.9293377266365,
+        "Width": 688.2097026778524,
+        "Height": 1790.3121863827898,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 1183.8274069891493,
-        "InitialHeight": 1398.5363493721359,
+        "InitialTop": 1184.9293377266365,
+        "InitialHeight": 1702.3121863827898,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -2499,17 +2696,17 @@
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "9f98f54591f64f6fa9690a74a60f6fd7",
-          "5280b0ecb13c46cab25899551522ec3d"
+          "5280b0ecb13c46cab25899551522ec3d",
+          "9f98f54591f64f6fa9690a74a60f6fd7"
         ],
         "HasNestedGroups": true,
         "Left": 1188.6187713410195,
-        "Top": 926.512652931852,
+        "Top": 924.0462500799101,
         "Width": 677.4490360730492,
-        "Height": 1413.0572087407165,
+        "Height": 1415.5236115926584,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 999.512652931852,
+        "InitialTop": 997.0462500799101,
         "InitialHeight": 1310.0572087407165,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
@@ -2526,14 +2723,14 @@
           "b8cc339afb7c44eeac889a06117e669e"
         ],
         "HasNestedGroups": true,
-        "Left": 1911.0211316055202,
+        "Left": 1906.6481723132015,
         "Top": 927.2663269066109,
-        "Width": 690.6207279410492,
-        "Height": 1688.1707073090668,
+        "Width": 708.2097026778524,
+        "Height": 1989.9751972028155,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1000.2663269066109,
-        "InitialHeight": 1597.0974294546743,
+        "InitialHeight": 1901.9751972028155,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
       },
@@ -2586,8 +2783,8 @@
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 1208.6504753896415,
-        "Top": 1080.512652931852,
+        "Left": 1215.7254506570107,
+        "Top": 1005.0462500799101,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -2599,7 +2796,7 @@
       },
       {
         "Id": "7faa5a59365543a5b04a32b29e2b99f2",
-        "Title": "DynaFetch > Nodes > RequestNodes \n= 16 Nodes\n•  0 +\n•  16⚡\n•  0 ?",
+        "Title": "DynaFetch > Nodes > RequestNodes \n= 19 Nodes\n•  0 +\n•  19⚡\n•  0 ?",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -2658,8 +2855,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 351.855877797079,
-    "Y": -461.26402191729505,
-    "Zoom": 0.5024492910998689
+    "X": 332.4744701388048,
+    "Y": -405.8577403676494,
+    "Zoom": 0.43496802393593326
   }
 }

@@ -4063,8 +4063,8 @@
         },
         {
           "Id": "fd46f6c136b640d0896aa8e478c3f68e",
-          "Name": "jsonData",
-          "Description": "string",
+          "Name": "content",
+          "Description": "var",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4082,9 +4082,9 @@
           "KeepListStructure": false
         }
       ],
-      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.POST@DynaFetch.Core.HttpClientWrapper,string,string",
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.POST@DynaFetch.Core.HttpClientWrapper,string,var",
       "Replication": "Auto",
-      "Description": "ExecuteNodes.POST (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+      "Description": "ExecuteNodes.POST (client: HttpClientWrapper, url: string, content: var): HttpResponse"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -5240,6 +5240,168 @@
       "FunctionSignature": "DynaFetch.Nodes.RequestNodes.SetMethod@DynaFetch.Core.HttpRequest,string",
       "Replication": "Auto",
       "Description": "RequestNodes.SetMethod (request: HttpRequest, method: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "84aa8b3a5bc542a1bc75d6cadabe59d4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c7ea5f373744457a988927edc569a65d",
+          "Name": "request",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a074d0d6eedd4664b87178fd031fca95",
+          "Name": "fieldName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e28b7fadbe7949f8b63a50dc93f65f7d",
+          "Name": "filePath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "549b2709fdba480ab9b80b3d8e6fd9ef",
+          "Name": "contentType",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "692e80b9db3143d7a7b4944e66aaf314",
+          "Name": "HttpRequest",
+          "Description": "HttpRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddFile@DynaFetch.Core.HttpRequest,string,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddFile (request: HttpRequest, fieldName: string, filePath: string, contentType: string): HttpRequest"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1550783d6eed4ca18c6aa174bd1ecc5d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7d618288d19f4458bb6a8aa35f96b504",
+          "Name": "formData",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f875c4b74e74f27858adb178fc08f12",
+          "Name": "fieldName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ba89150c4fae46c89f706ad913502476",
+          "Name": "value",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6959f3603b7b4971bc783fe28ff16af3",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.AddFormField@var,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.AddFormField (formData: var, fieldName: string, value: string): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "adca9bf34a6842bf8c38d286214b7e99",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9faffe6607bd408fb5bd22adebdfbc12",
+          "Name": "filePath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1e058663167c47b889742f286e5a5542",
+          "Name": "fieldName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9534617d32d9441bb1dda5dc0bb97f5b",
+          "Name": "fileName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "47e3422d06164fb1801e34f33048409d",
+          "Name": "contentType",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3579ab9d767843889fb5faa739ba5d14",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.RequestNodes.CreateFileUpload@string,string,string,string",
+      "Replication": "Auto",
+      "Description": "RequestNodes.CreateFileUpload (filePath: string, fieldName: string, fileName: string, contentType: string): var[]..[]"
     }
   ],
   "Connectors": [],
@@ -5400,7 +5562,10 @@
         "48a9a8fc696e42bcaedb177eb6fe9928",
         "6031646c75ce40959ca4a501828d903b",
         "a8bacfd0333548be870cc7611d174a7b",
-        "42ef41185dc8492d8ed53c63365034ba"
+        "42ef41185dc8492d8ed53c63365034ba",
+        "84aa8b3a5bc542a1bc75d6cadabe59d4",
+        "1550783d6eed4ca18c6aa174bd1ecc5d",
+        "adca9bf34a6842bf8c38d286214b7e99"
       ]
     }
   ],
@@ -5434,7 +5599,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "3.5.2.8856",
+      "Version": "3.6.1.9895",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -6649,8 +6814,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1183.9930938169052
+        "X": 1206.4487624662024,
+        "Y": 1185.3501930398515
       },
       {
         "Id": "9b21a0e01fad4e32b09a56efa9b6a8d9",
@@ -6659,8 +6824,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1309.5655176732782
+        "X": 1206.4487624662024,
+        "Y": 1310.9226168962246
       },
       {
         "Id": "9a3d6cdfb6ef45a0aea88b9b47936068",
@@ -6669,8 +6834,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1435.1379415296512
+        "X": 1206.4487624662024,
+        "Y": 1436.4950407525976
       },
       {
         "Id": "e86eb72cb34d4e9989047930c52ea87e",
@@ -6679,8 +6844,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1560.710365386024
+        "X": 1206.4487624662024,
+        "Y": 1562.0674646089703
       },
       {
         "Id": "b1dc8ff96af54e6c82dccf1f47b7acf7",
@@ -6689,8 +6854,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1686.282789242397
+        "X": 1206.4487624662024,
+        "Y": 1687.6398884653433
       },
       {
         "Id": "f6687d0b2b4945158da255459f8bcc4b",
@@ -6699,8 +6864,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1811.85521309877
+        "X": 1206.4487624662024,
+        "Y": 1813.2123123217164
       },
       {
         "Id": "7f42bbcecb414e3b8ea6eb9a565ec2e8",
@@ -6709,8 +6874,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 1937.4276369551435
+        "X": 1206.4487624662024,
+        "Y": 1938.7847361780898
       },
       {
         "Id": "ff7d5f89f07746438745f17af6e84ac4",
@@ -6719,8 +6884,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 2063.000060811516
+        "X": 1206.4487624662024,
+        "Y": 2064.3571600344626
       },
       {
         "Id": "56c9e83533474aad96bc6f9502b6e3de",
@@ -6729,8 +6894,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1208.6187713410195,
-        "Y": 2188.5724846678895
+        "X": 1206.4487624662024,
+        "Y": 2189.929583890836
       },
       {
         "Id": "2bc31377f8b143769b8e8fa90114ab4b",
@@ -6739,8 +6904,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 1191.242274025553
+        "X": 1566.8977985392517,
+        "Y": 1192.5993732484992
       },
       {
         "Id": "eff41383e5ad4bb9a2591747dd0b1ccf",
@@ -6749,8 +6914,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 1334.2890722608408
+        "X": 1566.8977985392517,
+        "Y": 1335.6461714837872
       },
       {
         "Id": "057c66d615c44f95997c44f94112800c",
@@ -6759,8 +6924,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 1477.3358704961288
+        "X": 1566.8977985392517,
+        "Y": 1478.692969719075
       },
       {
         "Id": "bd0e17ebd5874e70950250f4a012347b",
@@ -6769,8 +6934,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 1620.3826687314167
+        "X": 1566.8977985392517,
+        "Y": 1621.739767954363
       },
       {
         "Id": "d194985abf3749baad7f298bd61183d5",
@@ -6779,8 +6944,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 1763.4294669667051
+        "X": 1566.8977985392517,
+        "Y": 1764.7865661896515
       },
       {
         "Id": "6edea4d63ff8482eaf3f9c0652600c82",
@@ -6789,8 +6954,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 1906.4762652019926
+        "X": 1566.8977985392517,
+        "Y": 1907.833364424939
       },
       {
         "Id": "d92e87f5521440f4a6456a3e146ccc47",
@@ -6799,8 +6964,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 2049.523063437281
+        "X": 1566.8977985392517,
+        "Y": 2050.8801626602276
       },
       {
         "Id": "07b7346679c84a7383e4ee5869186cde",
@@ -6809,8 +6974,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1569.0678074140687,
-        "Y": 2192.5698616725685
+        "X": 1566.8977985392517,
+        "Y": 2193.926960895515
       },
       {
         "Id": "8a2632ca951d4bf4867de14c897224f0",
@@ -6819,8 +6984,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1184.9293377266365
+        "X": 1940.504781009181,
+        "Y": 1202.5272490288187
       },
       {
         "Id": "350272f48e7343638eca8130182f46c8",
@@ -6829,8 +6994,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1349.7161515107853
+        "X": 1940.504781009181,
+        "Y": 1815.9630812855619
       },
       {
         "Id": "cdce0034bf0e4c7b8fa4dcb538eba79e",
@@ -6839,8 +7004,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1548.502965294934
+        "X": 1940.504781009181,
+        "Y": 2020.4416920378096
       },
       {
         "Id": "82295200d1cc4d74b5614971e15d2a65",
@@ -6849,8 +7014,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1713.2897790790826
+        "X": 1940.504781009181,
+        "Y": 2190.920302790057
       },
       {
         "Id": "ccaf6a4925e24059b5b4072b3017d003",
@@ -6859,8 +7024,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 1878.0765928632313
+        "X": 1940.504781009181,
+        "Y": 2361.398913542305
       },
       {
         "Id": "6bb337cfa41c4098b331cebc2c773475",
@@ -6869,8 +7034,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 2042.86340664738
+        "X": 1940.504781009181,
+        "Y": 2531.8775242945526
       },
       {
         "Id": "7de73f9409044df59e2c2fbca34657d3",
@@ -6879,8 +7044,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 2241.650220431529
+        "X": 1940.504781009181,
+        "Y": 2736.3561350468003
       },
       {
         "Id": "a770cbb723fb4e2a93c9e8e33187d4a4",
@@ -6889,8 +7054,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 1931.0211316055202,
-        "Y": 2406.4370342156776
+        "X": 2332.79376081218,
+        "Y": 1204.448952215901
       },
       {
         "Id": "6ef1d2be118541a28e35d842de79e8d2",
@@ -6899,8 +7064,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1183.8274069891493
+        "X": 2332.79376081218,
+        "Y": 1417.049437148854
       },
       {
         "Id": "36116f06870c4a60b05b15ca5c93e29e",
@@ -6909,8 +7074,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1358.9040283280258
+        "X": 2332.79376081218,
+        "Y": 1567.6499220818068
       },
       {
         "Id": "828c14db3e504268afcbd6a7872263d8",
@@ -6919,8 +7084,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1533.9806496669023
+        "X": 2332.79376081218,
+        "Y": 1718.2504070147597
       },
       {
         "Id": "da607f85ab064dcc81a55199b1b2c595",
@@ -6929,8 +7094,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1709.057271005779
+        "X": 2332.79376081218,
+        "Y": 1868.8508919477126
       },
       {
         "Id": "48a9a8fc696e42bcaedb177eb6fe9928",
@@ -6939,8 +7104,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 1884.1338923446551
+        "X": 2332.79376081218,
+        "Y": 2019.4513768806655
       },
       {
         "Id": "6031646c75ce40959ca4a501828d903b",
@@ -6949,8 +7114,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 2059.210513683532
+        "X": 2332.79376081218,
+        "Y": 2170.0518618136184
       },
       {
         "Id": "a8bacfd0333548be870cc7611d174a7b",
@@ -6959,8 +7124,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 2262.287135022408
+        "X": 2332.79376081218,
+        "Y": 2348.6523467465713
       },
       {
         "Id": "42ef41185dc8492d8ed53c63365034ba",
@@ -6969,8 +7134,38 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 2309.6418595465693,
-        "Y": 2437.363756361285
+        "X": 2332.79376081218,
+        "Y": 2745.853316612477
+      },
+      {
+        "Id": "84aa8b3a5bc542a1bc75d6cadabe59d4",
+        "Name": "RequestNodes.AddFile",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1940.504781009181,
+        "Y": 1373.0058597810664
+      },
+      {
+        "Id": "1550783d6eed4ca18c6aa174bd1ecc5d",
+        "Name": "RequestNodes.AddFormField",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1940.504781009181,
+        "Y": 1611.4844705333142
+      },
+      {
+        "Id": "adca9bf34a6842bf8c38d286214b7e99",
+        "Name": "RequestNodes.CreateFileUpload",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2332.79376081218,
+        "Y": 2499.252831679524
       }
     ],
     "Annotations": [
@@ -7648,18 +7843,17 @@
           "d194985abf3749baad7f298bd61183d5",
           "6edea4d63ff8482eaf3f9c0652600c82",
           "d92e87f5521440f4a6456a3e146ccc47",
-          "07b7346679c84a7383e4ee5869186cde",
-          "9f98f54591f64f6fa9690a74a60f6fd7"
+          "07b7346679c84a7383e4ee5869186cde"
         ],
         "HasNestedGroups": false,
-        "Left": 1198.6187713410195,
-        "Top": 999.512652931852,
+        "Left": 1196.4487624662024,
+        "Top": 1112.3501930398515,
         "Width": 657.4490360730492,
-        "Height": 1325.0572087407165,
+        "Height": 1213.5767678556635,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 1072.512652931852,
-        "InitialHeight": 1265.0572087407165,
+        "InitialTop": 1185.3501930398515,
+        "InitialHeight": 1153.5767678556635,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -7686,19 +7880,45 @@
           "48a9a8fc696e42bcaedb177eb6fe9928",
           "6031646c75ce40959ca4a501828d903b",
           "a8bacfd0333548be870cc7611d174a7b",
-          "42ef41185dc8492d8ed53c63365034ba"
+          "42ef41185dc8492d8ed53c63365034ba",
+          "1550783d6eed4ca18c6aa174bd1ecc5d",
+          "adca9bf34a6842bf8c38d286214b7e99",
+          "84aa8b3a5bc542a1bc75d6cadabe59d4"
         ],
         "HasNestedGroups": false,
-        "Left": 1921.0211316055202,
-        "Top": 1110.8274069891493,
-        "Width": 670.6207279410492,
-        "Height": 1489.6096272265283,
+        "Left": 1930.504781009181,
+        "Top": 1129.5272490288187,
+        "Width": 726.2889798029992,
+        "Height": 1776.3260675836584,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 1183.8274069891493,
-        "InitialHeight": 1398.5363493721359,
+        "InitialTop": 1202.5272490288187,
+        "InitialHeight": 1688.3260675836584,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
+      },
+      {
+        "Id": "b4c05b7b03544e1a918465671e137e65",
+        "Title": "DynaFetch Section",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "588b4c82ec3d4f6bae14919d75a4957d",
+          "0f3caeca773641b8b45dd8cc00717d43"
+        ],
+        "HasNestedGroups": false,
+        "Left": -2331.6851479758006,
+        "Top": -1655.1690767850162,
+        "Width": 5433.084651317102,
+        "Height": 194.08407519194816,
+        "FontSize": 96.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -1510.1690767850162,
+        "InitialHeight": 145.08407519194816,
+        "TextblockHeight": 135.0,
+        "Background": "#FFFFFFFF"
       },
       {
         "Id": "7acfb045deac472ba6a0cab350702f05",
@@ -7998,14 +8218,14 @@
           "5280b0ecb13c46cab25899551522ec3d"
         ],
         "HasNestedGroups": true,
-        "Left": 1188.6187713410195,
-        "Top": 926.512652931852,
+        "Left": 1186.4487624662024,
+        "Top": 927.964119617186,
         "Width": 677.4490360730492,
-        "Height": 1413.0572087407165,
+        "Height": 1412.962841278329,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 999.512652931852,
-        "InitialHeight": 1310.0572087407165,
+        "InitialTop": 1000.964119617186,
+        "InitialHeight": 1352.962841278329,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
       },
@@ -8021,39 +8241,16 @@
           "b8cc339afb7c44eeac889a06117e669e"
         ],
         "HasNestedGroups": true,
-        "Left": 1911.0211316055202,
+        "Left": 1920.504781009181,
         "Top": 927.2663269066109,
-        "Width": 690.6207279410492,
-        "Height": 1688.1707073090668,
+        "Width": 746.2889798029992,
+        "Height": 1993.5869897058662,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1000.2663269066109,
-        "InitialHeight": 1597.0974294546743,
+        "InitialHeight": 1905.5869897058662,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
-      },
-      {
-        "Id": "b4c05b7b03544e1a918465671e137e65",
-        "Title": "DynaFetch Section",
-        "DescriptionText": "",
-        "IsExpanded": true,
-        "WidthAdjustment": 0.0,
-        "HeightAdjustment": 0.0,
-        "Nodes": [
-          "588b4c82ec3d4f6bae14919d75a4957d",
-          "0f3caeca773641b8b45dd8cc00717d43"
-        ],
-        "HasNestedGroups": false,
-        "Left": -2331.6851479758006,
-        "Top": -1655.1690767850162,
-        "Width": 5433.084651317102,
-        "Height": 194.08407519194816,
-        "FontSize": 96.0,
-        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": -1510.1690767850162,
-        "InitialHeight": 79.0,
-        "TextblockHeight": 135.0,
-        "Background": "#FFFFFFFF"
       },
       {
         "Id": "f48ae52202724979a24dc65e7660a33a",
@@ -8384,8 +8581,8 @@
         "HeightAdjustment": 0.0,
         "Nodes": [],
         "HasNestedGroups": false,
-        "Left": 1208.6504753896415,
-        "Top": 1080.512652931852,
+        "Left": 1206.480466514825,
+        "Top": 1008.964119617186,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -8397,7 +8594,7 @@
       },
       {
         "Id": "7faa5a59365543a5b04a32b29e2b99f2",
-        "Title": "DynaFetch > Nodes > RequestNodes \n= 16 Nodes\n•  0 +\n•  16⚡\n•  0 ?",
+        "Title": "DynaFetch > Nodes > RequestNodes \n= 19 Nodes\n•  0 +\n•  19⚡\n•  0 ?",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -8496,8 +8693,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 762.2951820380764,
-    "Y": 331.3447503292237,
-    "Zoom": 0.2006064130771285
+    "X": 685.6626958755865,
+    "Y": 310.3943464561025,
+    "Zoom": 0.18665964490243017
   }
 }
