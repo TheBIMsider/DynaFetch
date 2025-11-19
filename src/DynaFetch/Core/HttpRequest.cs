@@ -389,8 +389,9 @@ namespace DynaFetch.Core
         fileContent.Headers.ContentType =
           new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
 
-        // Add to form data
-        formData.Add(fileContent, file.FieldName, file.FileName);
+        // Ensure field name is not empty (required by .NET API)
+        string fieldName = string.IsNullOrWhiteSpace(file.FieldName) ? "file" : file.FieldName;
+        formData.Add(fileContent, fieldName, file.FileName);
       }
 
       return formData;
