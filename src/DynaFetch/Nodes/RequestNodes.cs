@@ -366,6 +366,35 @@ namespace DynaFetch.Nodes
     }
 
     /// <summary>
+    /// Add a file to the request for upload (multipart form-data)
+    /// Compatible with DynaWeb's AddFile pattern
+    /// Returns HttpRequest for method chaining: ByUrl → AddFile → ExecuteNodes.POST
+    /// </summary>
+    /// <param name="request">HTTP request to add file to</param>
+    /// <param name="fieldName">Form field name (use empty string for unnamed fields)</param>
+    /// <param name="filePath">Full path to the file to upload</param>
+    /// <param name="contentType">MIME type (e.g., "image/png", "image/jpeg")</param>
+    /// <returns>Updated HTTP request ready for execution</returns>
+    public static HttpRequest AddFile(HttpRequest request, string fieldName, string filePath, string contentType)
+    {
+      if (request == null)
+        throw new ArgumentNullException(nameof(request), "HTTP request cannot be null");
+
+      if (string.IsNullOrWhiteSpace(filePath))
+        throw new ArgumentException("File path cannot be empty", nameof(filePath));
+
+      try
+      {
+        request.AddFile(fieldName, filePath, contentType);
+        return request;
+      }
+      catch (Exception ex)
+      {
+        throw new InvalidOperationException($"Failed to add file '{filePath}': {ex.Message}", ex);
+      }
+    }
+
+    /// <summary>
     /// Creates multipart form-data content for file uploads.
     /// Returns a MultipartFormDataContent object that can be passed to POST/PUT methods.
     /// </summary>

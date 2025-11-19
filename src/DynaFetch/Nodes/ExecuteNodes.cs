@@ -38,12 +38,12 @@ namespace DynaFetch.Nodes
     }
 
     /// <summary>
-    /// Execute a POST request with URL and content (JSON string or file upload)
-    /// Supports both JSON data and multipart form-data for file uploads
+    /// Execute a POST request
+    /// Supports: (1) Simple POST with no content, (2) JSON string data, (3) HttpRequest with file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
-    /// <param name="url">URL to post to (e.g., "https://api.example.com/create")</param>
-    /// <param name="content">JSON string or MultipartFormDataContent from RequestNodes.CreateFileUpload</param>
+    /// <param name="url">URL to post to</param>
+    /// <param name="content">Optional: JSON string, HttpRequest with files, or MultipartFormDataContent</param>
     /// <returns>HTTP response containing the result</returns>
     public static HttpResponse POST(HttpClientWrapper client, string url, object? content = null)
     {
@@ -60,64 +60,39 @@ namespace DynaFetch.Nodes
         // Handle different content types
         if (content == null)
         {
-          // No content - simple POST (existing behavior)
+          // No content - simple POST
           httpContent = null;
+        }
+        else if (content is HttpRequest httpRequest)
+        {
+          // NEW: HttpRequest with potential file uploads (DynaWeb pattern)
+          httpContent = httpRequest.BuildMultipartContent();
+
+          // If no files, check for regular content
+          if (httpContent == null)
+            httpContent = httpRequest.Content;
+        }
+        else if (content is string jsonData)
+        {
+          // JSON string content (existing behavior)
+          if (string.IsNullOrWhiteSpace(jsonData))
+            throw new ArgumentException("JSON data cannot be empty", nameof(content));
+
+          httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+        }
+        else if (content is MultipartFormDataContent multipartContent)
+        {
+          // Direct multipart content (legacy CreateFileUpload support)
+          httpContent = multipartContent;
         }
         else
         {
-          // Unwrap Dynamo StackValue wrapper if present
-          var actualContent = content;
-          var contentType = content.GetType();
-
-          // Check if this is a Dynamo wrapped type (StackValue from ProtoCore)
-          if (contentType.FullName != null && contentType.FullName.Contains("ProtoCore.DSASM.StackValue"))
-          {
-            try
-            {
-              // Try multiple reflection approaches to unwrap
-              var opaqueProperty = contentType.GetProperty("opdata");
-              if (opaqueProperty != null)
-              {
-                var opaqueData = opaqueProperty.GetValue(content);
-                if (opaqueData != null)
-                {
-                  var dataProperty = opaqueData.GetType().GetProperty("Data");
-                  if (dataProperty != null)
-                  {
-                    actualContent = dataProperty.GetValue(opaqueData);
-                  }
-                }
-              }
-            }
-            catch
-            {
-              // If unwrapping fails, use original content
-            }
-          }
-
-          // Now check the actual content type
-          if (actualContent is string jsonData)
-          {
-            // JSON string content (existing behavior - check this FIRST to preserve existing workflows)
-            if (string.IsNullOrWhiteSpace(jsonData))
-              throw new ArgumentException("JSON data cannot be empty", nameof(content));
-
-            httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-          }
-          else if (actualContent is MultipartFormDataContent multipartContent)
-          {
-            // File upload - multipart form data (NEW functionality)
-            httpContent = multipartContent;
-          }
-          else
-          {
-            // Unknown type - provide helpful error
-            var typeName = actualContent?.GetType().FullName ?? "null";
-            throw new ArgumentException(
-              $"Unsupported content type: {typeName}. " +
-              $"POST accepts either: (1) string for JSON data, or (2) MultipartFormDataContent from RequestNodes.CreateFileUpload for file uploads.",
-              nameof(content));
-          }
+          // Unknown type - provide helpful error
+          var typeName = content?.GetType().FullName ?? "null";
+          throw new ArgumentException(
+            $"Unsupported content type: {typeName}. " +
+            $"POST accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, or (3) MultipartFormDataContent from CreateFileUpload.",
+            nameof(content));
         }
 
         // Execute POST (using Task.Run to avoid deadlocks in Revit)

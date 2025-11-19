@@ -27,6 +27,18 @@ namespace DynaFetch.Core
     private HttpContent? _content;
     private string _httpMethod;
 
+    // File upload support
+    private List<FileUploadInfo>? _files;
+
+    // Internal class to store file upload details
+    private class FileUploadInfo
+    {
+      public string FilePath { get; set; } = string.Empty;
+      public string FieldName { get; set; } = string.Empty;
+      public string FileName { get; set; } = string.Empty;
+      public string ContentType { get; set; } = string.Empty;
+    }
+
     #endregion
 
     #region Public Properties
@@ -59,6 +71,11 @@ namespace DynaFetch.Core
     /// </summary>
     public HttpContent? Content => _content;
 
+    /// <summary>
+    /// Indicates whether this request has file uploads
+    /// </summary>
+    public bool HasFiles => _files != null && _files.Count > 0;
+
     #endregion
 
     #region Constructors
@@ -68,12 +85,14 @@ namespace DynaFetch.Core
     /// This enforces the builder pattern and ensures we always have a valid URL
     /// </summary>
     /// <param name="url">Base URL for the request</param>
+
     private HttpRequest(string url)
     {
       _url = url ?? throw new ArgumentException("URL cannot be null", nameof(url));
       _parameters = new Dictionary<string, string>();
       _headers = new Dictionary<string, string>();
       _httpMethod = "GET"; // Default to GET method
+      _files = null; // Initialize as null, only create when needed
     }
 
     #endregion
@@ -315,6 +334,67 @@ namespace DynaFetch.Core
     }
 
     #endregion
+
+    /// <summary>
+    /// Adds a file to this request for upload (multipart form-data)
+    /// Follows DynaWeb's AddFile pattern for compatibility
+    /// </summary>
+    /// <param name="fieldName">Form field name for the file</param>
+    /// <param name="filePath">Full path to the file to upload</param>
+    /// <param name="contentType">MIME type (e.g., "image/png", "application/pdf")</param>
+    /// <returns>This HttpRequest instance for method chaining</returns>
+    public HttpRequest AddFile(string fieldName, string filePath, string contentType)
+    {
+      // Validate inputs
+      if (string.IsNullOrWhiteSpace(filePath))
+        throw new ArgumentException("File path cannot be empty", nameof(filePath));
+
+      if (!System.IO.File.Exists(filePath))
+        throw new System.IO.FileNotFoundException($"File not found: {filePath}");
+
+      // Initialize files list on first use
+      if (_files == null)
+        _files = new List<FileUploadInfo>();
+
+      // Store file info for later processing
+      _files.Add(new FileUploadInfo
+      {
+        FilePath = filePath,
+        FieldName = fieldName ?? string.Empty,
+        FileName = System.IO.Path.GetFileName(filePath),
+        ContentType = contentType ?? "application/octet-stream"
+      });
+
+      return this;
+    }
+
+    /// <summary>
+    /// Builds multipart form-data content from stored file information
+    /// Internal method used by ExecuteNodes
+    /// </summary>
+    internal MultipartFormDataContent? BuildMultipartContent()
+    {
+      if (_files == null || _files.Count == 0)
+        return null;
+
+      var formData = new MultipartFormDataContent();
+
+      foreach (var file in _files)
+      {
+        // Read file content
+        byte[] fileBytes = System.IO.File.ReadAllBytes(file.FilePath);
+        var fileContent = new ByteArrayContent(fileBytes);
+
+        // Set content type
+        fileContent.Headers.ContentType =
+          new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
+
+        // Add to form data
+        formData.Add(fileContent, file.FieldName, file.FileName);
+      }
+
+      return formData;
+    }
 
     #region Builder Methods - HTTP Method
 
