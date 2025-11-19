@@ -372,8 +372,9 @@ namespace DynaFetch.Nodes
     /// <param name="filePath">Full path to the file to upload</param>
     /// <param name="fieldName">Form field name (optional, defaults to empty string for unnamed fields)</param>
     /// <param name="fileName">Custom filename (optional, uses actual filename if not provided)</param>
+    /// <param name="contentType">MIME type (optional, auto-detected from file extension if not provided)</param>
     /// <returns>MultipartFormDataContent ready for upload</returns>
-    public static object CreateFileUpload(string filePath, string fieldName = "", string fileName = "")
+    public static object CreateFileUpload(string filePath, string? fieldName = null, string? fileName = null, string? contentType = null)
     {
       // Validate file exists
       if (!System.IO.File.Exists(filePath))
@@ -387,9 +388,11 @@ namespace DynaFetch.Nodes
       // Create ByteArrayContent from file bytes
       var fileContent = new ByteArrayContent(fileBytes);
 
-      // Detect content type based on file extension
-      string contentType = GetContentType(filePath);
-      fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(contentType);
+      // Use provided content type or auto-detect from file extension
+      string mimeType = string.IsNullOrEmpty(contentType)
+          ? GetContentType(filePath)
+          : contentType;
+      fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(mimeType);
 
       // Create multipart form data container
       var formData = new MultipartFormDataContent();
@@ -399,8 +402,11 @@ namespace DynaFetch.Nodes
           ? System.IO.Path.GetFileName(filePath)
           : fileName;
 
-      // Add file content with field name (empty string for unnamed fields like BIMtrack)
-      formData.Add(fileContent, fieldName, uploadFileName);
+      // Use empty string for field name if not provided (for unnamed fields like BIMtrack)
+      string uploadFieldName = fieldName ?? string.Empty;
+
+      // Add file content with field name
+      formData.Add(fileContent, uploadFieldName, uploadFileName);
 
       return formData;
     }
