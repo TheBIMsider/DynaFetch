@@ -419,15 +419,11 @@ namespace DynaFetch.Nodes
     /// <param name="fieldName">Form field name</param>
     /// <param name="value">Field value</param>
     /// <returns>Updated MultipartFormDataContent</returns>
-    public static object AddFormField(object formData, string fieldName, string value)
-    {
-      if (formData is not MultipartFormDataContent content)
-      {
-        throw new ArgumentException("formData must be MultipartFormDataContent from CreateFileUpload");
-      }
 
-      content.Add(new StringContent(value), fieldName);
-      return content;
+    public static MultipartFormDataContent AddFormField(MultipartFormDataContent formData, string fieldName, string value)
+    {
+      formData.Add(new StringContent(value), fieldName);
+      return formData;
     }
 
     /// <summary>

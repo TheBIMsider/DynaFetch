@@ -60,44 +60,30 @@ namespace DynaFetch.Nodes
         // Handle different content types
         if (content == null)
         {
-          // No content - simple POST
+          // No content - simple POST (existing behavior)
           httpContent = null;
+        }
+        else if (content is string jsonData)
+        {
+          // JSON string content (existing behavior - check this FIRST to preserve existing workflows)
+          if (string.IsNullOrWhiteSpace(jsonData))
+            throw new ArgumentException("JSON data cannot be empty", nameof(content));
+
+          httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+        }
+        else if (content is MultipartFormDataContent multipartContent)
+        {
+          // File upload - multipart form data (NEW functionality)
+          httpContent = multipartContent;
         }
         else
         {
-          // Try to unwrap if it's a wrapped object
-          var actualContent = content;
-
-          // Check if it's wrapped in a Dynamo type and try to unwrap
-          var contentType = content.GetType();
-          if (contentType.Name.Contains("StackValue") || contentType.Namespace?.Contains("ProtoCore") == true)
-          {
-            // Try to get the Data property or other unwrapping mechanism
-            var dataProperty = contentType.GetProperty("Data") ?? contentType.GetProperty("Value");
-            if (dataProperty != null)
-            {
-              actualContent = dataProperty.GetValue(content);
-            }
-          }
-
-          if (actualContent is MultipartFormDataContent multipartContent)
-          {
-            // File upload - multipart form data
-            httpContent = multipartContent;
-          }
-          else if (actualContent is string jsonData)
-          {
-            // Validate JSON string is not empty
-            if (string.IsNullOrWhiteSpace(jsonData))
-              throw new ArgumentException("JSON data cannot be empty", nameof(content));
-
-            // JSON string content
-            httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-          }
-          else
-          {
-            throw new ArgumentException($"Unsupported content type: {actualContent?.GetType().FullName ?? "null"}. Use string for JSON or MultipartFormDataContent for file uploads.", nameof(content));
-          }
+          // Unknown type - provide helpful error
+          var typeName = content.GetType().FullName;
+          throw new ArgumentException(
+            $"Unsupported content type: {typeName}. " +
+            $"POST accepts either: (1) string for JSON data, or (2) MultipartFormDataContent from RequestNodes.CreateFileUpload for file uploads.",
+            nameof(content));
         }
 
         // Execute POST (using Task.Run to avoid deadlocks in Revit)
@@ -109,7 +95,6 @@ namespace DynaFetch.Nodes
         throw new InvalidOperationException($"POST request to '{url}' failed: {ex.Message}", ex);
       }
     }
-
     /// <summary>
     /// Execute a PUT request with URL and JSON data
     /// Perfect for updating resources with JSON data
