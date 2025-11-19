@@ -63,27 +63,44 @@ namespace DynaFetch.Nodes
           // No content - simple POST
           httpContent = null;
         }
-        else if (content is MultipartFormDataContent multipartContent)
-        {
-          // File upload - multipart form data
-          httpContent = multipartContent;
-        }
-        else if (content is string jsonData)
-        {
-          // Validate JSON string is not empty
-          if (string.IsNullOrWhiteSpace(jsonData))
-            throw new ArgumentException("JSON data cannot be empty", nameof(content));
-
-          // JSON string content
-          httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        }
         else
         {
-          throw new ArgumentException($"Unsupported content type: {content.GetType().Name}. Use string for JSON or MultipartFormDataContent for file uploads.", nameof(content));
+          // Try to unwrap if it's a wrapped object
+          var actualContent = content;
+
+          // Check if it's wrapped in a Dynamo type and try to unwrap
+          var contentType = content.GetType();
+          if (contentType.Name.Contains("StackValue") || contentType.Namespace?.Contains("ProtoCore") == true)
+          {
+            // Try to get the Data property or other unwrapping mechanism
+            var dataProperty = contentType.GetProperty("Data") ?? contentType.GetProperty("Value");
+            if (dataProperty != null)
+            {
+              actualContent = dataProperty.GetValue(content);
+            }
+          }
+
+          if (actualContent is MultipartFormDataContent multipartContent)
+          {
+            // File upload - multipart form data
+            httpContent = multipartContent;
+          }
+          else if (actualContent is string jsonData)
+          {
+            // Validate JSON string is not empty
+            if (string.IsNullOrWhiteSpace(jsonData))
+              throw new ArgumentException("JSON data cannot be empty", nameof(content));
+
+            // JSON string content
+            httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+          }
+          else
+          {
+            throw new ArgumentException($"Unsupported content type: {actualContent?.GetType().FullName ?? "null"}. Use string for JSON or MultipartFormDataContent for file uploads.", nameof(content));
+          }
         }
 
         // Execute POST (using Task.Run to avoid deadlocks in Revit)
-        // Note: httpContent can be null for simple POST requests without body
         var httpResponseMessage = Task.Run(async () => await client.PostAsync(url, httpContent!)).Result;
         return new HttpResponse(httpResponseMessage);
       }
