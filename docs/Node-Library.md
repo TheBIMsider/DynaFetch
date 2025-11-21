@@ -219,71 +219,59 @@ ClientNodes.Create() → RequestNodes.ByUrl() → ExecuteNodes.GET()
 **Outputs**: HttpRequest  
 **Description**: For partial resource updates. Body contains only the fields that need to be updated.
 
+#### RequestNodes.AddFile
+**Purpose**: Add a file to request for upload (multipart form-data)  
+**Inputs**: request (HttpRequest), fieldName (string), filePath (string), contentType (string)  
+**Outputs**: HttpRequest  
+**Description**: Adds file to request using DynaWeb-compatible builder pattern. Returns updated HttpRequest for method chaining. Use with ExecuteNodes.POST/PUT/PATCH for file uploads. Field name is the form field (e.g., "file" or "application/json" for BIMtrack). Content type is MIME type (e.g., "image/png", "multipart/form-data").
+
+#### RequestNodes.CreateFileUpload
+**Purpose**: Create multipart form-data content for file uploads  
+**Inputs**: filePath (string), fieldName (string, optional), fileName (string, optional), contentType (string, optional)  
+**Outputs**: MultipartFormDataContent (as object)  
+**Outputs**: object (MultipartFormDataContent)  
+**Description**: Creates multipart form-data directly. Returns content ready for ExecuteNodes.POST/PUT/PATCH. Field name defaults to empty string, file name defaults to actual filename, content type auto-detected from extension if not provided. Use when not chaining with other request configuration.
+
+#### RequestNodes.AddFormField
+**Purpose**: Add text field to existing multipart form data  
+**Inputs**: formData (MultipartFormDataContent), fieldName (string), value (string)  
+**Outputs**: MultipartFormDataContent  
+**Description**: Adds additional text fields alongside file uploads. Use after CreateFileUpload to add metadata or parameters. Returns updated form data for method chaining or passing to ExecuteNodes.
+
 ---
 
 ### ExecuteNodes
-
 *Execute HTTP requests and receive responses*
 
-#### ExecuteNodes.GET (with HttpRequest)
-**Purpose**: Executes a configured GET request  
-**Inputs**: request (HttpRequest)  
-**Outputs**: HttpResponse  
-**Description**: Sends the request and returns response. Use after building request with headers, parameters, or authentication.
-
-#### ExecuteNodes.GET (with URL)
-**Purpose**: Executes GET request directly from URL  
+#### ExecuteNodes.GET
+**Purpose**: Executes GET request  
 **Inputs**: client (HttpClientWrapper), url (string)  
 **Outputs**: HttpResponse  
-**Description**: Shortcut for simple GET requests. Combines request creation and execution in one step.
+**Description**: Sends GET request and returns response. Simple pattern for retrieving data from APIs.
 
-#### ExecuteNodes.POST (with HttpRequest)
-**Purpose**: Executes a configured POST request  
-**Inputs**: request (HttpRequest)  
+#### ExecuteNodes.POST
+**Purpose**: Executes POST request with optional content  
+**Inputs**: client (HttpClientWrapper), url (string), content (var, optional)  
 **Outputs**: HttpResponse  
-**Description**: Sends POST with any configured body content. Ensure request has appropriate body content before executing.
+**Description**: Sends POST request. Accepts: (1) string for JSON data, (2) HttpRequest with files from AddFile, or (3) MultipartFormDataContent for file uploads. No content parameter creates simple POST.
 
-#### ExecuteNodes.POST (with URL and data)
-**Purpose**: Executes POST request with JSON data  
-**Inputs**: client (HttpClientWrapper), url (string), data (Dictionary<string, object>)  
+#### ExecuteNodes.PUT
+**Purpose**: Executes PUT request with optional content  
+**Inputs**: client (HttpClientWrapper), url (string), content (var, optional)  
 **Outputs**: HttpResponse  
-**Description**: Shortcut for POST with JSON. Automatically converts Dictionary to JSON and sets Content-Type.
+**Description**: Sends PUT request for resource updates. Accepts: (1) string for JSON data, (2) HttpRequest with files from AddFile, or (3) MultipartFormDataContent for file uploads.
 
-#### ExecuteNodes.PUT (with HttpRequest)
-**Purpose**: Executes a configured PUT request  
-**Inputs**: request (HttpRequest)  
-**Outputs**: HttpResponse  
-**Description**: Sends PUT with configured content. Usually for complete resource replacement or updates.
-
-#### ExecuteNodes.PUT (with URL and data)
-**Purpose**: Executes PUT request with JSON data  
-**Inputs**: client (HttpClientWrapper), url (string), data (Dictionary<string, object>)  
-**Outputs**: HttpResponse  
-**Description**: Shortcut for PUT with JSON. Converts Dictionary automatically and handles Content-Type.
-
-#### ExecuteNodes.DELETE (with HttpRequest)
-**Purpose**: Executes a configured DELETE request  
-**Inputs**: request (HttpRequest)  
-**Outputs**: HttpResponse  
-**Description**: Sends DELETE request. Check response status code to confirm successful deletion.
-
-#### ExecuteNodes.DELETE (with URL)
-**Purpose**: Executes DELETE request directly from URL  
+#### ExecuteNodes.DELETE
+**Purpose**: Executes DELETE request  
 **Inputs**: client (HttpClientWrapper), url (string)  
 **Outputs**: HttpResponse  
-**Description**: Shortcut for simple DELETE requests. No body content, just URL specification.
+**Description**: Sends DELETE request to remove resources. Check response StatusCode to confirm successful deletion.
 
-#### ExecuteNodes.PATCH (with HttpRequest)
-**Purpose**: Executes a configured PATCH request  
-**Inputs**: request (HttpRequest)  
+#### ExecuteNodes.PATCH
+**Purpose**: Executes PATCH request with optional content  
+**Inputs**: client (HttpClientWrapper), url (string), content (var, optional)  
 **Outputs**: HttpResponse  
-**Description**: Sends PATCH with configured content. For partial resource updates containing only changed fields.
-
-#### ExecuteNodes.PATCH (with URL and data)
-**Purpose**: Executes PATCH request with JSON data  
-**Inputs**: client (HttpClientWrapper), url (string), data (Dictionary<string, object>)  
-**Outputs**: HttpResponse  
-**Description**: Shortcut for PATCH with JSON. Updates only the fields specified in the Dictionary.
+**Description**: Sends PATCH request for partial updates. Accepts: (1) string for JSON data, (2) HttpRequest with files from AddFile, or (3) MultipartFormDataContent for file uploads.
 
 ---
 

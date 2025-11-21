@@ -113,7 +113,7 @@ DynaFetch/
 │       ├── ValidateTimeout
 │       └── ValidateUrl
 ├── Nodes/                   # Primary workflow nodes ⭐ (detailed in Node-Library.md)
-│   ├── ClientNodes/         # HTTP client management (11 methods)
+│   ├── ClientNodes/         # HTTP client management (10 methods)
 │   │   ├── AddDefaultHeader
 │   │   ├── AddDefaultHeaders
 │   │   ├── Create
@@ -124,7 +124,6 @@ DynaFetch/
 │   │   ├── SetBaseUrl
 │   │   ├── SetTimeout
 │   │   ├── SetUserAgent
-│   │   └── ... (other client management methods)
 │   ├── ExecuteNodes/        # HTTP method execution (5 methods)
 │   │   ├── DELETE
 │   │   ├── GET
@@ -149,8 +148,10 @@ DynaFetch/
 │   │   ├── TryToDictionary
 │   │   ├── TryToList
 │   │   └── ValidateJson
-│   └── RequestNodes/        # Request building and configuration (15 methods)
+│   └── RequestNodes/        # Request building and configuration (19 methods)
 │       ├── AddBearerToken
+│       ├── AddFile
+│       ├── AddFormField
 │       ├── AddHeader
 │       ├── AddHeaders
 │       ├── AddJsonBody
@@ -165,9 +166,10 @@ DynaFetch/
 │       ├── AsPut
 │       ├── ByEndpoint
 │       ├── ByUrl
+│       ├── ByCreateFileUpload
 │       └── SetMethod
 ├── Utilities/               # Static utility methods
-│   └── JsonHelper/          # Advanced JSON processing (11 methods)
+│   └── JsonHelper/          # Advanced JSON processing (12 methods)
 │       ├── DictionaryToJson
 │       ├── FormatJson
 │       ├── IsValidJson
