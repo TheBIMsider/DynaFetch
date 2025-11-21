@@ -10,7 +10,7 @@
     
     <!-- Package Information -->
     <PackageId>DynaFetch</PackageId>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
     <Authors>Carl Storms AKA The BIMsider</Authors>
     <Company>TBS</Company>
     <Description>Modern REST API package for Dynamo 3.0 - inspired by DynaWeb</Description>
@@ -23,8 +23,8 @@
     <!-- Assembly Information -->
     <AssemblyTitle>DynaFetch</AssemblyTitle>
     <AssemblyDescription>Modern REST API package for Dynamo 3.0</AssemblyDescription>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
-    <FileVersion>1.0.6.0</FileVersion>
+    <AssemblyVersion>1.0.7.0</AssemblyVersion>
+    <FileVersion>1.0.7.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

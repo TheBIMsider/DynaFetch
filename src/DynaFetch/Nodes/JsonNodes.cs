@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using DynaFetch.Core;
 using DynaFetch.Utilities;
 
+#nullable disable
+
 namespace DynaFetch.Nodes
 {
   /// <summary>
@@ -87,7 +89,7 @@ namespace DynaFetch.Nodes
     /// </summary>
     /// <param name="response">HTTP response containing JSON</param>
     /// <returns>Tuple with success flag, result dictionary, and error message</returns>
-    public static (bool Success, Dictionary<string, object>? Result, string ErrorMessage) TryToDictionary(HttpResponse response)
+    public static (bool Success, Dictionary<string, object> Result, string ErrorMessage) TryToDictionary(HttpResponse response)
     {
       if (response == null)
         return (false, null, "Response cannot be null");
@@ -111,7 +113,7 @@ namespace DynaFetch.Nodes
     /// </summary>
     /// <param name="response">HTTP response containing JSON array</param>
     /// <returns>Tuple with success flag, result list, and error message</returns>
-    public static (bool Success, List<object>? Result, string ErrorMessage) TryToList(HttpResponse response)
+    public static (bool Success, List<object> Result, string ErrorMessage) TryToList(HttpResponse response)
     {
       if (response == null)
         return (false, null, "Response cannot be null");
@@ -207,7 +209,7 @@ namespace DynaFetch.Nodes
     /// <typeparam name="T">Target type for deserialization</typeparam>
     /// <param name="response">HTTP response containing JSON</param>
     /// <returns>Tuple with success flag, result object, and error message</returns>
-    public static (bool Success, T? Result, string ErrorMessage) TryDeserialize<T>(HttpResponse response)
+    public static (bool Success, T Result, string ErrorMessage) TryDeserialize<T>(HttpResponse response)
     {
       if (response == null)
         return (false, default, "Response cannot be null");
@@ -255,28 +257,28 @@ namespace DynaFetch.Nodes
     /// Convert JSON string to Dynamo-friendly Dictionary
     /// Use when you have JSON as a string and want to work with it in Dynamo
     /// </summary>
-    /// <param name="json">JSON string</param>
+    /// <param name="jsonString">JSON string</param>
     /// <returns>Dictionary&lt;string, object&gt; for use in Dynamo</returns>
-    public static Dictionary<string, object> JsonToDictionary(string json)
+    public static Dictionary<string, object> JsonToDictionary(string jsonString)
     {
-      if (string.IsNullOrWhiteSpace(json))
-        throw new ArgumentException("JSON cannot be null or empty", nameof(json));
+      if (string.IsNullOrWhiteSpace(jsonString))
+        throw new ArgumentException("JSON cannot be null or empty", nameof(jsonString));
 
-      return JsonHelper.JsonToDictionary(json);
+      return JsonHelper.JsonToDictionary(jsonString);
     }
 
     /// <summary>
     /// Convert JSON array string to Dynamo-friendly List
     /// Use when you have JSON array as a string and want to work with it in Dynamo
     /// </summary>
-    /// <param name="json">JSON array string</param>
+    /// <param name="jsonString">JSON array string</param>
     /// <returns>List&lt;object&gt; for use in Dynamo</returns>
-    public static List<object> JsonToList(string json)
+    public static List<object> JsonToList(string jsonString)
     {
-      if (string.IsNullOrWhiteSpace(json))
-        throw new ArgumentException("JSON cannot be null or empty", nameof(json));
+      if (string.IsNullOrWhiteSpace(jsonString))
+        throw new ArgumentException("JSON cannot be null or empty", nameof(jsonString));
 
-      return JsonHelper.JsonToList(json);
+      return JsonHelper.JsonToList(jsonString);
     }
 
     /// <summary>

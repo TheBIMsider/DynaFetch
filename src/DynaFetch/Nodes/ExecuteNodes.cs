@@ -106,14 +106,14 @@ namespace DynaFetch.Nodes
     }
 
     /// <summary>
-    /// Execute a PUT request with URL and JSON data
-    /// Perfect for updating resources with JSON data
+    /// Execute a PUT request
+    /// Supports: (1) JSON string data, (2) HttpRequest with file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
-    /// <param name="url">URL to put to (e.g., "https://api.example.com/update/123")</param>
-    /// <param name="jsonData">JSON data to send as string</param>
+    /// <param name="url">URL to put to</param>
+    /// <param name="content">Optional: JSON string or HttpRequest with files</param>
     /// <returns>HTTP response containing the result</returns>
-    public static HttpResponse PUT(HttpClientWrapper client, string url, string jsonData)
+    public static HttpResponse PUT(HttpClientWrapper client, string url, object? content = null)
     {
       if (client == null)
         throw new ArgumentNullException(nameof(client), "HTTP client cannot be null");
@@ -121,14 +121,50 @@ namespace DynaFetch.Nodes
       if (string.IsNullOrWhiteSpace(url))
         throw new ArgumentException("URL cannot be empty", nameof(url));
 
-      if (string.IsNullOrWhiteSpace(jsonData))
-        throw new ArgumentException("JSON data cannot be empty", nameof(jsonData));
-
       try
       {
-        // Create JSON content and execute PUT (using Task.Run to avoid deadlocks in Revit)
-        var content = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        var httpResponseMessage = Task.Run(async () => await client.PutAsync(url, content)).Result;
+        System.Net.Http.HttpContent? httpContent = null;
+
+        // Handle different content types
+        if (content == null)
+        {
+          // No content - simple PUT
+          httpContent = null;
+        }
+        else if (content is HttpRequest httpRequest)
+        {
+          // HttpRequest with potential file uploads
+          httpContent = httpRequest.BuildMultipartContent();
+
+          // If no files, check for regular content
+          if (httpContent == null)
+            httpContent = httpRequest.Content;
+        }
+        else if (content is string jsonData)
+        {
+          // JSON string content
+          if (string.IsNullOrWhiteSpace(jsonData))
+            throw new ArgumentException("JSON data cannot be empty", nameof(content));
+
+          httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+        }
+        else if (content is MultipartFormDataContent multipartContent)
+        {
+          // Direct multipart content
+          httpContent = multipartContent;
+        }
+        else
+        {
+          // Unknown type - provide helpful error
+          var typeName = content?.GetType().FullName ?? "null";
+          throw new ArgumentException(
+            $"Unsupported content type: {typeName}. " +
+            $"PUT accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, or (3) MultipartFormDataContent.",
+            nameof(content));
+        }
+
+        // Execute PUT (using Task.Run to avoid deadlocks in Revit)
+        var httpResponseMessage = Task.Run(async () => await client.PutAsync(url, httpContent!)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)
@@ -165,14 +201,14 @@ namespace DynaFetch.Nodes
     }
 
     /// <summary>
-    /// Execute a PATCH request with URL and JSON data
-    /// Perfect for partial updates with JSON data
+    /// Execute a PATCH request
+    /// Supports: (1) JSON string data, (2) HttpRequest with file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
-    /// <param name="url">URL to patch (e.g., "https://api.example.com/patch/123")</param>
-    /// <param name="jsonData">JSON data to send as string</param>
+    /// <param name="url">URL to patch</param>
+    /// <param name="content">Optional: JSON string or HttpRequest with files</param>
     /// <returns>HTTP response containing the result</returns>
-    public static HttpResponse PATCH(HttpClientWrapper client, string url, string jsonData)
+    public static HttpResponse PATCH(HttpClientWrapper client, string url, object? content = null)
     {
       if (client == null)
         throw new ArgumentNullException(nameof(client), "HTTP client cannot be null");
@@ -180,14 +216,50 @@ namespace DynaFetch.Nodes
       if (string.IsNullOrWhiteSpace(url))
         throw new ArgumentException("URL cannot be empty", nameof(url));
 
-      if (string.IsNullOrWhiteSpace(jsonData))
-        throw new ArgumentException("JSON data cannot be empty", nameof(jsonData));
-
       try
       {
-        // Create JSON content and execute PATCH (using Task.Run to avoid deadlocks in Revit)
-        var content = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        var httpResponseMessage = Task.Run(async () => await client.PatchAsync(url, content)).Result;
+        System.Net.Http.HttpContent? httpContent = null;
+
+        // Handle different content types
+        if (content == null)
+        {
+          // No content - simple PATCH
+          httpContent = null;
+        }
+        else if (content is HttpRequest httpRequest)
+        {
+          // HttpRequest with potential file uploads
+          httpContent = httpRequest.BuildMultipartContent();
+
+          // If no files, check for regular content
+          if (httpContent == null)
+            httpContent = httpRequest.Content;
+        }
+        else if (content is string jsonData)
+        {
+          // JSON string content
+          if (string.IsNullOrWhiteSpace(jsonData))
+            throw new ArgumentException("JSON data cannot be empty", nameof(content));
+
+          httpContent = new System.Net.Http.StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+        }
+        else if (content is MultipartFormDataContent multipartContent)
+        {
+          // Direct multipart content
+          httpContent = multipartContent;
+        }
+        else
+        {
+          // Unknown type - provide helpful error
+          var typeName = content?.GetType().FullName ?? "null";
+          throw new ArgumentException(
+            $"Unsupported content type: {typeName}. " +
+            $"PATCH accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, or (3) MultipartFormDataContent.",
+            nameof(content));
+        }
+
+        // Execute PATCH (using Task.Run to avoid deadlocks in Revit)
+        var httpResponseMessage = Task.Run(async () => await client.PatchAsync(url, httpContent!)).Result;
         return new HttpResponse(httpResponseMessage);
       }
       catch (Exception ex)

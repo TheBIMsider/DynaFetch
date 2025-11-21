@@ -2,7 +2,7 @@
   "license": "BSD-3-Clause",
   "file_hash": null,
   "name": "DynaFetch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Modern REST API package for Dynamo 3.0+ with comprehensive sample collection - inspired by DynaWeb by Radu Gidei",
   "group": "Data",
   "keywords": [
@@ -48,6 +48,6 @@
   "repository_url": "https://github.com/TheBIMsider/DynaFetch",
   "contains_binaries": true,
   "node_libraries": [
-    "DynaFetch, Version=1.0.6.0, Culture=neutral, PublicKeyToken=null"
+    "DynaFetch, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null"
   ]
 }
