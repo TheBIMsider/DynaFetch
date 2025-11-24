@@ -39,12 +39,17 @@ namespace DynaFetch.Nodes
 
     /// <summary>
     /// Execute a POST request
-    /// Supports: (1) Simple POST with no content, (2) JSON string data, (3) HttpRequest with file uploads
+    /// Supports: (1) JSON string data, (2) HttpRequest with custom Content-Type headers, (3) HttpRequest with file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
     /// <param name="url">URL to post to</param>
-    /// <param name="content">Optional: JSON string, HttpRequest with files, or MultipartFormDataContent</param>
+    /// <param name="content">Optional: JSON string, HttpRequest with custom headers, or HttpRequest with files</param>
     /// <returns>HTTP response containing the result</returns>
+    /// <remarks>
+    /// When using HttpRequest with AddHeader to set custom Content-Type (e.g., application/merge-patch+json),
+    /// the custom header is preserved instead of forcing application/json. This enables specialized POST
+    /// operations with custom content-types while maintaining backward compatibility.
+    /// </remarks>
     public static HttpResponse POST(HttpClientWrapper client, string url, object? content = null)
     {
       if (client == null)
@@ -65,16 +70,17 @@ namespace DynaFetch.Nodes
         }
         else if (content is HttpRequest httpRequest)
         {
-          // NEW: HttpRequest with potential file uploads (DynaWeb pattern)
+          // HttpRequest - check for file uploads first
           httpContent = httpRequest.BuildMultipartContent();
 
-          // If no files, check for regular content
+          // If no files, use the request's Content property
+          // This preserves any custom Content-Type headers set via AddHeader
           if (httpContent == null)
             httpContent = httpRequest.Content;
         }
         else if (content is string jsonData)
         {
-          // JSON string content (existing behavior)
+          // JSON string content - apply default application/json
           if (string.IsNullOrWhiteSpace(jsonData))
             throw new ArgumentException("JSON data cannot be empty", nameof(content));
 
@@ -82,7 +88,7 @@ namespace DynaFetch.Nodes
         }
         else if (content is MultipartFormDataContent multipartContent)
         {
-          // Direct multipart content (legacy CreateFileUpload support)
+          // Direct multipart content
           httpContent = multipartContent;
         }
         else
@@ -91,7 +97,7 @@ namespace DynaFetch.Nodes
           var typeName = content?.GetType().FullName ?? "null";
           throw new ArgumentException(
             $"Unsupported content type: {typeName}. " +
-            $"POST accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, or (3) MultipartFormDataContent from CreateFileUpload.",
+            $"POST accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, (3) HttpRequest with custom Content-Type, or (4) MultipartFormDataContent.",
             nameof(content));
         }
 
@@ -107,12 +113,17 @@ namespace DynaFetch.Nodes
 
     /// <summary>
     /// Execute a PUT request
-    /// Supports: (1) JSON string data, (2) HttpRequest with file uploads
+    /// Supports: (1) JSON string data, (2) HttpRequest with custom Content-Type headers, (3) HttpRequest with file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
     /// <param name="url">URL to put to</param>
-    /// <param name="content">Optional: JSON string or HttpRequest with files</param>
+    /// <param name="content">Optional: JSON string, HttpRequest with custom headers, or HttpRequest with files</param>
     /// <returns>HTTP response containing the result</returns>
+    /// <remarks>
+    /// When using HttpRequest with AddHeader to set custom Content-Type (e.g., application/merge-patch+json),
+    /// the custom header is preserved instead of forcing application/json. This enables specialized PUT
+    /// operations with custom content-types while maintaining backward compatibility.
+    /// </remarks>
     public static HttpResponse PUT(HttpClientWrapper client, string url, object? content = null)
     {
       if (client == null)
@@ -133,16 +144,17 @@ namespace DynaFetch.Nodes
         }
         else if (content is HttpRequest httpRequest)
         {
-          // HttpRequest with potential file uploads
+          // HttpRequest - check for file uploads first
           httpContent = httpRequest.BuildMultipartContent();
 
-          // If no files, check for regular content
+          // If no files, use the request's Content property
+          // This preserves any custom Content-Type headers set via AddHeader
           if (httpContent == null)
             httpContent = httpRequest.Content;
         }
         else if (content is string jsonData)
         {
-          // JSON string content
+          // JSON string content - apply default application/json
           if (string.IsNullOrWhiteSpace(jsonData))
             throw new ArgumentException("JSON data cannot be empty", nameof(content));
 
@@ -159,7 +171,7 @@ namespace DynaFetch.Nodes
           var typeName = content?.GetType().FullName ?? "null";
           throw new ArgumentException(
             $"Unsupported content type: {typeName}. " +
-            $"PUT accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, or (3) MultipartFormDataContent.",
+            $"PUT accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, (3) HttpRequest with custom Content-Type, or (4) MultipartFormDataContent.",
             nameof(content));
         }
 
@@ -202,12 +214,17 @@ namespace DynaFetch.Nodes
 
     /// <summary>
     /// Execute a PATCH request
-    /// Supports: (1) JSON string data, (2) HttpRequest with file uploads
+    /// Supports: (1) JSON string data, (2) HttpRequest with custom Content-Type headers, (3) HttpRequest with file uploads
     /// </summary>
     /// <param name="client">HTTP client for making the request</param>
     /// <param name="url">URL to patch</param>
-    /// <param name="content">Optional: JSON string or HttpRequest with files</param>
+    /// <param name="content">Optional: JSON string, HttpRequest with custom headers, or HttpRequest with files</param>
     /// <returns>HTTP response containing the result</returns>
+    /// <remarks>
+    /// When using HttpRequest with AddHeader to set custom Content-Type (e.g., application/merge-patch+json),
+    /// the custom header is preserved instead of forcing application/json. This enables RFC 7396 Merge Patch
+    /// and other specialized PATCH operations.
+    /// </remarks>
     public static HttpResponse PATCH(HttpClientWrapper client, string url, object? content = null)
     {
       if (client == null)
@@ -228,16 +245,17 @@ namespace DynaFetch.Nodes
         }
         else if (content is HttpRequest httpRequest)
         {
-          // HttpRequest with potential file uploads
+          // HttpRequest - check for file uploads first
           httpContent = httpRequest.BuildMultipartContent();
 
-          // If no files, check for regular content
+          // If no files, use the request's Content property
+          // This preserves any custom Content-Type headers set via AddHeader
           if (httpContent == null)
             httpContent = httpRequest.Content;
         }
         else if (content is string jsonData)
         {
-          // JSON string content
+          // JSON string content - apply default application/json
           if (string.IsNullOrWhiteSpace(jsonData))
             throw new ArgumentException("JSON data cannot be empty", nameof(content));
 
@@ -254,7 +272,7 @@ namespace DynaFetch.Nodes
           var typeName = content?.GetType().FullName ?? "null";
           throw new ArgumentException(
             $"Unsupported content type: {typeName}. " +
-            $"PATCH accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, or (3) MultipartFormDataContent.",
+            $"PATCH accepts: (1) string for JSON, (2) HttpRequest with AddFile for uploads, (3) HttpRequest with custom Content-Type, or (4) MultipartFormDataContent.",
             nameof(content));
         }
 

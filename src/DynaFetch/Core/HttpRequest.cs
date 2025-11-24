@@ -492,6 +492,7 @@ namespace DynaFetch.Core
     /// <summary>
     /// Converts this HttpRequest to an HttpRequestMessage
     /// This is used internally when sending the request
+    /// Respects custom Content-Type headers set via AddHeader
     /// </summary>
     /// <returns>HttpRequestMessage ready to send</returns>
     public HttpRequestMessage ToHttpRequestMessage()
@@ -507,10 +508,20 @@ namespace DynaFetch.Core
         // Some headers need to go on the content, others on the request
         if (_content != null && IsContentHeader(header.Key))
         {
+          // CRITICAL FIX: For Content-Type header, we need to clear the existing one first
+          // because StringContent sets it automatically in the constructor
+          if (string.Equals(header.Key, "Content-Type", StringComparison.OrdinalIgnoreCase))
+          {
+            // Remove the default Content-Type that was set by StringContent
+            _content.Headers.ContentType = null;
+          }
+
+          // Now add the custom header (will work for Content-Type and other content headers)
           _content.Headers.TryAddWithoutValidation(header.Key, header.Value);
         }
         else
         {
+          // Non-content headers go on the request itself
           request.Headers.TryAddWithoutValidation(header.Key, header.Value);
         }
       }
