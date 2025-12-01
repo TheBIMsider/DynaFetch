@@ -73,10 +73,23 @@ namespace DynaFetch.Nodes
           // HttpRequest - check for file uploads first
           httpContent = httpRequest.BuildMultipartContent();
 
-          // If no files, use the request's Content property
-          // This preserves any custom Content-Type headers set via AddHeader
+          // If no files, check for custom Content-Type header
           if (httpContent == null)
-            httpContent = httpRequest.Content;
+          {
+            // Check if user specified a custom Content-Type
+            if (httpRequest.Headers.ContainsKey("Content-Type") && httpRequest.Content is StringContent)
+            {
+              // Extract the string content and recreate with custom Content-Type
+              var contentString = httpRequest.Content.ReadAsStringAsync().Result;
+              var customContentType = httpRequest.Headers["Content-Type"];
+              httpContent = new System.Net.Http.StringContent(contentString, System.Text.Encoding.UTF8, customContentType);
+            }
+            else
+            {
+              // Use content as-is
+              httpContent = httpRequest.Content;
+            }
+          }
         }
         else if (content is string jsonData)
         {
@@ -147,10 +160,23 @@ namespace DynaFetch.Nodes
           // HttpRequest - check for file uploads first
           httpContent = httpRequest.BuildMultipartContent();
 
-          // If no files, use the request's Content property
-          // This preserves any custom Content-Type headers set via AddHeader
+          // If no files, check for custom Content-Type header
           if (httpContent == null)
-            httpContent = httpRequest.Content;
+          {
+            // Check if user specified a custom Content-Type
+            if (httpRequest.Headers.ContainsKey("Content-Type") && httpRequest.Content is StringContent)
+            {
+              // Extract the string content and recreate with custom Content-Type
+              var contentString = httpRequest.Content.ReadAsStringAsync().Result;
+              var customContentType = httpRequest.Headers["Content-Type"];
+              httpContent = new System.Net.Http.StringContent(contentString, System.Text.Encoding.UTF8, customContentType);
+            }
+            else
+            {
+              // Use content as-is
+              httpContent = httpRequest.Content;
+            }
+          }
         }
         else if (content is string jsonData)
         {
@@ -248,10 +274,23 @@ namespace DynaFetch.Nodes
           // HttpRequest - check for file uploads first
           httpContent = httpRequest.BuildMultipartContent();
 
-          // If no files, use the request's Content property
-          // This preserves any custom Content-Type headers set via AddHeader
+          // If no files, check for custom Content-Type header
           if (httpContent == null)
-            httpContent = httpRequest.Content;
+          {
+            // Check if user specified a custom Content-Type
+            if (httpRequest.Headers.ContainsKey("Content-Type") && httpRequest.Content is StringContent)
+            {
+              // Extract the string content and recreate with custom Content-Type
+              var contentString = httpRequest.Content.ReadAsStringAsync().Result;
+              var customContentType = httpRequest.Headers["Content-Type"];
+              httpContent = new System.Net.Http.StringContent(contentString, System.Text.Encoding.UTF8, customContentType);
+            }
+            else
+            {
+              // Use content as-is
+              httpContent = httpRequest.Content;
+            }
+          }
         }
         else if (content is string jsonData)
         {
