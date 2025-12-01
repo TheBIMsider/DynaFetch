@@ -497,31 +497,49 @@ namespace DynaFetch.Core
     /// <returns>HttpRequestMessage ready to send</returns>
     public HttpRequestMessage ToHttpRequestMessage()
     {
-      var request = new HttpRequestMessage(new HttpMethod(_httpMethod), Url)
+      var request = new HttpRequestMessage(new HttpMethod(_httpMethod), Url);
+
+      // Check if user specified a custom Content-Type via AddHeader BEFORE setting content
+      string? customContentType = null;
+      if (_headers.ContainsKey("Content-Type"))
       {
-        Content = _content
-      };
+        customContentType = _headers["Content-Type"];
+      }
+
+      // Handle content with potential Content-Type override
+      if (_content != null)
+      {
+        // If user set a custom Content-Type header, we need to recreate the content
+        // because StringContent bakes Content-Type into the constructor
+        if (customContentType != null && _content is StringContent)
+        {
+          // Extract the string content
+          var contentString = _content.ReadAsStringAsync().Result;
+
+          // Recreate StringContent with custom Content-Type
+          request.Content = new StringContent(contentString, Encoding.UTF8, customContentType);
+        }
+        else
+        {
+          // Use content as-is
+          request.Content = _content;
+        }
+      }
 
       // Add headers to the request
       foreach (var header in _headers)
       {
-        // Some headers need to go on the content, others on the request
-        if (_content != null && IsContentHeader(header.Key))
-        {
-          // CRITICAL FIX: For Content-Type header, we need to clear the existing one first
-          // because StringContent sets it automatically in the constructor
-          if (string.Equals(header.Key, "Content-Type", StringComparison.OrdinalIgnoreCase))
-          {
-            // Remove the default Content-Type that was set by StringContent
-            _content.Headers.ContentType = null;
-          }
+        // Skip Content-Type since we already handled it above
+        if (string.Equals(header.Key, "Content-Type", StringComparison.OrdinalIgnoreCase))
+          continue;
 
-          // Now add the custom header (will work for Content-Type and other content headers)
-          _content.Headers.TryAddWithoutValidation(header.Key, header.Value);
+        // Some headers need to go on the content, others on the request
+        if (request.Content != null && IsContentHeader(header.Key))
+        {
+          request.Content.Headers.TryAddWithoutValidation(header.Key, header.Value);
         }
         else
         {
-          // Non-content headers go on the request itself
           request.Headers.TryAddWithoutValidation(header.Key, header.Value);
         }
       }

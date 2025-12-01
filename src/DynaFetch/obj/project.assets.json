@@ -275,7 +275,7 @@
     "C:\\Users\\CarlStorms\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.8",
+    "version": "1.0.9",
     "restore": {
       "projectUniqueName": "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
       "projectName": "DynaFetch",
@@ -349,7 +349,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
