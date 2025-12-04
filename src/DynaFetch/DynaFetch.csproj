@@ -10,7 +10,7 @@
     
     <!-- Package Information -->
     <PackageId>DynaFetch</PackageId>
-    <Version>1.0.9</Version>
+    <Version>1.0.10</Version>
     <Authors>Carl Storms AKA The BIMsider</Authors>
     <Company>TBS</Company>
     <Description>Modern REST API package for Dynamo 3.0 - inspired by DynaWeb</Description>
@@ -23,11 +23,11 @@
     <!-- Assembly Information -->
     <AssemblyTitle>DynaFetch</AssemblyTitle>
     <AssemblyDescription>Modern REST API package for Dynamo 3.0</AssemblyDescription>
-    <AssemblyVersion>1.0.9.0</AssemblyVersion>
-    <FileVersion>1.0.9.0</FileVersion>
+    <AssemblyVersion>1.0.10.0</AssemblyVersion>
+    <FileVersion>1.0.10.0</FileVersion>
   </PropertyGroup>
 
-  <ItemGroup>
+<ItemGroup>
     <!-- Dynamo Core Dependencies -->
     <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="3.0.0" />
     <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="3.0.0" />
@@ -35,6 +35,9 @@
     <!-- JSON Handling -->
     <PackageReference Include="System.Text.Json" Version="8.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    
+    <!-- JWT Authentication -->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1" />
     
     <!-- HTTP Client (built into .NET 8, but explicit for clarity) -->
     <FrameworkReference Include="Microsoft.AspNetCore.App" />

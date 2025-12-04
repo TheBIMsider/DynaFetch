@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj": {
-      "version": "1.0.9",
+      "version": "1.0.10",
       "restore": {
         "projectUniqueName": "C:\\_Carl's Stuff\\GitHub\\DynaFetch\\src\\DynaFetch\\DynaFetch.csproj",
         "projectName": "DynaFetch",
@@ -54,6 +54,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.2.1, )"
             },
             "System.Text.Json": {
               "target": "Package",

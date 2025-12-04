@@ -113,12 +113,13 @@ DynaFetch/
 │       ├── ValidateTimeout
 │       └── ValidateUrl
 ├── Nodes/                   # Primary workflow nodes ⭐ (detailed in Node-Library.md)
-│   ├── ClientNodes/         # HTTP client management (10 methods)
+│   ├── ClientNodes/         # HTTP client management (11 methods)
 │   │   ├── AddDefaultHeader
 │   │   ├── AddDefaultHeaders
 │   │   ├── Create
 │   │   ├── CreateWithBaseUrl
 │   │   ├── CreateWithSettings
+│   │   ├── GenerateJwtAssertion
 │   │   ├── GetDefaultHeaders
 │   │   ├── RemoveDefaultHeader
 │   │   ├── SetBaseUrl

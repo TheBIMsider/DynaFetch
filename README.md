@@ -115,6 +115,42 @@ ClientNodes.AddDefaultHeader(client, "X-API-Key", api_key)
 ClientNodes.AddDefaultHeader(client, "Custom-Auth", auth_value)
 ```
 
+**JWT Assertions** (Service Accounts):
+
+```
+ClientNodes.GenerateJwtAssertion(privateKeyPem, clientId, audience, scopes, 60)
+```
+
+#### JWT Assertion Workflow (Autodesk SSA Example)
+
+For service account authentication like Autodesk Platform Services Secure Service Accounts (SSA):
+
+```
+1. ClientNodes.GenerateJwtAssertion(privateKeyPem, clientId, "https://developer.api.autodesk.com/", ["data:read", "data:write"], 60) → jwt_assertion
+
+2. Build token exchange body:
+   "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=" + jwt_assertion → request_body
+
+3. ClientNodes.Create() → client
+
+4. ExecuteNodes.POST(client, "https://developer.api.autodesk.com/authentication/v2/token", request_body) → token_response
+
+5. JsonNodes.ToDictionary(token_response) → token_dict
+
+6. Dictionary.ValueAtKey(token_dict, "access_token") → access_token
+
+7. ClientNodes.AddDefaultHeader(client, "Authorization", "Bearer " + access_token) → authenticated_client
+
+8. Use authenticated_client for subsequent API calls
+```
+
+**Supported JWT Use Cases**:
+
+- Autodesk Platform Services Secure Service Accounts (SSA)
+- Google Service Accounts
+- Custom OAuth 2.0 JWT Bearer flows
+- Any RFC 7523 compliant JWT assertion authentication
+
 ### JSON Processing
 
 - **ToDictionary**: Convert API responses to Dynamo Dictionaries
@@ -190,6 +226,7 @@ All samples are located in the `samples/` folder and can be opened directly in D
 - `SetTimeout(client, seconds)` - Set request timeout
 - `AddDefaultHeader(client, name, value)` - Add persistent header
 - `SetUserAgent(client, userAgent)` - Set client user agent
+- `GenerateJwtAssertion(privateKeyPem, clientId, audience, scopes, expirationMinutes)` - Generate JWT assertion for service account authentication
 
 ### Execute Nodes (HTTP Operations)
 

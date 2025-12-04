@@ -35,3 +35,8 @@ C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Debug\net8.0\DynaFetch.dll
 C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Debug\net8.0\refint\DynaFetch.dll
 C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Debug\net8.0\DynaFetch.pdb
 C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\obj\Debug\net8.0\ref\DynaFetch.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\_Carl's Stuff\GitHub\DynaFetch\src\DynaFetch\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

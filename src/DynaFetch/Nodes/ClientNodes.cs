@@ -1,6 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using DynaFetch.Core;
+using Microsoft.IdentityModel.Tokens;
 
 namespace DynaFetch.Nodes
 {
@@ -249,6 +254,152 @@ namespace DynaFetch.Nodes
       catch (Exception ex)
       {
         throw new InvalidOperationException($"Failed to remove header '{headerName}': {ex.Message}", ex);
+      }
+    }
+
+    /// <summary>
+    /// Generates a JWT assertion for service account authentication (e.g., Autodesk SSA).
+    /// This creates a cryptographically signed JSON Web Token using an RSA private key.
+    /// 
+    /// USAGE PATTERN (Autodesk SSA 3-legged token exchange):
+    /// 1. Generate JWT assertion with this method
+    /// 2. Exchange assertion for access token using ExecuteNodes.POST to token endpoint
+    /// 3. Use access token for subsequent API calls
+    /// 
+    /// Example token exchange body:
+    /// "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&amp;assertion={JWT}"
+    /// </summary>
+    /// <param name="privateKeyPem">RSA private key in PEM format (begins with "-----BEGIN RSA PRIVATE KEY-----")</param>
+    /// <param name="clientId">OAuth client ID / application ID (also used as issuer and subject)</param>
+    /// <param name="audience">Token audience URL (e.g., "https://developer.api.autodesk.com/")</param>
+    /// <param name="scopes">List of scope strings (e.g., ["data:read", "data:write"])</param>
+    /// <param name="expirationMinutes">Token validity period in minutes (default: 60, max: 60 for most providers)</param>
+    /// <returns>Signed JWT assertion string ready for token exchange</returns>
+    public static string GenerateJwtAssertion(
+      string privateKeyPem,
+      string clientId,
+      string audience,
+      List<string> scopes,
+      int expirationMinutes = 60)
+    {
+      try
+      {
+        // Validate inputs
+        if (string.IsNullOrWhiteSpace(privateKeyPem))
+          throw new ArgumentException("Private key PEM cannot be empty");
+
+        if (string.IsNullOrWhiteSpace(clientId))
+          throw new ArgumentException("Client ID cannot be empty");
+
+        if (string.IsNullOrWhiteSpace(audience))
+          throw new ArgumentException("Audience URL cannot be empty");
+
+        if (scopes == null || !scopes.Any())
+          throw new ArgumentException("At least one scope is required");
+
+        if (expirationMinutes < 1 || expirationMinutes > 60)
+          throw new ArgumentException("Expiration must be between 1 and 60 minutes");
+
+        // Parse the RSA private key from PEM format
+        var rsa = LoadRsaPrivateKeyFromPem(privateKeyPem);
+
+        // Create signing credentials with RS256 algorithm
+        var signingCredentials = new SigningCredentials(
+          new RsaSecurityKey(rsa),
+          SecurityAlgorithms.RsaSha256
+        );
+
+        // Build JWT claims according to RFC 7523 and Autodesk SSA requirements
+        var now = DateTime.UtcNow;
+        var claims = new List<Claim>
+        {
+          new Claim(JwtRegisteredClaimNames.Iss, clientId),    // Issuer = client ID
+          new Claim(JwtRegisteredClaimNames.Sub, clientId),    // Subject = client ID
+          new Claim(JwtRegisteredClaimNames.Aud, audience),    // Audience = token endpoint
+          new Claim(JwtRegisteredClaimNames.Iat,
+            new DateTimeOffset(now).ToUnixTimeSeconds().ToString()), // Issued at
+          new Claim(JwtRegisteredClaimNames.Exp,
+            new DateTimeOffset(now.AddMinutes(expirationMinutes)).ToUnixTimeSeconds().ToString()), // Expires
+          new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()) // Unique token ID
+        };
+
+        // Add scope as a single space-separated string claim (OAuth 2.0 standard)
+        // Note: Some providers may expect array format, but space-separated is standard
+        var scopeValue = string.Join(" ", scopes);
+        claims.Add(new Claim("scope", scopeValue));
+
+        // Create the JWT token
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+          Subject = new ClaimsIdentity(claims),
+          SigningCredentials = signingCredentials
+        };
+
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        var jwtString = tokenHandler.WriteToken(token);
+
+        return jwtString;
+      }
+      catch (CryptographicException ex)
+      {
+        throw new InvalidOperationException(
+          $"Failed to load RSA private key. Ensure the PEM format is correct " +
+          $"and begins with '-----BEGIN RSA PRIVATE KEY-----': {ex.Message}", ex);
+      }
+      catch (ArgumentException ex)
+      {
+        throw new ArgumentException($"Invalid JWT assertion parameter: {ex.Message}", ex);
+      }
+      catch (Exception ex)
+      {
+        throw new InvalidOperationException(
+          $"Failed to generate JWT assertion: {ex.Message}", ex);
+      }
+    }
+
+    /// <summary>
+    /// Loads an RSA private key from PEM format string.
+    /// Supports both PKCS#1 (BEGIN RSA PRIVATE KEY) and PKCS#8 (BEGIN PRIVATE KEY) formats.
+    /// </summary>
+    private static RSA LoadRsaPrivateKeyFromPem(string privateKeyPem)
+    {
+      var rsa = RSA.Create();
+
+      try
+      {
+        // Clean up the PEM string - remove headers, footers, and whitespace
+        var cleanedPem = privateKeyPem
+          .Replace("-----BEGIN RSA PRIVATE KEY-----", "")
+          .Replace("-----END RSA PRIVATE KEY-----", "")
+          .Replace("-----BEGIN PRIVATE KEY-----", "")
+          .Replace("-----END PRIVATE KEY-----", "")
+          .Replace("\n", "")
+          .Replace("\r", "")
+          .Replace(" ", "");
+
+        // Convert from Base64 to bytes
+        var privateKeyBytes = Convert.FromBase64String(cleanedPem);
+
+        // Try PKCS#1 format first (RSA PRIVATE KEY)
+        try
+        {
+          rsa.ImportRSAPrivateKey(privateKeyBytes, out _);
+        }
+        catch
+        {
+          // Fall back to PKCS#8 format (PRIVATE KEY)
+          rsa.ImportPkcs8PrivateKey(privateKeyBytes, out _);
+        }
+
+        return rsa;
+      }
+      catch (Exception ex)
+      {
+        rsa.Dispose();
+        throw new CryptographicException(
+          "Failed to parse RSA private key from PEM. Ensure the key is in valid " +
+          "PKCS#1 or PKCS#8 format.", ex);
       }
     }
   }

@@ -83,6 +83,42 @@ ClientNodes.Create() → RequestNodes.ByUrl() → ExecuteNodes.GET()
 
 **Example**: `"MyDynamoApp/1.0"`, `"DynaFetch/1.0"`, or `"CompanyName-AutomationTool/2.1"`
 
+#### ClientNodes.GenerateJwtAssertion
+
+**Category**: Client Nodes  
+**Purpose**: Generate JWT assertion for service account authentication (e.g., Autodesk SSA)
+
+**Parameters**:
+- `privateKeyPem` (string) - RSA private key in PEM format
+- `clientId` (string) - OAuth client ID / application ID
+- `audience` (string) - Token audience URL (e.g., "https://developer.api.autodesk.com/")
+- `scopes` (List<string>) - List of scope strings (e.g., ["data:read", "data:write"])
+- `expirationMinutes` (int) - Token validity period in minutes (default: 60)
+
+**Returns**: Signed JWT assertion string ready for token exchange
+
+**Example**:
+```python
+# Generate JWT assertion for Autodesk SSA
+jwt = ClientNodes.GenerateJwtAssertion(
+    privateKeyPem,
+    "your-client-id",
+    "https://developer.api.autodesk.com/",
+    ["data:read", "data:write"],
+    60
+)
+
+# Exchange assertion for access token
+tokenBody = "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=" + jwt
+response = ExecuteNodes.POST(client, tokenEndpoint, tokenBody)
+```
+
+**Use Cases**:
+- Autodesk Platform Services Secure Service Accounts (SSA)
+- Google Service Accounts
+- Custom OAuth 2.0 JWT Bearer authentication flows
+- Any RFC 7523 compliant JWT assertion authentication
+
 #### ClientNodes.AddDefaultHeader
 **Purpose**: Adds a header to all requests from this client  
 **Inputs**: client (HttpClientWrapper), name (string), value (string)  
