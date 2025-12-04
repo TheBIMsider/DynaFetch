@@ -4015,8 +4015,8 @@
         },
         {
           "Id": "a31e5229990b457c9749f949da33cc07",
-          "Name": "jsonData",
-          "Description": "string",
+          "Name": "content",
+          "Description": "var",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4034,9 +4034,9 @@
           "KeepListStructure": false
         }
       ],
-      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.PATCH@DynaFetch.Core.HttpClientWrapper,string,string",
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.PATCH@DynaFetch.Core.HttpClientWrapper,string,var",
       "Replication": "Auto",
-      "Description": "ExecuteNodes.PATCH (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+      "Description": "ExecuteNodes.PATCH (client: HttpClientWrapper, url: string, content: var): HttpResponse"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -4111,8 +4111,8 @@
         },
         {
           "Id": "c73ce563864847268c9c99833f8d4cd8",
-          "Name": "jsonData",
-          "Description": "string",
+          "Name": "content",
+          "Description": "var",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4130,9 +4130,9 @@
           "KeepListStructure": false
         }
       ],
-      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.PUT@DynaFetch.Core.HttpClientWrapper,string,string",
+      "FunctionSignature": "DynaFetch.Nodes.ExecuteNodes.PUT@DynaFetch.Core.HttpClientWrapper,string,var",
       "Replication": "Auto",
-      "Description": "ExecuteNodes.PUT (client: HttpClientWrapper, url: string, jsonData: string): HttpResponse"
+      "Description": "ExecuteNodes.PUT (client: HttpClientWrapper, url: string, content: var): HttpResponse"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -4291,7 +4291,7 @@
       "Inputs": [
         {
           "Id": "980e8f66aae54133afbc9bf1f958fadc",
-          "Name": "json",
+          "Name": "jsonString",
           "Description": "string",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -4312,7 +4312,7 @@
       ],
       "FunctionSignature": "DynaFetch.Nodes.JsonNodes.JsonToDictionary@string",
       "Replication": "Auto",
-      "Description": "JsonNodes.JsonToDictionary (json: string): var[]..[]"
+      "Description": "JsonNodes.JsonToDictionary (jsonString: string): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -4321,7 +4321,7 @@
       "Inputs": [
         {
           "Id": "a819073399a84fba96a4c7ebefe27343",
-          "Name": "json",
+          "Name": "jsonString",
           "Description": "string",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -4342,7 +4342,7 @@
       ],
       "FunctionSignature": "DynaFetch.Nodes.JsonNodes.JsonToList@string",
       "Replication": "Auto",
-      "Description": "JsonNodes.JsonToList (json: string): var[]"
+      "Description": "JsonNodes.JsonToList (jsonString: string): var[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -7131,14 +7131,81 @@
       "FunctionSignature": "DynaFetch.Nodes.RequestNodes.CreateFileUpload@string,string,string,string",
       "Replication": "Auto",
       "Description": "RequestNodes.CreateFileUpload (filePath: string, fieldName: string, fileName: string, contentType: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0c54734c3ea64c0c905533b0b5751182",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "48b61f53756147099e49d5bf15ebd47f",
+          "Name": "privateKeyPem",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "10be92e0757446b19869023952e56b78",
+          "Name": "clientId",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7cbcefaec8f64755836fb7e4e69f5841",
+          "Name": "audience",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3575f4f0326947929dc177107111217f",
+          "Name": "scopes",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aeb8abbf59eb40eba837438021bfb60f",
+          "Name": "expirationMinutes",
+          "Description": "int\nDefault value : 60",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0dcfb97618dc4494ae35eee79eec5ef7",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DynaFetch.Nodes.ClientNodes.GenerateJwtAssertion@string,string,string,string[],int",
+      "Replication": "Auto",
+      "Description": "ClientNodes.GenerateJwtAssertion (privateKeyPem: string, clientId: string, audience: string, scopes: string[], expirationMinutes: int = 60): string"
     }
   ],
   "Connectors": [],
   "Dependencies": [],
   "NodeLibraryDependencies": [
     {
-      "Name": "DynaFetch.dll",
-      "ReferenceType": "ZeroTouch",
+      "Name": "DynaFetch",
+      "Version": "1.0.10",
+      "ReferenceType": "Package",
       "Nodes": [
         "52cc6dc2cff34d77adbac53f10c573e3",
         "f8a579b6324a490b83295801f5f3811a",
@@ -7374,7 +7441,8 @@
         "64afa4aab00445cc9a1bc1666d6bb701",
         "f6ea244a31324b2aa5d55042b3a05451",
         "ad0eb8e336b04048ab873b74d9e5ab8d",
-        "8a5cd9ca1cdf43b8ba2297c3ee400e9c"
+        "8a5cd9ca1cdf43b8ba2297c3ee400e9c",
+        "0c54734c3ea64c0c905533b0b5751182"
       ]
     }
   ],
@@ -7408,7 +7476,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "3.6.1.9895",
+      "Version": "3.3.0.6316",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -9775,6 +9843,16 @@
         "ShowGeometry": true,
         "X": 2316.73232078385,
         "Y": 2489.0341535958164
+      },
+      {
+        "Id": "0c54734c3ea64c0c905533b0b5751182",
+        "Name": "ClientNodes.GenerateJwtAssertion",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 73.1274699508549,
+        "Y": 1978.4912943157078
       }
     ],
     "Annotations": [
@@ -9839,7 +9917,7 @@
         "Left": -1167.328097811861,
         "Top": 170.83252354027672,
         "Width": 473.0,
-        "Height": 267.0,
+        "Height": 270.0,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 243.83252354027672,
@@ -9908,7 +9986,7 @@
         "Left": -1637.538102635249,
         "Top": -1160.0273805352122,
         "Width": 402.0,
-        "Height": 301.0,
+        "Height": 305.0,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1087.0273805352122,
@@ -9931,7 +10009,7 @@
         "Left": -1171.6835686720024,
         "Top": -1156.929943589642,
         "Width": 470.0,
-        "Height": 524.0659647023541,
+        "Height": 526.0659647023541,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1083.929943589642,
@@ -10030,7 +10108,7 @@
         "Left": 164.62657801647947,
         "Top": -1180.8011605211416,
         "Width": 406.0,
-        "Height": 1595.1747686183498,
+        "Height": 1597.1747686183498,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1107.8011605211416,
@@ -10053,7 +10131,7 @@
         "Left": 631.7777786665492,
         "Top": -1166.4023821330659,
         "Width": 276.0,
-        "Height": 378.19480004580373,
+        "Height": 380.19480004580373,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1093.4023821330659,
@@ -10118,7 +10196,7 @@
         "Left": 976.0028835739431,
         "Top": -1161.1665929748401,
         "Width": 747.5332717883275,
-        "Height": 1675.7259050970388,
+        "Height": 1678.7259050970388,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1088.1665929748401,
@@ -10261,7 +10339,7 @@
         "Left": -649.4914602839892,
         "Top": -1190.4052930149762,
         "Width": 332.0,
-        "Height": 1394.7587243862527,
+        "Height": 1396.7587243862527,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1117.4052930149762,
@@ -10388,13 +10466,14 @@
           "5eb2c34d00de4c118d12da46c731117f",
           "52a2fdab29844133af44180690d1d454",
           "9a07fed0ed1840e8b88f429e27d4c1de",
-          "f26b0ecdbebb4ccbaf55c79e3abc9cba"
+          "f26b0ecdbebb4ccbaf55c79e3abc9cba",
+          "0c54734c3ea64c0c905533b0b5751182"
         ],
         "HasNestedGroups": false,
         "Left": 54.514804139696025,
         "Top": 1118.3447662641522,
         "Width": 731.2577872307327,
-        "Height": 856.7463382918343,
+        "Height": 1127.1465280515556,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1191.3447662641522,
@@ -10419,8 +10498,8 @@
         "HasNestedGroups": false,
         "Left": 848.799902110924,
         "Top": 1162.2001666038157,
-        "Width": 283.0,
-        "Height": 968.2098931376602,
+        "Width": 276.0,
+        "Height": 971.2098931376602,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1235.2001666038157,
@@ -10462,7 +10541,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1183.9930938169052,
-        "InitialHeight": 1265.0572087407165,
+        "InitialHeight": 1153.5767678556633,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -10498,11 +10577,11 @@
         "Left": 1932.838567000988,
         "Top": 1122.9090811212434,
         "Width": 707.893753782862,
-        "Height": 1772.5157065338947,
+        "Height": 1774.5157065338947,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1195.9090811212434,
-        "InitialHeight": 1398.5363493721359,
+        "InitialHeight": 1684.5157065338947,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -10522,7 +10601,7 @@
         "Left": -1703.5572331505973,
         "Top": 3399.7947748884762,
         "Width": 293.0,
-        "Height": 498.75334636515663,
+        "Height": 500.75334636515663,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 3472.7947748884762,
@@ -10549,7 +10628,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 4001.5961152038044,
-        "InitialHeight": 288.45006435365167,
+        "InitialHeight": 288.4500643536512,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -10712,7 +10791,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 3487.2224937000956,
-        "InitialHeight": 1309.9406890770665,
+        "InitialHeight": 1309.940689077066,
         "TextblockHeight": 63.0,
         "Background": "#FF48B9FF"
       },
@@ -10875,7 +10954,7 @@
         "Left": -272.8725618412826,
         "Top": -1382.5130512831968,
         "Width": 853.4991398577621,
-        "Height": 1811.886659380405,
+        "Height": 1813.886659380405,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1309.5130512831968,
@@ -10900,7 +10979,7 @@
         "Left": 617.2985143194169,
         "Top": -1381.271255204343,
         "Width": 1116.2376410428537,
-        "Height": 1910.8305673265418,
+        "Height": 1913.8305673265418,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1308.271255204343,
@@ -10971,7 +11050,7 @@
         "Left": -659.4914602839892,
         "Top": -1380.0336221934513,
         "Width": 352.0,
-        "Height": 1599.3870535647277,
+        "Height": 1601.3870535647277,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": -1307.0336221934513,
@@ -11017,7 +11096,7 @@
         "Left": 44.514804139696025,
         "Top": 921.0454754895895,
         "Width": 751.2577872307327,
-        "Height": 1069.045629066397,
+        "Height": 1339.4458188261183,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 994.0454754895895,
@@ -11039,8 +11118,8 @@
         "HasNestedGroups": true,
         "Left": 838.799902110924,
         "Top": 926.2866928637534,
-        "Width": 303.0,
-        "Height": 1219.1233668777224,
+        "Width": 296.0,
+        "Height": 1222.1233668777224,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1042.2866928637534,
@@ -11056,8 +11135,8 @@
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "5280b0ecb13c46cab25899551522ec3d",
-          "9f98f54591f64f6fa9690a74a60f6fd7"
+          "9f98f54591f64f6fa9690a74a60f6fd7",
+          "5280b0ecb13c46cab25899551522ec3d"
         ],
         "HasNestedGroups": true,
         "Left": 1188.6187713410195,
@@ -11067,7 +11146,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 999.9274218086109,
-        "InitialHeight": 1310.0572087407165,
+        "InitialHeight": 1352.6424398639576,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
       },
@@ -11086,11 +11165,11 @@
         "Left": 1922.838567000988,
         "Top": 927.2663269066109,
         "Width": 727.893753782862,
-        "Height": 1983.1584607485272,
+        "Height": 1985.1584607485272,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1000.2663269066109,
-        "InitialHeight": 1597.0974294546743,
+        "InitialHeight": 1895.1584607485272,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
       },
@@ -11115,7 +11194,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 3283.892609014765,
-        "InitialHeight": 1021.1535705426909,
+        "InitialHeight": 1021.1535705426904,
         "TextblockHeight": 63.0,
         "Background": "#FF848484"
       },
@@ -11138,7 +11217,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 3292.2500201373186,
-        "InitialHeight": 1519.9131626398434,
+        "InitialHeight": 1519.913162639843,
         "TextblockHeight": 63.0,
         "Background": "#FFD8D8D8"
       },
@@ -11424,7 +11503,7 @@
       },
       {
         "Id": "1374616d8d7c4f78afa56715cf4fa18b",
-        "Title": "DynaFetch > Nodes > ClientNodes \n= 10 Nodes\n•  0 +\n•  10⚡\n•  0 ?",
+        "Title": "DynaFetch > Nodes > ClientNodes \n= 11 Nodes\n•  0 +\n•  11⚡\n•  0 ?",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -11504,7 +11583,7 @@
       },
       {
         "Id": "896fda42dbeb4dd8a6b1b682e7c9c656",
-        "Title": "DynaFetch Nodes Section\r\n\r\nThe Nodes section contains the primary workflow nodes that most users interact with for HTTP operations. These 4 subsections with 48 total nodes provide the simplified, user-friendly interface for building and executing web requests in Dynamo.\r\n\r\nThis is the main working area for DynaFetch users, offering streamlined workflows for common HTTP operations:\r\n\r\nClientNodes - HTTP client creation and configuration management\r\nRequestNodes - Request building with headers, parameters, and body content  \r\nExecuteNodes - HTTP method execution (GET, POST, PUT, DELETE, PATCH)\r\nJsonNodes - JSON response processing and data conversion",
+        "Title": "DynaFetch Nodes Section\r\n\r\nThe Nodes section contains the primary workflow nodes that most users interact with for HTTP operations. These 4 subsections with 52 total nodes provide the simplified, user-friendly interface for building and executing web requests in Dynamo.\r\n\r\nThis is the main working area for DynaFetch users, offering streamlined workflows for common HTTP operations:\r\n\r\nClientNodes - HTTP client creation and configuration management\r\nRequestNodes - Request building with headers, parameters, and body content  \r\nExecuteNodes - HTTP method execution (GET, POST, PUT, DELETE, PATCH)\r\nJsonNodes - JSON response processing and data conversion",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -11524,7 +11603,7 @@
       },
       {
         "Id": "ac5d52b69f724e6d971bbabae0661673",
-        "Title": "These 48 nodes represent the essential DynaFetch functionality that replaces DynaWeb workflows while providing enhanced capabilities. They abstract the complexity of the Core infrastructure into clean, chainable operations that follow Dynamo's visual programming patterns.\r\n\r\nMost DynaFetch workflows use a simple pattern: create client → build request → execute → process response, making HTTP API integration accessible to users regardless of their programming background.",
+        "Title": "These 52 nodes represent the essential DynaFetch functionality that replaces DynaWeb workflows while providing enhanced capabilities. They abstract the complexity of the Core infrastructure into clean, chainable operations that follow Dynamo's visual programming patterns.\r\n\r\nMost DynaFetch workflows use a simple pattern: create client → build request → execute → process response, making HTTP API integration accessible to users regardless of their programming background.",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -11743,8 +11822,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 694.1896756596552,
-    "Y": 226.41418951859328,
-    "Zoom": 0.1307537164451317
+    "X": 703.5352602344349,
+    "Y": 226.8932485174191,
+    "Zoom": 0.1310726279486564
   }
 }
