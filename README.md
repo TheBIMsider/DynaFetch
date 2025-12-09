@@ -151,6 +151,29 @@ For service account authentication like Autodesk Platform Services Secure Servic
 - Custom OAuth 2.0 JWT Bearer flows
 - Any RFC 7523 compliant JWT assertion authentication
 
+**File Uploads** (Multipart Form Data):
+
+```
+RequestNodes.AddFile(request, "file", filePath, "image/png")
+```
+
+**File Upload Workflow**:
+
+```
+1. ClientNodes.Create() → client
+2. ClientNodes.AddDefaultHeader(client, "Authorization", "Bearer " + token)
+3. RequestNodes.ByUrl(uploadUrl) → request
+4. RequestNodes.AddFile(request, "file", filePath, "image/png") → request
+5. ExecuteNodes.POST(client, "", request) → response
+```
+
+**Supported File Upload Features**:
+
+- Auto-detection of MIME types from file extensions
+- Multiple file formats (images, documents, archives, etc.)
+- Metadata fields with `RequestNodes.AddFormField()`
+- Compatible with POST, PUT, and PATCH methods
+
 ### JSON Processing
 
 - **ToDictionary**: Convert API responses to Dynamo Dictionaries

@@ -7830,12 +7830,12 @@
         ],
         "HasNestedGroups": false,
         "Left": -650.5738519254983,
-        "Top": 922.1891145379805,
+        "Top": 922.2882144965931,
         "Width": 634.1852142341736,
-        "Height": 396.09909995861267,
+        "Height": 396.0,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 995.1891145379805,
+        "InitialTop": 995.2882144965931,
         "InitialHeight": 145.09909995861267,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
@@ -7868,7 +7868,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 1191.3447662641522,
-        "InitialHeight": 768.7463382918343,
+        "InitialHeight": 931.2967182606146,
         "TextblockHeight": 63.0,
         "Background": "#FFFFC999"
       },
@@ -8258,7 +8258,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
         "InitialTop": 994.0454754895895,
-        "InitialHeight": 981.0456290663969,
+        "InitialHeight": 1143.5960090351773,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
       },
@@ -8713,7 +8713,7 @@
       },
       {
         "Id": "ac5d52b69f724e6d971bbabae0661673",
-        "Title": "These 48 nodes represent the essential DynaFetch functionality that replaces DynaWeb workflows while providing enhanced capabilities. They abstract the complexity of the Core infrastructure into clean, chainable operations that follow Dynamo's visual programming patterns.\r\n\r\nMost DynaFetch workflows use a simple pattern: create client → build request → execute → process response, making HTTP API integration accessible to users regardless of their programming background.",
+        "Title": "These 52 nodes represent the essential DynaFetch functionality that replaces DynaWeb workflows while providing enhanced capabilities. They abstract the complexity of the Core infrastructure into clean, chainable operations that follow Dynamo's visual programming patterns.\r\n\r\nMost DynaFetch workflows use a simple pattern: create client → build request → execute → process response, making HTTP API integration accessible to users regardless of their programming background.",
         "DescriptionText": null,
         "IsExpanded": true,
         "WidthAdjustment": 0.0,
@@ -8721,7 +8721,7 @@
         "Nodes": [],
         "HasNestedGroups": false,
         "Left": -325.3886376913247,
-        "Top": 1003.1891145379805,
+        "Top": 1005.2518790660822,
         "Width": 0.0,
         "Height": 0.0,
         "FontSize": 36.0,
@@ -8772,7 +8772,7 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 695.0202529728932,
+    "X": 705.5202529728932,
     "Y": 310.9503275733611,
     "Zoom": 0.18702976376977404
   }

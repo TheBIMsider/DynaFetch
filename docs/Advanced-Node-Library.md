@@ -1,6 +1,6 @@
 # DynaFetch Advanced Node Library Reference
 
-*Complete reference for ALL DynaFetch nodes including Core infrastructure and System utilities*
+_Complete reference for ALL DynaFetch nodes including Core infrastructure and System utilities_
 
 ## Overview
 
@@ -10,7 +10,7 @@ This document covers ALL nodes available in DynaFetch, including the Core infras
 
 ```
 DynaFetch/
-├── Core/                    # HTTP infrastructure classes (100+ individual nodes)
+├── Core/                    # HTTP infrastructure classes (94 nodes)
 │   ├── DynaFetchException/
 │   │   ├── DynaFetchException (constructor)
 │   │   ├── Context
@@ -113,7 +113,7 @@ DynaFetch/
 │       ├── ValidateTimeout
 │       └── ValidateUrl
 ├── Nodes/                   # Primary workflow nodes ⭐ (detailed in Node-Library.md)
-│   ├── ClientNodes/         # HTTP client management (11 methods)
+│   ├── ClientNodes/         # HTTP client management (11 nodes)
 │   │   ├── AddDefaultHeader
 │   │   ├── AddDefaultHeaders
 │   │   ├── Create
@@ -125,13 +125,13 @@ DynaFetch/
 │   │   ├── SetBaseUrl
 │   │   ├── SetTimeout
 │   │   ├── SetUserAgent
-│   ├── ExecuteNodes/        # HTTP method execution (5 methods)
+│   ├── ExecuteNodes/        # HTTP method execution (5 nodes)
 │   │   ├── DELETE
 │   │   ├── GET
 │   │   ├── PATCH
 │   │   ├── POST
 │   │   └── PUT
-│   ├── JsonNodes/           # JSON processing utilities (17 methods)
+│   ├── JsonNodes/           # JSON processing utilities (17 nodes)
 │   │   ├── DictionaryToJson
 │   │   ├── Format
 │   │   ├── FormatJson
@@ -149,7 +149,7 @@ DynaFetch/
 │   │   ├── TryToDictionary
 │   │   ├── TryToList
 │   │   └── ValidateJson
-│   └── RequestNodes/        # Request building and configuration (19 methods)
+│   └── RequestNodes/        # Request building and configuration (19 nodes)
 │       ├── AddBearerToken
 │       ├── AddFile
 │       ├── AddFormField
@@ -170,7 +170,7 @@ DynaFetch/
 │       ├── ByCreateFileUpload
 │       └── SetMethod
 ├── Utilities/               # Static utility methods
-│   └── JsonHelper/          # Advanced JSON processing (12 methods)
+│   └── JsonHelper/          # Advanced JSON processing (12 nodes)
 │       ├── DictionaryToJson
 │       ├── FormatJson
 │       ├── IsValidJson
@@ -184,7 +184,7 @@ DynaFetch/
 │       ├── SerializeWithNewtonsoft
 │       └── TrySerialize
 └── System/                  # .NET system extensions
-    ├── Exception/           # System exception handling (13 items)
+    ├── Exception/           # System exception handling (13 nodes)
     │   ├── Exception() - constructors (3 variations)
     │   ├── GetBaseException
     │   ├── GetType
@@ -196,7 +196,7 @@ DynaFetch/
     │   ├── Source
     │   ├── StackTrace
     │   └── TargetSite
-    └── Net/                 # Network utilities
+    └── Net/                 # Network utilities (67 nodes)
         └── HttpStatusCode/  # Complete HTTP status code enumeration (50+ codes)
             ├── Accepted (202), AlreadyReported (208), Ambiguous (300)
             ├── BadGateway (502), BadRequest (400), Conflict (409)
@@ -238,8 +238,9 @@ DynaFetch/
 ⭐ **For complete documentation of the primary workflow nodes (ClientNodes, RequestNodes, ExecuteNodes, JsonNodes), see the [Node Library Reference](Node-Library.md).**
 
 The primary workflow nodes are what you'll use for 90% of DynaFetch operations:
+
 - **ClientNodes**: HTTP client creation and configuration
-- **RequestNodes**: Request building and setup  
+- **RequestNodes**: Request building and setup
 - **ExecuteNodes**: HTTP method execution
 - **JsonNodes**: JSON processing and data transformation
 
@@ -247,39 +248,45 @@ The primary workflow nodes are what you'll use for 90% of DynaFetch operations:
 
 ## Core Infrastructure Classes
 
-*All classes available directly in DynaFetch/Core/ for advanced HTTP operations and error handling*
+_All classes available directly in DynaFetch/Core/ for advanced HTTP operations and error handling_
 
 Based on the Dynamo library structure, Core contains both HTTP infrastructure and exception handling classes:
 
 ### HTTP Infrastructure Classes
 
 #### HttpClientWrapper
+
 **Location**: DynaFetch/Core/HttpClientWrapper  
 **Purpose**: Main HTTP client class that manages connections, configuration, and request execution
 
 **Properties and Methods Available**:
+
 - **BaseAddress** - Get/set the base URL for relative requests
 - **Timeout** - Get/set request timeout duration
 - **DefaultRequestHeaders** - Access to header collection
 - **UserAgent** - Get/set User-Agent string
 
 **Advanced Usage**:
+
 ```
 HttpClientWrapper client = ClientNodes.Create()
 Access: client.BaseAddress, client.Timeout, client.DefaultRequestHeaders
 ```
 
-**When to use directly**: 
+**When to use directly**:
+
 - Custom timeout logic beyond simple seconds
 - Complex header manipulation
 - Advanced connection pooling scenarios
 - Integration with existing HttpClient code
 
 #### HttpRequest
+
 **Location**: DynaFetch/Core/HttpRequest  
 **Purpose**: Represents a fully configured HTTP request before execution
 
 **Properties Available**:
+
 - **RequestUri** - The complete URL for the request
 - **Method** - HTTP method (GET, POST, etc.)
 - **Headers** - Request-specific headers
@@ -287,22 +294,26 @@ Access: client.BaseAddress, client.Timeout, client.DefaultRequestHeaders
 - **Parameters** - Query parameters
 
 **Advanced Usage**:
+
 ```
 HttpRequest request = RequestNodes.ByUrl(client, url)
 Access: request.RequestUri, request.Method, request.Headers
 ```
 
 **When to use directly**:
+
 - Inspecting request configuration before execution
 - Custom request validation logic
 - Complex conditional request building
 - Debugging request construction
 
 #### HttpResponse
+
 **Location**: DynaFetch/Core/HttpResponse  
 **Purpose**: Contains the complete response from an HTTP request
 
 **Properties Available**:
+
 - **StatusCode** - HTTP status code (200, 404, etc.)
 - **IsSuccessStatusCode** - True for 2xx status codes
 - **Headers** - Response headers from server
@@ -311,12 +322,14 @@ Access: request.RequestUri, request.Method, request.Headers
 - **RequestMessage** - Original request that generated this response
 
 **Advanced Usage**:
+
 ```
 HttpResponse response = ExecuteNodes.GET(request)
 Access: response.StatusCode, response.Headers, response.Content
 ```
 
 **When to use directly**:
+
 - Custom status code handling beyond success/failure
 - Header inspection for caching, rate limiting, pagination
 - Raw content processing for non-JSON responses
@@ -325,6 +338,7 @@ Access: response.StatusCode, response.Headers, response.Content
 ### Error Handling and Utility Classes
 
 #### DynaFetchException
+
 **Location**: DynaFetch/Core/DynaFetchException  
 **Purpose**: Base exception for all DynaFetch operations  
 **Properties**: ErrorCode, Details, InnerException  
@@ -332,13 +346,14 @@ Access: response.StatusCode, response.Headers, response.Content
 
 ```
 try { /* DynaFetch operations */ }
-catch (DynaFetchException ex) { 
+catch (DynaFetchException ex) {
     // Handle any DynaFetch error
     Console.WriteLine($"Error: {ex.Message}, Code: {ex.ErrorCode}");
 }
 ```
 
 #### DynaFetchHttpException
+
 **Location**: DynaFetch/Core/DynaFetchHttpException  
 **Purpose**: HTTP-specific errors (timeouts, connection failures, server errors)  
 **Properties**: StatusCode, ResponseContent, RequestUrl  
@@ -347,12 +362,13 @@ catch (DynaFetchException ex) {
 ```
 Common scenarios:
 - Network timeouts
-- Server 500 errors  
+- Server 500 errors
 - Connection refused
 - DNS resolution failures
 ```
 
 #### DynaFetchJsonException
+
 **Location**: DynaFetch/Core/DynaFetchJsonException  
 **Purpose**: JSON parsing and processing errors  
 **Properties**: JsonContent, ParseAttempt, Engine  
@@ -367,6 +383,7 @@ Common scenarios:
 ```
 
 #### ErrorDetails
+
 **Location**: DynaFetch/Core/ErrorDetails  
 **Purpose**: Structured error information for debugging  
 **Properties**: Timestamp, Operation, Context, StackTrace  
@@ -381,44 +398,52 @@ Provides context for:
 ```
 
 #### SafeOperations
+
 **Location**: DynaFetch/Core/SafeOperations  
 **Purpose**: Utility class for error-resistant operations
 
 **Available Methods**:
+
 - **TryGetValue<T>** - Safe dictionary value extraction
 - **TryParseJson** - Safe JSON parsing with fallback
 - **ValidateUrl** - URL format validation
 - **SanitizeInput** - Input cleaning and validation
 
 **Advanced Usage**:
+
 ```
 Use SafeOperations for operations that might fail gracefully
 Example: SafeOperations.TryGetValue(dictionary, "key", defaultValue)
 ```
 
 **When to use directly**:
+
 - Building error-resistant workflows
 - Handling unpredictable data sources
 - Creating robust automation that won't crash
 - Input validation in custom nodes
 
 #### Validation
+
 **Location**: DynaFetch/Core/Validation  
 **Purpose**: Input validation and sanitization utilities
 
 **Available Methods**:
+
 - **ValidateUrl** - Check URL format and accessibility
 - **ValidateJson** - JSON syntax validation
 - **ValidateHeaders** - HTTP header format validation
 - **SanitizeString** - String cleaning for safe processing
 
 **Advanced Usage**:
+
 ```
 Use Validation for pre-processing inputs before API calls
 Example: Validation.ValidateUrl(userInput) before creating requests
 ```
 
 **When to use directly**:
+
 - User input processing in custom interfaces
 - Bulk URL validation
 - Data quality checks in automation
@@ -428,7 +453,7 @@ Example: Validation.ValidateUrl(userInput) before creating requests
 
 ## System Utilities
 
-*Complete .NET system extensions and HTTP status code enumeration*
+_Complete .NET system extensions and HTTP status code enumeration_
 
 The System folder contains extensive .NET extensions that provide direct access to system-level functionality and comprehensive HTTP status code handling.
 
@@ -437,15 +462,18 @@ The System folder contains extensive .NET extensions that provide direct access 
 Complete .NET Exception class with all constructors, properties, and methods for comprehensive error handling:
 
 #### Exception Constructors:
+
 - **Exception()** - Default exception constructor with no parameters
 - **Exception(message)** - Exception with custom error message
 - **Exception(message, innerException)** - Exception with message and inner exception chaining
 
 #### Exception Methods:
+
 - **GetBaseException** - Gets the original exception at the root of the exception chain
 - **GetType** - Gets the runtime type information of the current exception instance
 
 #### Exception Properties:
+
 - **Data** - Key-value pairs providing additional user-defined information about the exception
 - **HelpLink** - Link or URN to help documentation associated with this exception
 - **HResult** - HRESULT error code value assigned to a specific exception
@@ -456,6 +484,7 @@ Complete .NET Exception class with all constructors, properties, and methods for
 - **TargetSite** - Method that threw the current exception
 
 #### Advanced Exception Usage:
+
 ```
 try {
     // DynaFetch operations that might fail
@@ -464,25 +493,25 @@ try {
     // Access comprehensive exception information
     Exception baseException = ex.GetBaseException()
     Type exceptionType = ex.GetType()
-    
+
     // Get detailed error context
     string errorMessage = ex.Message
     string errorSource = ex.Source
     string stackTrace = ex.StackTrace
     Exception innerEx = ex.InnerException
-    
+
     // Access additional data
     object helpInfo = ex.HelpLink
     int errorCode = ex.HResult
     object additionalData = ex.Data
     object targetMethod = ex.TargetSite
-    
+
     // Use for comprehensive error logging and debugging
     Console.WriteLine($"Exception Type: {exceptionType}")
     Console.WriteLine($"Message: {errorMessage}")
     Console.WriteLine($"Source: {errorSource}")
     Console.WriteLine($"Stack Trace: {stackTrace}")
-    
+
     if (innerEx != null) {
         Console.WriteLine($"Inner Exception: {innerEx.Message}")
     }
@@ -492,6 +521,7 @@ try {
 #### Exception Property Details:
 
 **Data**: Dictionary-like collection for storing arbitrary data related to the exception
+
 ```
 Exception ex = new Exception("Custom error")
 ex.Data["UserId"] = "12345"
@@ -500,18 +530,21 @@ ex.Data["Timestamp"] = DateTime.Now
 ```
 
 **HelpLink**: URL or URN pointing to documentation about the error
+
 ```
 Exception ex = new Exception("API Error")
 ex.HelpLink = "https://api-docs.example.com/errors/authentication"
 ```
 
 **HResult**: Win32 HRESULT error code for interoperability
+
 ```
 // Access the underlying system error code
 int systemErrorCode = ex.HResult
 ```
 
 **InnerException**: Chain of exceptions for root cause analysis
+
 ```
 try {
     // Some operation that causes a chain of exceptions
@@ -525,22 +558,26 @@ try {
 ```
 
 **Message**: Primary error description
+
 ```
 string userFriendlyError = ex.Message
 ```
 
 **Source**: Application or assembly name where the exception originated
+
 ```
 string errorOrigin = ex.Source
 ```
 
 **StackTrace**: Detailed call stack at the point where exception was thrown
+
 ```
 string detailedTrace = ex.StackTrace
 // Use for debugging and error analysis
 ```
 
 **TargetSite**: Specific method that threw the exception
+
 ```
 object faultingMethod = ex.TargetSite
 // Provides method name and signature information
@@ -553,12 +590,14 @@ object faultingMethod = ex.TargetSite
 DynaFetch provides direct access to ALL HTTP status codes as individual nodes. This comprehensive collection covers every standard HTTP response code:
 
 ##### 1xx Informational Responses:
+
 - **Continue (100)** - Server has received request headers, client should proceed
 - **SwitchingProtocols (101)** - Server is switching protocols per client request
 - **Processing (102)** - Server has received and is processing request (WebDAV)
 - **EarlyHints (103)** - Server is returning some response headers early
 
 ##### 2xx Success Responses:
+
 - **OK (200)** - Standard successful HTTP request response
 - **Created (201)** - Request has been fulfilled, new resource created
 - **Accepted (202)** - Request accepted for processing, but not completed
@@ -571,9 +610,10 @@ DynaFetch provides direct access to ALL HTTP status codes as individual nodes. T
 - **IMUsed (226)** - Request fulfilled, instance-manipulations applied
 
 ##### 3xx Redirection Messages:
+
 - **MultipleChoices (300)** - Multiple options for resource client may follow
 - **Ambiguous (300)** - Alias for MultipleChoices
-- **Moved (301)** - Alias for MovedPermanently  
+- **Moved (301)** - Alias for MovedPermanently
 - **MovedPermanently (301)** - Resource moved permanently to new location
 - **Found (302)** - Resource temporarily moved to different URI
 - **Redirect (302)** - Alias for Found
@@ -587,6 +627,7 @@ DynaFetch provides direct access to ALL HTTP status codes as individual nodes. T
 - **PermanentRedirect (308)** - Resource permanently moved, same method should be used
 
 ##### 4xx Client Error Responses:
+
 - **BadRequest (400)** - Server cannot process request due to client error
 - **Unauthorized (401)** - Authentication required for access
 - **PaymentRequired (402)** - Reserved for future use
@@ -617,6 +658,7 @@ DynaFetch provides direct access to ALL HTTP status codes as individual nodes. T
 - **UnavailableForLegalReasons (451)** - Resource unavailable for legal reasons
 
 ##### 5xx Server Error Responses:
+
 - **InternalServerError (500)** - Generic server error message
 - **NotImplemented (501)** - Server does not support functionality required to fulfill request
 - **BadGateway (502)** - Server acting as gateway received invalid response
@@ -659,15 +701,18 @@ if (response.StatusCode >= 200 && response.StatusCode < 300) {
 #### Common Status Code Usage Patterns:
 
 **Success Handling**:
+
 - **200 OK**: Standard successful response - process content normally
 - **201 Created**: Resource created successfully - often includes Location header
 - **204 No Content**: Success but no response body - check headers for confirmation
 
 **Redirection Handling**:
+
 - **301/302/307/308**: Automatic redirect handling - usually transparent to user
 - **304 Not Modified**: Use cached version - no new content to process
 
 **Client Error Handling**:
+
 - **400 Bad Request**: Check request format and required parameters
 - **401 Unauthorized**: Authentication required - prompt for credentials
 - **403 Forbidden**: Access denied - user lacks permissions
@@ -675,6 +720,7 @@ if (response.StatusCode >= 200 && response.StatusCode < 300) {
 - **429 Too Many Requests**: Rate limited - implement backoff strategy
 
 **Server Error Handling**:
+
 - **500 Internal Server Error**: Server-side issue - retry may help
 - **502/503/504**: Service issues - implement retry with exponential backoff
 - **501 Not Implemented**: Feature not supported - try alternative approach
@@ -688,6 +734,7 @@ if (response.StatusCode >= 200 && response.StatusCode < 300) {
 Advanced JSON processing utilities beyond the standard JsonNodes workflow nodes. These static methods provide comprehensive JSON manipulation capabilities:
 
 #### Data Conversion Methods:
+
 - **DictionaryToJson** - Converts Dictionary<string, object> to JSON string
 - **JsonToDictionary** - Converts JSON string to Dictionary<string, object>
 - **JsonToList** - Converts JSON array string to List<object>
@@ -695,21 +742,25 @@ Advanced JSON processing utilities beyond the standard JsonNodes workflow nodes.
 - **ListToJson** - Converts List<object> to JSON array string
 
 #### Validation and Formatting:
+
 - **IsValidJson** - Validates JSON string syntax and structure
 - **FormatJson** - Pretty-prints JSON with proper indentation and formatting
 - **MinifyJson** - Removes whitespace and formatting to create compact JSON
 
 #### Serialization Methods:
+
 - **Serialize** - Converts any .NET object to JSON string using default settings
 - **SerializeSmart** - Intelligent serialization with type preservation and null handling
 - **SerializeWithNewtonsoft** - Forces use of Newtonsoft.Json engine for compatibility
 
 #### Safe Processing Methods:
+
 - **TrySerialize** - Safe serialization that returns null on failure instead of throwing exception
 
 #### Advanced Usage Examples:
 
 **Data Conversion**:
+
 ```
 // Convert Dynamo Dictionary to JSON
 Dictionary<string, object> data = GetDynamoData()
@@ -729,6 +780,7 @@ object result = JsonHelper.JsonToObject(jsonData)  // Returns Dictionary
 ```
 
 **Validation and Formatting**:
+
 ```
 // Validate JSON before processing
 string userJson = GetUserInput()
@@ -746,7 +798,7 @@ string prettyJson = JsonHelper.FormatJson(compactJson)
 /*
 Result:
 {
-  "name": "John", 
+  "name": "John",
   "age": 30
 }
 */
@@ -757,6 +809,7 @@ string compact = JsonHelper.MinifyJson(formattedJson)
 ```
 
 **Advanced Serialization**:
+
 ```
 // Standard serialization
 MyCustomObject obj = new MyCustomObject()
@@ -783,39 +836,47 @@ if (result != null) {
 #### Method Comparison and When to Use:
 
 **DictionaryToJson vs Serialize**:
+
 - Use `DictionaryToJson` for Dynamo Dictionary objects specifically
 - Use `Serialize` for general .NET objects and custom types
 
 **JsonToDictionary vs JsonToObject**:
+
 - Use `JsonToDictionary` when you know the JSON represents an object
 - Use `JsonToObject` for unknown JSON that could be object, array, or primitive
 
 **Serialize vs SerializeSmart vs SerializeWithNewtonsoft**:
+
 - Use `Serialize` for standard scenarios with good performance
 - Use `SerializeSmart` for complex objects requiring type preservation
 - Use `SerializeWithNewtonsoft` for maximum compatibility with legacy systems
 
 **FormatJson vs MinifyJson**:
+
 - Use `FormatJson` for human-readable output, debugging, or display
 - Use `MinifyJson` for network transmission or storage optimization
 
 **TrySerialize vs Serialize**:
+
 - Use `TrySerialize` when input data reliability is uncertain
 - Use `Serialize` for known good data where exceptions are acceptable
 
 #### Performance Considerations:
 
 **High-Performance Scenarios**:
+
 - `Serialize` and `JsonToDictionary` use System.Text.Json for optimal speed
 - `MinifyJson` is faster than `FormatJson` for processing large JSON
 - `IsValidJson` is lightweight and should be used before expensive parsing
 
 **Compatibility Scenarios**:
+
 - `SerializeWithNewtonsoft` provides maximum compatibility but slower performance
 - `SerializeSmart` balances performance and reliability
 - `JsonToObject` handles edge cases but has slight overhead
 
 **Memory Efficiency**:
+
 - `TrySerialize` prevents exception overhead in high-volume scenarios
 - `MinifyJson` reduces memory footprint for large JSON strings
 - `JsonToList` and `JsonToDictionary` use efficient native collections
@@ -854,7 +915,7 @@ if (tokenExpired) {
     HttpRequest tokenRequest = RequestNodes.ByUrl(client, tokenEndpoint)
     tokenRequest = RequestNodes.AddJsonBody(tokenRequest, credentials)
     HttpResponse tokenResponse = ExecuteNodes.POST(tokenRequest)
-    
+
     // Extract new token and update client
     Dictionary tokenData = JsonNodes.ToDictionary(tokenResponse)
     string newToken = tokenData["access_token"]
@@ -896,7 +957,7 @@ HttpResponse response = ExecuteNodes.GET(request)
 if (JsonHelper.ValidateSchema(response.Content, expectedSchema)) {
     // Use streaming parse for large responses
     object data = JsonHelper.StreamingParse(response.Content)
-    
+
     // Custom deserialization with type information
     MyCustomType typed = JsonHelper.DeserializeWithTypeInfo<MyCustomType>(response.Content)
 } else {
@@ -928,16 +989,19 @@ if (contentLength > 10000000) {  // 10MB
 ## Performance Considerations
 
 ### Core Class Usage
+
 - **HttpClientWrapper**: Reuse instances - creating new clients has overhead
 - **HttpRequest**: Lightweight objects - safe to create many instances
 - **HttpResponse**: Contains response data - dispose promptly for memory management
 
 ### Exception Handling Performance
+
 - **Specific Catches**: Catch specific exception types rather than generic Exception
 - **Error Codes**: Use ErrorCode properties for fast error categorization
 - **Logging**: ErrorDetails provides structured logging without performance impact
 
 ### Advanced JSON Performance
+
 - **Streaming**: Use JsonHelper.StreamingParse for responses >1MB
 - **Bulk Operations**: JsonHelper.BulkDeserialize for processing many small JSON objects
 - **Memory**: Dispose large JSON objects promptly to prevent memory leaks
@@ -947,6 +1011,7 @@ if (contentLength > 10000000) {  // 10MB
 ## When to Use Advanced Classes
 
 ### Use Core Classes When:
+
 - Building custom workflow nodes
 - Need direct control over HTTP configuration
 - Implementing complex authentication flows
@@ -954,6 +1019,7 @@ if (contentLength > 10000000) {  // 10MB
 - Integrating with existing HttpClient code
 
 ### Use System Classes When:
+
 - Building error-resistant automation
 - Need detailed error analysis and logging
 - Handling unpredictable data sources
@@ -961,6 +1027,7 @@ if (contentLength > 10000000) {  // 10MB
 - Building production-grade applications
 
 ### Use Primary Workflow Nodes When:
+
 - Standard API integration scenarios
 - Learning DynaFetch capabilities
 - Building typical GET/POST workflows
@@ -985,7 +1052,7 @@ Validation.ValidateUrl(request.RequestUri)
 // Execute and handle with advanced classes
 try {
     HttpResponse response = ExecuteNodes.GET(request)
-    
+
     if (response.StatusCode == 200) {
         Dictionary data = JsonNodes.ToDictionary(response)
     } else {
@@ -1049,6 +1116,6 @@ For most users, the [primary workflow nodes](Node-Library.md) provide everything
 
 ---
 
-*For everyday API workflows, see [Node Library Reference](Node-Library.md)*  
-*For detailed examples and parameters, see [API Documentation](API-Documentation.md)*  
-*For troubleshooting, see [Troubleshooting Guide](Troubleshooting.md)*
+_For everyday API workflows, see [Node Library Reference](Node-Library.md)_  
+_For detailed examples and parameters, see [API Documentation](API-Documentation.md)_  
+_For troubleshooting, see [Troubleshooting Guide](Troubleshooting.md)_
