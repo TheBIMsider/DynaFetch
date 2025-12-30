@@ -1,4 +1,4 @@
-# DynaFetch {🐕}
+# DynaFetch {🐕} <a href="https://github.com/thebimsider/DynaFetch/releases/tag/v1.0.10"><img src="https://img.shields.io/badge/v1.0.10-release-brightgreen" alt="v1.0.10" /></a>
 
 <img width="512" height="512" alt="DynaFetch_Logo_O_Tag" src="https://github.com/user-attachments/assets/1b6ba9bc-b950-4a4e-a217-6d9f766eeba0" />
 
