@@ -1,4 +1,9 @@
-# DynaFetch {🐕} <a href="https://github.com/thebimsider/DynaFetch/releases/tag/v1.0.10"><img src="https://img.shields.io/badge/v1.0.10-release-brightgreen" alt="v1.0.10" /></a>
+# DynaFetch {🐕} 
+
+[![Release](https://img.shields.io/github/v/release/thebimsider/DynaFetch?display_name=tag&sort=semver)](https://github.com/thebimsider/DynaFetch/releases/latest)
+[![License](https://img.shields.io/github/license/thebimsider/DynaFetch)](https://github.com/thebimsider/DynaFetch/blob/main/LICENSE)
+![Tech](https://img.shields.io/badge/Tech-C#%20%HTML%20%7C%20CSS%20%7C%20JavaScript-informational)
+[![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-brightgreen)](https://thebimsider.github.io/BYF/)
 
 <img width="512" height="512" alt="DynaFetch_Logo_O_Tag" src="https://github.com/user-attachments/assets/1b6ba9bc-b950-4a4e-a217-6d9f766eeba0" />
 
