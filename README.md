@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/thebimsider/DynaFetch)](https://github.com/thebimsider/DynaFetch/blob/main/LICENSE)
 ![Tech](https://img.shields.io/badge/Tech-C-Sharp%20%HTML%20%7C%20CSS%20%7C%20JavaScript-informational)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub-brightgreen)](https://thebimsider.github.io/DynaFetch/)
-[![Packagemanager](https://img.shields.io/badge/Hosted_on-Dynamo Package Manager-Purple)](https://thebimsider.github.io/DynaFetch/)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](LICENSE)
 
 <img width="512" height="512" alt="DynaFetch_Logo_O_Tag" src="https://github.com/user-attachments/assets/1b6ba9bc-b950-4a4e-a217-6d9f766eeba0" />
 
