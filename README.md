@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/v/release/thebimsider/DynaFetch?display_name=tag&sort=semver)](https://github.com/thebimsider/DynaFetch/releases/latest)
 [![License](https://img.shields.io/github/license/thebimsider/DynaFetch)](https://github.com/thebimsider/DynaFetch/blob/main/LICENSE)
-![Tech](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JavaScript%20%7C%20C%23-informational)
+![Tech](https://img.shields.io/badge/Tech-C%23%20%7C%20.NET%20%7C%20HTML%20%7C%20CSS%20%7C%20JavaScript-informational)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](LICENSE)
 
 <img width="512" height="512" alt="DynaFetch_Logo_O_Tag" src="https://github.com/user-attachments/assets/1b6ba9bc-b950-4a4e-a217-6d9f766eeba0" />
