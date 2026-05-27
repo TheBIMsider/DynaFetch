@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Modern REST API package for Dynamo 3.0 - inspired by DynaWeb")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.10.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.10+b3d15b242dc68d9ea7b45295bc73d2a236aa3f28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.10+e4161b1a3275b49821ac32826c69aa045f5432f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynaFetch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynaFetch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.10.0")]
