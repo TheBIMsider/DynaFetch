@@ -303,3 +303,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 src/DynaFetch/obj/Debug/net8.0/DynaFetch.AssemblyInfoInputs.cache
+
+# Claude Code local/private files
+.claude/settings.local.json
+CLAUDE.local.md
+.mcp.json
