@@ -20,6 +20,7 @@ The original roadmaps stopped at Session 25 (v1.0.7, 2025-11-24). Work since the
   - **v1.0.8 (24 Nov 2025):** first fix. Previously the `application/json` default overrode the custom header, causing 415 Unsupported Media Type errors. Changed `HttpRequest.ToHttpRequestMessage()` and the `ExecuteNodes` docs for POST/PUT/PATCH.
   - **v1.0.9 (1 Dec 2025):** follow-up. `ToHttpRequestMessage()` now recreates the content with the custom type, and the POST/PUT/PATCH handling in `ExecuteNodes` was updated to match. Files changed: `HttpRequest.cs`, `ExecuteNodes.cs`.
   - Neither release needs workflow changes. The issue was reported by Robert Manna (credited in the release notes).
+- **v1.0.10 (4 Dec 2025, year inferred):** new node `ClientNodes.GenerateJwtAssertion` for service-account authentication. It creates RFC 7523 JWT assertions signed with RS256 from PKCS#1 or PKCS#8 PEM private keys, with configurable OAuth 2.0 scopes, a validated token lifetime (1-60 minutes), a unique `jti` claim against replay, and the `iss`, `sub`, `aud`, `iat` and `exp` claims. Usage: generate the assertion, then `ExecuteNodes.POST` it to a token endpoint with grant type `urn:ietf:params:oauth:grant-type:jwt-bearer`. Targets Autodesk Platform Services Secure Service Accounts, Google service accounts, and custom JWT bearer flows. Adds the `System.IdentityModel.Tokens.Jwt` 8.2.1 dependency. Docs updated (README, Node Library, Advanced Node Library). Additive, no breaking changes. Requested by @andydandy74 via a GitHub issue.
 - File uploads are supported through `HttpRequest` with `AddFile` (multipart), which covers the old deferred "Upload File to APS" idea.
 - The repo includes a 7th DynaWeb migration sample, "GET ACC Projects and Users".
 
@@ -27,7 +28,7 @@ Tests: `dotnet test` run on 2026-10-24 passed 25 of 25 (live-API integration tes
 
 Known build warnings (2026-10-24): `System.Text.Json` 8.0.4 carries a high-severity advisory (GHSA-8g4q-xg66-9fp4), and the Dynamo packages restore as 3.0.0.7186 because 3.0.0 is not on NuGet. Both are candidates for a future patch release.
 
-Still to confirm with Carl: the release notes for v1.0.10, and the current state of the BIMtrack multi-user sample.
+Still to confirm with Carl: the current state of the BIMtrack multi-user sample.
 
 ### Next Priorities
 
@@ -40,6 +41,7 @@ To be set by Carl. Update this section and `current-feature.md` as work is chose
 - **Language / framework:** C#, .NET 8
 - **Platform:** Dynamo 3.0+ ZeroTouch package (`DynamoVisualProgramming.DynamoServices` 3.0.x)
 - **HTTP:** built-in `System.Net.Http.HttpClient` (async/await throughout; not RestSharp)
+- **Auth tokens:** `System.IdentityModel.Tokens.Jwt` 8.2.1 (JWT assertion generation)
 - **JSON:** dual engine -- `System.Text.Json` (default, performance) with `Newtonsoft.Json` (compatibility layer)
 - **Tests:** NUnit + Moq project in `tests/DynaFetch.Tests` (unit and live-API integration tests; JSONPlaceholder and httpbin.org)
 - **IDE:** VS Code + C# Dev Kit
@@ -159,7 +161,7 @@ Breaking changes from DynaWeb: namespace `DynaWeb` to `DynaFetch`, some node con
 
 Not planned or committed; collected from earlier brainstorming. Pick from here only when Carl chooses.
 
-- **Authentication:** OAuth 2.0 flows, automatic token refresh, multi-provider auth (Azure AD, AWS Cognito), client-certificate auth
+- **Authentication:** full OAuth 2.0 flows (JWT assertion generation already exists via `GenerateJwtAssertion`), automatic token refresh, multi-provider auth (Azure AD, AWS Cognito), client-certificate auth
 - **Data handling:** streaming for large datasets, batch operations with queuing, XML/CSV serialization (binary upload is already supported via `AddFile`)
 - **Resilience:** automatic retry with exponential backoff, rate limiting, circuit breaker, response caching, built-in metrics
 - **Protocols:** GraphQL, gRPC, WebSockets
