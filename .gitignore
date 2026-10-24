@@ -305,6 +305,8 @@ $RECYCLE.BIN/
 src/DynaFetch/obj/Debug/net8.0/DynaFetch.AssemblyInfoInputs.cache
 
 # Claude Code local/private files
-.claude/settings.local.json
+.claude/
+CLAUDE.md
 CLAUDE.local.md
+context/
 .mcp.json
