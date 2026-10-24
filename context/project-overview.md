@@ -23,7 +23,11 @@ The original roadmaps stopped at Session 25 (v1.0.7, 2025-11-24). Work since the
 - File uploads are supported through `HttpRequest` with `AddFile` (multipart), which covers the old deferred "Upload File to APS" idea.
 - The repo includes a 7th DynaWeb migration sample, "GET ACC Projects and Users".
 
-Still to confirm with Carl: the release notes for v1.0.10, the current state of the BIMtrack multi-user sample, and the current test count and pass rate (25 tests, 100% at Session 25).
+Tests: `dotnet test` run on 2026-10-24 passed 25 of 25 (live-API integration tests included).
+
+Known build warnings (2026-10-24): `System.Text.Json` 8.0.4 carries a high-severity advisory (GHSA-8g4q-xg66-9fp4), and the Dynamo packages restore as 3.0.0.7186 because 3.0.0 is not on NuGet. Both are candidates for a future patch release.
+
+Still to confirm with Carl: the release notes for v1.0.10, and the current state of the BIMtrack multi-user sample.
 
 ### Next Priorities
 
