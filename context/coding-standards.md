@@ -81,6 +81,7 @@ Keep the layering: `Nodes/` are thin Dynamo-facing wrappers; real HTTP and JSON 
 
 - No credentials, tokens, or API keys committed to the repo -- including in tests, `.dyn` sample graphs, docs, and screenshots. Sample graphs use placeholder tokens and public test APIs
 - Integration tests that need secrets read them from environment variables, never from source
+- Private keys (PEM) and generated JWT assertions, access tokens, and client secrets (for example in `GenerateJwtAssertion`) must never be logged, stored on disk, or included in exception or error messages. Report failures with a generic reason (for example "invalid PEM key format") and no key material. Samples and docs use obviously fake placeholder keys only
 - Do not disable TLS certificate validation
 - Treat all response data as untrusted; do not evaluate or execute it
 
