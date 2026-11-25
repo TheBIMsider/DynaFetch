@@ -1,0 +1,5 @@
+# False positives: PEM header text in docs/comments and dummy test API key
+0532bf6f73199b892ab6cb880362626dc5b1eaf7:src/DynaFetch/Nodes/ClientNodes.cs:private-key:272
+0532bf6f73199b892ab6cb880362626dc5b1eaf7:src/DynaFetch/Nodes/ClientNodes.cs:private-key:373
+b3d15b242dc68d9ea7b45295bc73d2a236aa3f28:docs/Troubleshooting.md:private-key:198
+d72bce16384c0ba49e53e085b43772c5362e195b:tests/DynaFetch.Tests/Integration/AuthenticationTests.cs:generic-api-key:87
